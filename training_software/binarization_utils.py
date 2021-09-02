@@ -52,21 +52,43 @@ def LOG_quantize(
     zero = tf.constant(0, dtype=tf.float32)
     return sign * (2 ** value)
 
-def binarize_weight(x):
-    '''Element-wise rounding to the closest integer with full gradient propagation.
-    A trick from [Sergey Ioffe](http://stackoverflow.com/a/36480182)
-    '''
-    clipped = K.clip(x,-1,1)
-    rounded = K.sign(clipped)
-    return clipped + K.stop_gradient(rounded - clipped)
-
 def binarize_activation(x):
-    '''Element-wise rounding to the closest integer with full gradient propagation.
-    A trick from [Sergey Ioffe](http://stackoverflow.com/a/36480182)
-    '''
-    clipped = K.clip(x,-1,1)
-    rounded = K.sign(clipped)
-    return clipped + K.stop_gradient(rounded - clipped)
+    out_forward = K.sign(x)
+    mask1 = tf.dtypes.cast(x < -1, tf.float32)
+    mask2 = tf.dtypes.cast(x < 0, tf.float32)
+    mask3 = tf.dtypes.cast(x < 1, tf.float32)
+    out1 = (-1) * mask1 + (x*x + 2*x) * (1-mask1)
+    out2 = out1 * mask2 + (-x*x + 2*x) * (1-mask2)
+    out3 = out2 * mask3 + 1 * (1- mask3)
+    out = out3 + K.stop_gradient(out_forward - out3)
+
+    return out
+
+def binarize_weight(w):
+    real_weights = w
+    scaling_factor = tf.reduce_mean(abs(real_weights),axis=[0,1,2],keepdims=True)
+    scaling_factor = K.stop_gradient(scaling_factor)
+    binary_weights_no_grad = scaling_factor * K.sign(real_weights)
+    cliped_weights = K.clip(real_weights, -1.0, 1.0)
+    binary_weights = K.stop_gradient(binary_weights_no_grad) - K.stop_gradient(cliped_weights) + cliped_weights
+
+    return binary_weights
+
+#def binarize_weight(x):
+#    '''Element-wise rounding to the closest integer with full gradient propagation.
+#    A trick from [Sergey Ioffe](http://stackoverflow.com/a/36480182)
+#    '''
+#    clipped = K.clip(x,-1,1)
+#    rounded = K.sign(clipped)
+#    return clipped + K.stop_gradient(rounded - clipped)
+#
+#def binarize_activation(x):
+#    '''Element-wise rounding to the closest integer with full gradient propagation.
+#    A trick from [Sergey Ioffe](http://stackoverflow.com/a/36480182)
+#    '''
+#    clipped = K.clip(x,-1,1)
+#    rounded = K.sign(clipped)
+#    return clipped + K.stop_gradient(rounded - clipped)
 
 def tf_custom_gradient_method(f):
     @functools.wraps(f)
