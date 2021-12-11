@@ -1,0 +1,662 @@
+desc: --time-unit=ms --max-snapshots=100 --stacks=yes --massif-out-file=.//memory_profile_results//Ofast/massif.outtest_boost_Ofast_batch_size_128_FP32
+cmd: .//test_exe//test_boost_Ofast float32 128
+time_unit: ms
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=34
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=1360
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=83
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=2096
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=147
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=7984
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=202
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=8704
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=251
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5808
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=584
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5424
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=604
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5968
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=4187
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5488
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=4196
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5888
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=4699
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5552
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=4745
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=2400
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=4811
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=2688
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=4859
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=2688
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=4918
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=2688
+heap_tree=detailed
+n0: 0 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+#-----------
+snapshot=15
+#-----------
+time=4959
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=2688
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=4991
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=192
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=5039
+mem_heap_B=72704
+mem_heap_extra_B=8
+mem_stacks_B=1808
+heap_tree=detailed
+n1: 72704 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+#-----------
+snapshot=18
+#-----------
+time=5090
+mem_heap_B=72704
+mem_heap_extra_B=8
+mem_stacks_B=864
+heap_tree=detailed
+n1: 72704 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+#-----------
+snapshot=19
+#-----------
+time=5130
+mem_heap_B=72704
+mem_heap_extra_B=8
+mem_stacks_B=992
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=5165
+mem_heap_B=72704
+mem_heap_extra_B=8
+mem_stacks_B=736
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=5224
+mem_heap_B=334848
+mem_heap_extra_B=40
+mem_stacks_B=800
+heap_tree=peak
+n3: 334848 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 196608 0x10C5EF: boost::numeric::ublas::unbounded_array<float, std::allocator<float> >::unbounded_array(unsigned long, float const&, std::allocator<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+  n3: 196608 0x10C6E7: boost::numeric::ublas::matrix<float, boost::numeric::ublas::basic_row_major<unsigned long, long>, boost::numeric::ublas::unbounded_array<float, std::allocator<float> > >::matrix(unsigned long, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+   n0: 65536 0x109ACF: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+   n0: 65536 0x109AE7: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+   n0: 65536 0x109AFF: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n1: 65536 0x10C59B: boost::numeric::ublas::unbounded_array<float, std::allocator<float> >::unbounded_array(unsigned long, std::allocator<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+  n0: 65536 0x109B2B: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+#-----------
+snapshot=22
+#-----------
+time=5296
+mem_heap_B=334848
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=5368
+mem_heap_B=334848
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=5440
+mem_heap_B=334848
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=5512
+mem_heap_B=334848
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=5575
+mem_heap_B=334848
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=5647
+mem_heap_B=334848
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=5719
+mem_heap_B=334848
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=5755
+mem_heap_B=334848
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=5791
+mem_heap_B=334848
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=5827
+mem_heap_B=334848
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=5863
+mem_heap_B=334848
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=5899
+mem_heap_B=334848
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=5935
+mem_heap_B=334848
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=5971
+mem_heap_B=334848
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=6007
+mem_heap_B=334848
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=6043
+mem_heap_B=334848
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=6079
+mem_heap_B=334848
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=6115
+mem_heap_B=334848
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=6151
+mem_heap_B=334848
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=6187
+mem_heap_B=334848
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=6223
+mem_heap_B=334848
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=6259
+mem_heap_B=334848
+mem_heap_extra_B=40
+mem_stacks_B=864
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=6295
+mem_heap_B=334848
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=6331
+mem_heap_B=334848
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=6367
+mem_heap_B=334848
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=6403
+mem_heap_B=334848
+mem_heap_extra_B=40
+mem_stacks_B=864
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=6439
+mem_heap_B=334848
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=6475
+mem_heap_B=334848
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=6484
+mem_heap_B=334848
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=detailed
+n3: 334848 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 196608 0x10C5EF: boost::numeric::ublas::unbounded_array<float, std::allocator<float> >::unbounded_array(unsigned long, float const&, std::allocator<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+  n3: 196608 0x10C6E7: boost::numeric::ublas::matrix<float, boost::numeric::ublas::basic_row_major<unsigned long, long>, boost::numeric::ublas::unbounded_array<float, std::allocator<float> > >::matrix(unsigned long, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+   n0: 65536 0x109ACF: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+   n0: 65536 0x109AE7: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+   n0: 65536 0x109AFF: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n1: 65536 0x10C59B: boost::numeric::ublas::unbounded_array<float, std::allocator<float> >::unbounded_array(unsigned long, std::allocator<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+  n0: 65536 0x109B2B: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+#-----------
+snapshot=51
+#-----------
+time=6493
+mem_heap_B=334848
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=6502
+mem_heap_B=334848
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=6511
+mem_heap_B=334848
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=6520
+mem_heap_B=334848
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=6529
+mem_heap_B=334848
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=6538
+mem_heap_B=334848
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=6547
+mem_heap_B=334848
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=6556
+mem_heap_B=334848
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=6565
+mem_heap_B=334848
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=6574
+mem_heap_B=334848
+mem_heap_extra_B=40
+mem_stacks_B=688
+heap_tree=detailed
+n3: 334848 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 196608 0x10C5EF: boost::numeric::ublas::unbounded_array<float, std::allocator<float> >::unbounded_array(unsigned long, float const&, std::allocator<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+  n3: 196608 0x10C6E7: boost::numeric::ublas::matrix<float, boost::numeric::ublas::basic_row_major<unsigned long, long>, boost::numeric::ublas::unbounded_array<float, std::allocator<float> > >::matrix(unsigned long, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+   n0: 65536 0x109ACF: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+   n0: 65536 0x109AE7: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+   n0: 65536 0x109AFF: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n1: 65536 0x10C59B: boost::numeric::ublas::unbounded_array<float, std::allocator<float> >::unbounded_array(unsigned long, std::allocator<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+  n0: 65536 0x109B2B: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+#-----------
+snapshot=61
+#-----------
+time=6584
+mem_heap_B=269312
+mem_heap_extra_B=32
+mem_stacks_B=2624
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=6594
+mem_heap_B=270336
+mem_heap_extra_B=40
+mem_stacks_B=2624
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=6608
+mem_heap_B=270336
+mem_heap_extra_B=40
+mem_stacks_B=2624
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=6617
+mem_heap_B=270336
+mem_heap_extra_B=40
+mem_stacks_B=2816
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=6628
+mem_heap_B=73728
+mem_heap_extra_B=16
+mem_stacks_B=480
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=6638
+mem_heap_B=73728
+mem_heap_extra_B=16
+mem_stacks_B=672
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=6647
+mem_heap_B=73728
+mem_heap_extra_B=16
+mem_stacks_B=704
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=6656
+mem_heap_B=73728
+mem_heap_extra_B=16
+mem_stacks_B=672
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=6667
+mem_heap_B=73728
+mem_heap_extra_B=16
+mem_stacks_B=608
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=6677
+mem_heap_B=73728
+mem_heap_extra_B=16
+mem_stacks_B=560
+heap_tree=detailed
+n3: 73728 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n1: 1024 0x4ADD5C7: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x4AEC4DB: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4AEB807: _IO_file_overflow@@GLIBC_2.17 (fileops.c:745)
+    n1: 1024 0x4AEA937: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 1024 0x4AEA937: _IO_file_xsputn@@GLIBC_2.17 (fileops.c:1197)
+      n1: 1024 0x4AD3FC7: __vfprintf_internal (vfprintf-internal.c:1373)
+       n1: 1024 0x4B58AF7: __printf_chk (printf_chk.c:33)
+        n0: 1024 0x109B9B: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+ n0: 0 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=71
+#-----------
+time=6686
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=6695
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=6704
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=640
+heap_tree=empty

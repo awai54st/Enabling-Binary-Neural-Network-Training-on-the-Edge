@@ -1,0 +1,847 @@
+desc: --time-unit=ms --max-snapshots=100 --stacks=yes --massif-out-file=.//memory_profile_results//Ofast/massif.outtest_neon_simd_Ofast_batch_size_2048_mix_INT8_FP32
+cmd: .//test_exe//test_neon_simd_Ofast mix_8_32 2048
+time_unit: ms
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=5207
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=752
+heap_tree=detailed
+n3: 37821440 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 33554432 0x10B5CB: std::vector<float, std::allocator<float> >::vector(unsigned long, std::allocator<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 16777216 0x109017: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 16777216 0x109027: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+ n1: 4194304 0x10B647: std::vector<signed char, std::allocator<signed char> >::vector(unsigned long, std::allocator<signed char> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 4194304 0x109003: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+ n0: 72704 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=2
+#-----------
+time=11588
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=17988
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=24796
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=detailed
+n3: 37821440 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 33554432 0x10B5CB: std::vector<float, std::allocator<float> >::vector(unsigned long, std::allocator<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 16777216 0x109017: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 16777216 0x109027: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+ n1: 4194304 0x10B647: std::vector<signed char, std::allocator<signed char> >::vector(unsigned long, std::allocator<signed char> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 4194304 0x109003: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+ n0: 72704 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=5
+#-----------
+time=28812
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=32828
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=36844
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=40860
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=44876
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=48892
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=52908
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=60438
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=65310
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=detailed
+n3: 37821440 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 33554432 0x10B5CB: std::vector<float, std::allocator<float> >::vector(unsigned long, std::allocator<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 16777216 0x109017: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 16777216 0x109027: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+ n1: 4194304 0x10B647: std::vector<signed char, std::allocator<signed char> >::vector(unsigned long, std::allocator<signed char> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 4194304 0x109003: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+ n0: 72704 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=14
+#-----------
+time=70182
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=75054
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=79926
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=688
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=84798
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=89670
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=688
+heap_tree=detailed
+n3: 37821440 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 33554432 0x10B5CB: std::vector<float, std::allocator<float> >::vector(unsigned long, std::allocator<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 16777216 0x109017: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 16777216 0x109027: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+ n1: 4194304 0x10B647: std::vector<signed char, std::allocator<signed char> >::vector(unsigned long, std::allocator<signed char> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 4194304 0x109003: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+ n0: 72704 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=19
+#-----------
+time=94542
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=99414
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=104286
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=688
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=109158
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=114030
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=detailed
+n3: 37821440 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 33554432 0x10B5CB: std::vector<float, std::allocator<float> >::vector(unsigned long, std::allocator<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 16777216 0x109017: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 16777216 0x109027: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+ n1: 4194304 0x10B647: std::vector<signed char, std::allocator<signed char> >::vector(unsigned long, std::allocator<signed char> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 4194304 0x109003: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+ n0: 72704 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=24
+#-----------
+time=118902
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=123774
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=688
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=128646
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=133518
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=138390
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=detailed
+n3: 37821440 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 33554432 0x10B5CB: std::vector<float, std::allocator<float> >::vector(unsigned long, std::allocator<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 16777216 0x109017: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 16777216 0x109027: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+ n1: 4194304 0x10B647: std::vector<signed char, std::allocator<signed char> >::vector(unsigned long, std::allocator<signed char> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 4194304 0x109003: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+ n0: 72704 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=29
+#-----------
+time=143262
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=148134
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=155632
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=163320
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=171008
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=178696
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=688
+heap_tree=detailed
+n3: 37821440 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 33554432 0x10B5CB: std::vector<float, std::allocator<float> >::vector(unsigned long, std::allocator<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 16777216 0x109017: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 16777216 0x109027: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+ n1: 4194304 0x10B647: std::vector<signed char, std::allocator<signed char> >::vector(unsigned long, std::allocator<signed char> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 4194304 0x109003: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+ n0: 72704 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=35
+#-----------
+time=186384
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=194072
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=201760
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=205604
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=209448
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=213292
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=688
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=217136
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=detailed
+n3: 37821440 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 33554432 0x10B5CB: std::vector<float, std::allocator<float> >::vector(unsigned long, std::allocator<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 16777216 0x109017: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 16777216 0x109027: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+ n1: 4194304 0x10B647: std::vector<signed char, std::allocator<signed char> >::vector(unsigned long, std::allocator<signed char> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 4194304 0x109003: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+ n0: 72704 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=42
+#-----------
+time=220980
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=224824
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=228668
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=232512
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=688
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=236356
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=detailed
+n3: 37821440 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 33554432 0x10B5CB: std::vector<float, std::allocator<float> >::vector(unsigned long, std::allocator<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 16777216 0x109017: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 16777216 0x109027: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+ n1: 4194304 0x10B647: std::vector<signed char, std::allocator<signed char> >::vector(unsigned long, std::allocator<signed char> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 4194304 0x109003: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+ n0: 72704 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=47
+#-----------
+time=240200
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=244044
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=247888
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=251732
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=255576
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=259420
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=263264
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=267108
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=270952
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=274796
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=688
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=278640
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=detailed
+n3: 37821440 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 33554432 0x10B5CB: std::vector<float, std::allocator<float> >::vector(unsigned long, std::allocator<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 16777216 0x109017: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 16777216 0x109027: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+ n1: 4194304 0x10B647: std::vector<signed char, std::allocator<signed char> >::vector(unsigned long, std::allocator<signed char> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 4194304 0x109003: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+ n0: 72704 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=58
+#-----------
+time=282484
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=286328
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=290172
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=294016
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=297860
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=688
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=301704
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=305548
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=309392
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=313236
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=688
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=317080
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=detailed
+n3: 37821440 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 33554432 0x10B5CB: std::vector<float, std::allocator<float> >::vector(unsigned long, std::allocator<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 16777216 0x109017: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 16777216 0x109027: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+ n1: 4194304 0x10B647: std::vector<signed char, std::allocator<signed char> >::vector(unsigned long, std::allocator<signed char> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 4194304 0x109003: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+ n0: 72704 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=68
+#-----------
+time=320924
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=324768
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=328612
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=332456
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=336300
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=340144
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=343988
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=347832
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=351676
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=77
+#-----------
+time=355520
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=detailed
+n3: 37821440 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 33554432 0x10B5CB: std::vector<float, std::allocator<float> >::vector(unsigned long, std::allocator<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 16777216 0x109017: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 16777216 0x109027: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+ n1: 4194304 0x10B647: std::vector<signed char, std::allocator<signed char> >::vector(unsigned long, std::allocator<signed char> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 4194304 0x109003: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+ n0: 72704 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=78
+#-----------
+time=359364
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=363208
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=80
+#-----------
+time=367052
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=81
+#-----------
+time=370896
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=82
+#-----------
+time=374740
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=83
+#-----------
+time=378584
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=84
+#-----------
+time=382428
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=85
+#-----------
+time=386272
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=86
+#-----------
+time=390116
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=87
+#-----------
+time=656595
+mem_heap_B=37821440
+mem_heap_extra_B=12128
+mem_stacks_B=624
+heap_tree=detailed
+n3: 37821440 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 33554432 0x10B5CB: std::vector<float, std::allocator<float> >::vector(unsigned long, std::allocator<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 16777216 0x109017: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 16777216 0x109027: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+ n1: 4194304 0x10B647: std::vector<signed char, std::allocator<signed char> >::vector(unsigned long, std::allocator<signed char> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 4194304 0x109003: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+ n0: 72704 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=88
+#-----------
+time=656642
+mem_heap_B=54599680
+mem_heap_extra_B=16176
+mem_stacks_B=752
+heap_tree=detailed
+n3: 54599680 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n3: 50331648 0x10B5CB: std::vector<float, std::allocator<float> >::vector(unsigned long, std::allocator<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 16777216 0x109017: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 16777216 0x109027: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 16777216 0x1090EB: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+ n1: 4194304 0x10B647: std::vector<signed char, std::allocator<signed char> >::vector(unsigned long, std::allocator<signed char> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 4194304 0x109003: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+ n0: 73728 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=89
+#-----------
+time=657153
+mem_heap_B=71376896
+mem_heap_extra_B=20216
+mem_stacks_B=752
+heap_tree=peak
+n3: 71376896 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n4: 67108864 0x10B5CB: std::vector<float, std::allocator<float> >::vector(unsigned long, std::allocator<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 16777216 0x109017: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 16777216 0x109027: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 16777216 0x1090EB: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 16777216 0x109467: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+ n1: 4194304 0x10B647: std::vector<signed char, std::allocator<signed char> >::vector(unsigned long, std::allocator<signed char> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 4194304 0x109003: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+ n0: 73728 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=90
+#-----------
+time=3903089
+mem_heap_B=71376896
+mem_heap_extra_B=20216
+mem_stacks_B=672
+heap_tree=empty
+#-----------
+snapshot=91
+#-----------
+time=3906933
+mem_heap_B=73728
+mem_heap_extra_B=16
+mem_stacks_B=672
+heap_tree=empty

@@ -1,0 +1,113 @@
+CPP = aarch64-linux-gnu-g++
+CFLAGS_O2 = -O2 -std=c++17 -ftree-vectorize -unroll-loops
+CFLAGS_O3 = -O3 -std=c++17 -ftree-vectorize -unroll-loops
+CFLAGS_OFAST = -Ofast -std=c++17 -ftree-vectorize -unroll-loops
+LDFLAGS = -fopenmp -lpthread -lrt
+ARMV8_A = -mcpu=native -mtune=cortex-a53 -march=armv8-a+crc+simd+fp -mlittle-endian
+
+# memory profiller settings
+MASSIF = --tool=massif --time-unit=ms --max-snapshots=100 --stacks=yes#--detailed-freq=1 
+
+# libraries
+ARMADILLO = -larmadillo
+BLAS = -lblas
+EIGEN = -I/usr/include/eigen3/
+
+# Root path
+ROOT = ./
+OUTPUT_EXE_DIR = $(ROOT)/test_exe/
+OUTPUT_MEMORY_PROFILE = $(ROOT)/memory_profile_results/
+
+ARMA_EXE = test_armadillo
+BLAS_EXE = test_blas
+BLIS_EXE = test_blis
+BOOST_EXE = test_boost
+EIGEN_EXE = test_eigen3
+NEON_EXE = test_neon_simd
+VECTOR_EXE = test_vector
+
+build_all:
+	make -j2 -f makefile_library_test_code build_arma
+	make -j2 -f makefile_library_test_code build_blas
+	make -j2 -f makefile_library_test_code build_boost
+	make -j2 -f makefile_library_test_code build_eigen
+	make -j2 -f makefile_library_test_code build_neon
+	make -j2 -f makefile_library_test_code build_vector
+
+build_arma: $(ROOT)/arma_main.cpp
+	$(CPP) $(CFLAGS_O2) $(ARMV8_A) $? -o $(OUTPUT_EXE_DIR)/$(ARMA_EXE)_O2 $(ARMADILLO)
+	$(CPP) $(CFLAGS_O3) $(ARMV8_A) $? -o $(OUTPUT_EXE_DIR)/$(ARMA_EXE)_O3 $(ARMADILLO)
+	$(CPP) $(CFLAGS_OFAST) $(ARMV8_A) $? -o $(OUTPUT_EXE_DIR)/$(ARMA_EXE)_Ofast $(ARMADILLO)
+
+build_blas: $(ROOT)/blas_main.cpp
+	$(CPP) $(CFLAGS_O2) $(ARMV8_A) $? -o $(OUTPUT_EXE_DIR)/$(BLAS_EXE)_O2 $(BLAS)
+	$(CPP) $(CFLAGS_O3) $(ARMV8_A) $? -o $(OUTPUT_EXE_DIR)/$(BLAS_EXE)_O3 $(BLAS)
+	$(CPP) $(CFLAGS_OFAST) $(ARMV8_A) $? -o $(OUTPUT_EXE_DIR)/$(BLAS_EXE)_Ofast $(BLAS)
+
+build_boost: $(ROOT)/boost_main.cpp
+	$(CPP) $(CFLAGS_O2) $(ARMV8_A) $? -o $(OUTPUT_EXE_DIR)/$(BOOST_EXE)_O2 $(BLAS)
+	$(CPP) $(CFLAGS_O3) $(ARMV8_A) $? -o $(OUTPUT_EXE_DIR)/$(BOOST_EXE)_O3 $(BLAS)
+	$(CPP) $(CFLAGS_OFAST) $(ARMV8_A) $? -o $(OUTPUT_EXE_DIR)/$(BOOST_EXE)_Ofast $(BLAS)
+
+build_eigen: $(ROOT)/eigen_main.cpp
+	$(CPP) $(CFLAGS_O2) $(ARMV8_A) $(EIGEN) $? -o $(OUTPUT_EXE_DIR)/$(EIGEN_EXE)_O2
+	$(CPP) $(CFLAGS_O3) $(ARMV8_A) $(EIGEN) $? -o $(OUTPUT_EXE_DIR)/$(EIGEN_EXE)_O3
+	$(CPP) $(CFLAGS_OFAST) $(ARMV8_A) $(EIGEN) $? -o $(OUTPUT_EXE_DIR)/$(EIGEN_EXE)_Ofast
+
+build_neon: $(ROOT)/neon_main.cpp
+	$(CPP) $(CFLAGS_O2) $(ARMV8_A) $? -o $(OUTPUT_EXE_DIR)/$(NEON_EXE)_O2
+	$(CPP) $(CFLAGS_O3) $(ARMV8_A) $? -o $(OUTPUT_EXE_DIR)/$(NEON_EXE)_O3
+	$(CPP) $(CFLAGS_OFAST) $(ARMV8_A) $? -o $(OUTPUT_EXE_DIR)/$(NEON_EXE)_Ofast
+
+build_vector: $(ROOT)/vector_main.cpp
+	$(CPP) $(CFLAGS_O2) $(ARMV8_A) $? -o $(OUTPUT_EXE_DIR)/$(VECTOR_EXE)_O2
+	$(CPP) $(CFLAGS_O3) $(ARMV8_A) $? -o $(OUTPUT_EXE_DIR)/$(VECTOR_EXE)_O3
+	$(CPP) $(CFLAGS_OFAST) $(ARMV8_A) $? -o $(OUTPUT_EXE_DIR)/$(VECTOR_EXE)_Ofast
+
+run_memory_profiling:
+	for options in O2 O3 Ofast ; do \
+		for test_target in $(ARMA_EXE) $(BLAS_EXE) $(BLIS_EXE) $(BOOST_EXE) $(EIGEN_EXE) $(NEON_EXE) ; do \
+			for test_batch in 64 128 256 512 1024 2048; do \
+				echo $${test_target}_$${options} $$test_batch; \
+				valgrind $(MASSIF) --massif-out-file=$(OUTPUT_MEMORY_PROFILE)/$${options}/massif.out$${test_target}_$${options}_batch_size_$${test_batch}_FP32 $(OUTPUT_EXE_DIR)/$${test_target}_$${options} float32 $$test_batch; \
+				valgrind $(MASSIF) --massif-out-file=$(OUTPUT_MEMORY_PROFILE)/$${options}/massif.out$${test_target}_$${options}_batch_size_$${test_batch}_mix_INT8_FP32 $(OUTPUT_EXE_DIR)/$${test_target}_$${options} mix_8_32 $$test_batch; \
+			done \
+		done \
+	done
+
+
+run_naive_memory_profiling:
+	for options in O2 O3 Ofast ; do \
+		for test_target in $(NEON_EXE) ; do \
+			for test_batch in 64 128 256 512 1024 2048; do \
+				echo $${test_target}_$${options} $$test_batch; \
+				valgrind $(MASSIF) --massif-out-file=$(OUTPUT_MEMORY_PROFILE)/$${options}/massif.out$${test_target}_$${options}_batch_size_$${test_batch}_FP32_Naive $(OUTPUT_EXE_DIR)/$${test_target}_$${options} float32_naive $$test_batch; \
+				valgrind $(MASSIF) --massif-out-file=$(OUTPUT_MEMORY_PROFILE)/$${options}/massif.out$${test_target}_$${options}_batch_size_$${test_batch}_FP16 $(OUTPUT_EXE_DIR)/$${test_target}_$${options} float16_naive $$test_batch; \
+			done \
+		done \
+	done
+
+
+run_speed_profiling:
+	for options in O3; do \
+#		for test_target in $(ARMA_EXE) $(BLAS_EXE) $(BLIS_EXE) $(BOOST_EXE) $(EIGEN_EXE) $(NEON_EXE) ; do \
+		for test_target in $(BOOST_EXE) ; do \
+			for test_batch in 2048; do \
+				echo $${test_target}_$${options} $$test_batch; \
+#				$(OUTPUT_EXE_DIR)/$${test_target}_$${options} float32 $$test_batch; \
+				$(OUTPUT_EXE_DIR)/$${test_target}_$${options} mix_8_32 $$test_batch; \
+			done \
+		done \
+	done
+
+
+run_naive_speed_profiling:
+	for options in O2 O3 Ofast ; do \
+		for test_target in $(NEON_EXE); do \
+			for test_batch in 64 128 256 512 1024 2048; do \
+				echo $${test_target}_$${options} $$test_batch; \
+				$(OUTPUT_EXE_DIR)/$${test_target}_$${options} float16_naive $$test_batch; \
+			done \
+		done \
+	done
+

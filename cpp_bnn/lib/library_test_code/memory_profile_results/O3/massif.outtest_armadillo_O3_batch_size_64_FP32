@@ -1,0 +1,799 @@
+desc: --time-unit=ms --max-snapshots=100 --stacks=yes --massif-out-file=.//memory_profile_results//O3/massif.outtest_armadillo_O3_batch_size_64_FP32
+cmd: .//test_exe//test_armadillo_O3 float32 64
+time_unit: ms
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=33
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=1360
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=81
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=2096
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=143
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=7984
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=184
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=8704
+heap_tree=detailed
+n0: 0 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+#-----------
+snapshot=5
+#-----------
+time=228
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5440
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=284
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5840
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=620
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5456
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=636
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=6000
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=4278
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5520
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=4314
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5744
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=4643
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5584
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=4648
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5376
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=5192
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5616
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=5251
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5440
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=5795
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5712
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=5800
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5472
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=6272
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5744
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=6278
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5536
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=6403
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5776
+heap_tree=detailed
+n0: 0 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+#-----------
+snapshot=20
+#-----------
+time=6455
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=2400
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=6494
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=2464
+heap_tree=detailed
+n0: 0 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+#-----------
+snapshot=22
+#-----------
+time=6546
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=2688
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=6610
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=2944
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=6646
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=3008
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=6710
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=2688
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=6746
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=2944
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=6810
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=3008
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=6846
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=2944
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=6910
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=2688
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=6946
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=2944
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=7010
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=2944
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=7046
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=2688
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=7110
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=2688
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=7186
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=3008
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=7262
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=2688
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=7342
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=2416
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=7403
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=400
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=7478
+mem_heap_B=5484
+mem_heap_extra_B=204
+mem_stacks_B=192
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=7529
+mem_heap_B=38300
+mem_heap_extra_B=212
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=7570
+mem_heap_B=5836
+mem_heap_extra_B=212
+mem_stacks_B=592
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=7629
+mem_heap_B=79244
+mem_heap_extra_B=236
+mem_stacks_B=1360
+heap_tree=detailed
+n5: 79244 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4928293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n2: 4088 0x648C2FF: ??? (in /usr/lib/aarch64-linux-gnu/libgfortran.so.5.0.0)
+  n1: 3800 0x6589D9B: ??? (in /usr/lib/aarch64-linux-gnu/libgfortran.so.5.0.0)
+   n0: 3800 in 5 places, all below massif's threshold (1.00%)
+  n0: 288 in 1 place, below massif's threshold (1.00%)
+ n2: 1376 0x648C263: ??? (in /usr/lib/aarch64-linux-gnu/libgfortran.so.5.0.0)
+  n1: 1280 0x659299B: ??? (in /usr/lib/aarch64-linux-gnu/libgfortran.so.5.0.0)
+   n0: 1280 in 3 places, all below massif's threshold (1.00%)
+  n0: 96 in 1 place, below massif's threshold (1.00%)
+ n1: 1056 0x4010B3F: allocate_dtv (dl-tls.c:286)
+  n1: 1056 0x40113CF: _dl_allocate_tls (dl-tls.c:532)
+   n1: 1056 0x6448F73: allocate_stack (allocatestack.c:622)
+    n1: 1056 0x6448F73: pthread_create@@GLIBC_2.17 (pthread_create.c:660)
+     n1: 1056 0x4DE0BA7: blas_thread_init (in /usr/lib/aarch64-linux-gnu/openblas-pthread/libblas.so.3)
+      n1: 1056 0x4C6D807: gotoblas_init (in /usr/lib/aarch64-linux-gnu/openblas-pthread/libblas.so.3)
+       n1: 1056 0x400E83B: call_init.part.0 (dl-init.c:72)
+        n1: 1056 0x400E93B: call_init (dl-init.c:30)
+         n1: 1056 0x400E93B: _dl_init (dl-init.c:119)
+          n0: 1056 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 20 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=42
+#-----------
+time=7682
+mem_heap_B=79244
+mem_heap_extra_B=236
+mem_stacks_B=2064
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=7722
+mem_heap_B=79244
+mem_heap_extra_B=236
+mem_stacks_B=2144
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=7774
+mem_heap_B=79244
+mem_heap_extra_B=236
+mem_stacks_B=1712
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=7816
+mem_heap_B=79244
+mem_heap_extra_B=236
+mem_stacks_B=1696
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=7896
+mem_heap_B=128396
+mem_heap_extra_B=356
+mem_stacks_B=3120
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=8040
+mem_heap_B=128396
+mem_heap_extra_B=356
+mem_stacks_B=3120
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=8058
+mem_heap_B=129420
+mem_heap_extra_B=364
+mem_stacks_B=4736
+heap_tree=peak
+n6: 129420 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4928293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n2: 32768 0x10EE4B: arma::Mat<float>::init_cold() (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_armadillo_O3)
+  n0: 16384 0x10A137: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_armadillo_O3)
+  n0: 16384 0x10A153: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_armadillo_O3)
+ n1: 16384 0x10DFB3: void arma::glue_times::apply<float, false, false, false, arma::Mat<float>, arma::Mat<float> >(arma::Mat<float>&, arma::Mat<float> const&, arma::Mat<float> const&, float) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_armadillo_O3)
+  n0: 16384 0x10A23F: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_armadillo_O3)
+ n2: 4088 0x648C2FF: ??? (in /usr/lib/aarch64-linux-gnu/libgfortran.so.5.0.0)
+  n1: 3800 0x6589D9B: ??? (in /usr/lib/aarch64-linux-gnu/libgfortran.so.5.0.0)
+   n0: 3800 in 5 places, all below massif's threshold (1.00%)
+  n0: 288 in 1 place, below massif's threshold (1.00%)
+ n0: 2100 in 4 places, all below massif's threshold (1.00%)
+ n1: 1376 0x648C263: ??? (in /usr/lib/aarch64-linux-gnu/libgfortran.so.5.0.0)
+  n0: 1376 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=49
+#-----------
+time=8076
+mem_heap_B=129420
+mem_heap_extra_B=364
+mem_stacks_B=4352
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=8081
+mem_heap_B=129420
+mem_heap_extra_B=364
+mem_stacks_B=4576
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=8086
+mem_heap_B=129420
+mem_heap_extra_B=364
+mem_stacks_B=2704
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=8091
+mem_heap_B=80268
+mem_heap_extra_B=244
+mem_stacks_B=1568
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=8096
+mem_heap_B=80268
+mem_heap_extra_B=244
+mem_stacks_B=1696
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=8101
+mem_heap_B=80268
+mem_heap_extra_B=244
+mem_stacks_B=1696
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=8106
+mem_heap_B=80268
+mem_heap_extra_B=244
+mem_stacks_B=2016
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=8112
+mem_heap_B=80268
+mem_heap_extra_B=244
+mem_stacks_B=2000
+heap_tree=detailed
+n6: 80268 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4928293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n2: 4088 0x648C2FF: ??? (in /usr/lib/aarch64-linux-gnu/libgfortran.so.5.0.0)
+  n1: 3800 0x6589D9B: ??? (in /usr/lib/aarch64-linux-gnu/libgfortran.so.5.0.0)
+   n0: 3800 in 5 places, all below massif's threshold (1.00%)
+  n0: 288 in 1 place, below massif's threshold (1.00%)
+ n2: 1376 0x648C263: ??? (in /usr/lib/aarch64-linux-gnu/libgfortran.so.5.0.0)
+  n1: 1280 0x659299B: ??? (in /usr/lib/aarch64-linux-gnu/libgfortran.so.5.0.0)
+   n0: 1280 in 3 places, all below massif's threshold (1.00%)
+  n0: 96 in 1 place, below massif's threshold (1.00%)
+ n1: 1056 0x4010B3F: allocate_dtv (dl-tls.c:286)
+  n1: 1056 0x40113CF: _dl_allocate_tls (dl-tls.c:532)
+   n1: 1056 0x6448F73: allocate_stack (allocatestack.c:622)
+    n1: 1056 0x6448F73: pthread_create@@GLIBC_2.17 (pthread_create.c:660)
+     n1: 1056 0x4DE0BA7: blas_thread_init (in /usr/lib/aarch64-linux-gnu/openblas-pthread/libblas.so.3)
+      n1: 1056 0x4C6D807: gotoblas_init (in /usr/lib/aarch64-linux-gnu/openblas-pthread/libblas.so.3)
+       n1: 1056 0x400E83B: call_init.part.0 (dl-init.c:72)
+        n1: 1056 0x400E93B: call_init (dl-init.c:30)
+         n1: 1056 0x400E93B: _dl_init (dl-init.c:119)
+          n0: 1056 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n1: 1024 0x4AFC5C7: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x4B0B4DB: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4B0A807: _IO_file_overflow@@GLIBC_2.17 (fileops.c:745)
+    n1: 1024 0x4B09937: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 1024 0x4B09937: _IO_file_xsputn@@GLIBC_2.17 (fileops.c:1197)
+      n1: 1024 0x4AF2FC7: __vfprintf_internal (vfprintf-internal.c:1373)
+       n1: 1024 0x4B77AF7: __printf_chk (printf_chk.c:33)
+        n0: 1024 0x10A263: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_armadillo_O3)
+ n0: 20 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=57
+#-----------
+time=8117
+mem_heap_B=80268
+mem_heap_extra_B=244
+mem_stacks_B=2448
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=8123
+mem_heap_B=80268
+mem_heap_extra_B=244
+mem_stacks_B=1984
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=8131
+mem_heap_B=80268
+mem_heap_extra_B=244
+mem_stacks_B=1856
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=8136
+mem_heap_B=80268
+mem_heap_extra_B=244
+mem_stacks_B=2016
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=8141
+mem_heap_B=80268
+mem_heap_extra_B=244
+mem_stacks_B=2176
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=8146
+mem_heap_B=80268
+mem_heap_extra_B=244
+mem_stacks_B=2096
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=8151
+mem_heap_B=80268
+mem_heap_extra_B=244
+mem_stacks_B=1920
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=8156
+mem_heap_B=80268
+mem_heap_extra_B=244
+mem_stacks_B=1744
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=8161
+mem_heap_B=80268
+mem_heap_extra_B=244
+mem_stacks_B=1664
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=8172
+mem_heap_B=80268
+mem_heap_extra_B=244
+mem_stacks_B=1568
+heap_tree=detailed
+n6: 80268 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4928293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n2: 4088 0x648C2FF: ??? (in /usr/lib/aarch64-linux-gnu/libgfortran.so.5.0.0)
+  n1: 3800 0x6589D9B: ??? (in /usr/lib/aarch64-linux-gnu/libgfortran.so.5.0.0)
+   n0: 3800 in 5 places, all below massif's threshold (1.00%)
+  n0: 288 in 1 place, below massif's threshold (1.00%)
+ n2: 1376 0x648C263: ??? (in /usr/lib/aarch64-linux-gnu/libgfortran.so.5.0.0)
+  n1: 1280 0x659299B: ??? (in /usr/lib/aarch64-linux-gnu/libgfortran.so.5.0.0)
+   n0: 1280 in 3 places, all below massif's threshold (1.00%)
+  n0: 96 in 1 place, below massif's threshold (1.00%)
+ n1: 1056 0x4010B3F: allocate_dtv (dl-tls.c:286)
+  n1: 1056 0x40113CF: _dl_allocate_tls (dl-tls.c:532)
+   n1: 1056 0x6448F73: allocate_stack (allocatestack.c:622)
+    n1: 1056 0x6448F73: pthread_create@@GLIBC_2.17 (pthread_create.c:660)
+     n1: 1056 0x4DE0BA7: blas_thread_init (in /usr/lib/aarch64-linux-gnu/openblas-pthread/libblas.so.3)
+      n1: 1056 0x4C6D807: gotoblas_init (in /usr/lib/aarch64-linux-gnu/openblas-pthread/libblas.so.3)
+       n1: 1056 0x400E83B: call_init.part.0 (dl-init.c:72)
+        n1: 1056 0x400E93B: call_init (dl-init.c:30)
+         n1: 1056 0x400E93B: _dl_init (dl-init.c:119)
+          n0: 1056 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n1: 1024 0x4AFC5C7: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x4B0B4DB: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4B0A807: _IO_file_overflow@@GLIBC_2.17 (fileops.c:745)
+    n1: 1024 0x4B09937: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 1024 0x4B09937: _IO_file_xsputn@@GLIBC_2.17 (fileops.c:1197)
+      n1: 1024 0x4AF2FC7: __vfprintf_internal (vfprintf-internal.c:1373)
+       n1: 1024 0x4B77AF7: __printf_chk (printf_chk.c:33)
+        n0: 1024 0x10A263: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_armadillo_O3)
+ n0: 20 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=67
+#-----------
+time=8178
+mem_heap_B=80268
+mem_heap_extra_B=244
+mem_stacks_B=1568
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=8183
+mem_heap_B=80268
+mem_heap_extra_B=244
+mem_stacks_B=1568
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=8188
+mem_heap_B=80268
+mem_heap_extra_B=244
+mem_stacks_B=1664
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=8193
+mem_heap_B=80268
+mem_heap_extra_B=244
+mem_stacks_B=1648
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=8198
+mem_heap_B=79405
+mem_heap_extra_B=203
+mem_stacks_B=1760
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=8203
+mem_heap_B=74784
+mem_heap_extra_B=40
+mem_stacks_B=1600
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=8209
+mem_heap_B=74784
+mem_heap_extra_B=40
+mem_stacks_B=1424
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=8217
+mem_heap_B=74784
+mem_heap_extra_B=40
+mem_stacks_B=1456
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=8223
+mem_heap_B=74784
+mem_heap_extra_B=40
+mem_stacks_B=1376
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=8228
+mem_heap_B=2080
+mem_heap_extra_B=32
+mem_stacks_B=1424
+heap_tree=detailed
+n3: 2080 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1056 0x4010B3F: allocate_dtv (dl-tls.c:286)
+  n1: 1056 0x40113CF: _dl_allocate_tls (dl-tls.c:532)
+   n1: 1056 0x6448F73: allocate_stack (allocatestack.c:622)
+    n1: 1056 0x6448F73: pthread_create@@GLIBC_2.17 (pthread_create.c:660)
+     n1: 1056 0x4DE0BA7: blas_thread_init (in /usr/lib/aarch64-linux-gnu/openblas-pthread/libblas.so.3)
+      n1: 1056 0x4C6D807: gotoblas_init (in /usr/lib/aarch64-linux-gnu/openblas-pthread/libblas.so.3)
+       n1: 1056 0x400E83B: call_init.part.0 (dl-init.c:72)
+        n1: 1056 0x400E93B: call_init (dl-init.c:30)
+         n1: 1056 0x400E93B: _dl_init (dl-init.c:119)
+          n0: 1056 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n1: 1024 0x4AFC5C7: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x4B0B4DB: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4B0A807: _IO_file_overflow@@GLIBC_2.17 (fileops.c:745)
+    n1: 1024 0x4B09937: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 1024 0x4B09937: _IO_file_xsputn@@GLIBC_2.17 (fileops.c:1197)
+      n1: 1024 0x4AF2FC7: __vfprintf_internal (vfprintf-internal.c:1373)
+       n1: 1024 0x4B77AF7: __printf_chk (printf_chk.c:33)
+        n0: 1024 0x10A263: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_armadillo_O3)
+ n0: 0 in 7 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=77
+#-----------
+time=8234
+mem_heap_B=2080
+mem_heap_extra_B=32
+mem_stacks_B=1440
+heap_tree=empty
+#-----------
+snapshot=78
+#-----------
+time=8239
+mem_heap_B=1056
+mem_heap_extra_B=24
+mem_stacks_B=1440
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=8244
+mem_heap_B=1056
+mem_heap_extra_B=24
+mem_stacks_B=1456
+heap_tree=empty
+#-----------
+snapshot=80
+#-----------
+time=8249
+mem_heap_B=1056
+mem_heap_extra_B=24
+mem_stacks_B=1488
+heap_tree=empty
+#-----------
+snapshot=81
+#-----------
+time=8254
+mem_heap_B=1056
+mem_heap_extra_B=24
+mem_stacks_B=1488
+heap_tree=empty
+#-----------
+snapshot=82
+#-----------
+time=8259
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=1440
+heap_tree=empty

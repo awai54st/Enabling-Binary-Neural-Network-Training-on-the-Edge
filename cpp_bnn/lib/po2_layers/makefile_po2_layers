@@ -1,0 +1,31 @@
+CPP = aarch64-linux-gnu-g++
+CFLAGS = -std=c++17 -ftree-vectorize -unroll-loops
+ARMV8_A = -mcpu=native -mtune=cortex-a53 -march=armv8-a+crc+simd+fp -mlittle-endian
+CBLAS = -lblas -lpthread #-lcblas -latlas -lopenblas
+
+PROJECT_DIR = ./
+OUTPUT_DIR = ../../build/cpp_profile/optimized_layers/
+TEST_DIR = ./test_exe/
+
+OPT_VANILLA_LAYERS = $(PROJECT_DIR)/vanilla_layers/
+OPT_VANILLA_LAYERS_OUTPUT = $(OUTPUT_DIR)/vanilla_layers/
+
+OPT_XNOR_LAYERS = $(PROJECT_DIR)/xnor_layers/
+OPT_XNOR_LAYERS_OUTPUT = $(OUTPUT_DIR)/xnor_layers/
+
+MASSIF = --tool=massif --time-unit=ms --max-snapshots=100 --stacks=yes --depth=5 #--detailed-freq=1 
+
+# dense layer ----------------------------------------------------------------------------------------
+
+build_xnor_dense:
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) -c ./xnor_layers/dense/xnor_dense_po2.cpp -o $(OPT_XNOR_LAYERS_OUTPUT)/po2_xnor_dense.o $(CBLAS)
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) ./xnor_layers/dense/test_dense_main.cpp -o $(TEST_DIR)/test_po2_xnor_dense $(OPT_XNOR_LAYERS_OUTPUT)/po2_xnor_dense.o
+	$(TEST_DIR)/test_po2_xnor_dense 0 0
+
+# convolution layer ----------------------------------------------------------------------------------------
+
+build_xnor_convolution_layer:
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) -c $(OPT_XNOR_LAYERS)/convolution/opt_xnor_convolution.cpp -o $(OPT_XNOR_LAYERS_OUTPUT)/opt_xnor_convolution.o $(CBLAS)
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $(OPT_XNOR_LAYERS)/convolution/test_convolution_main.cpp -o $(TEST_DIR)/test_opt_xnor_convolution $(OPT_XNOR_LAYERS_OUTPUT)/opt_xnor_convolution.o $(CBLAS)
+	$(TEST_DIR)/test_opt_xnor_convolution 0 0
+
