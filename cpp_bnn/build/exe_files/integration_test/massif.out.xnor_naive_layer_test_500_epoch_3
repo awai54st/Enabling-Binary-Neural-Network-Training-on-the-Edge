@@ -1,0 +1,492 @@
+desc: --time-unit=ms --max-snapshots=100 --stacks=yes --depth=5 --massif-out-file=././integration_test//massif.out.xnor_naive_layer_test_500_epoch_3
+cmd: ./xnor_naive_layer_test 500 3
+time_unit: ms
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=1102
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=6000
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=4529
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5520
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=5894
+mem_heap_B=493008
+mem_heap_extra_B=128
+mem_stacks_B=1632
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=7294
+mem_heap_B=493008
+mem_heap_extra_B=128
+mem_stacks_B=1632
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=8694
+mem_heap_B=493008
+mem_heap_extra_B=128
+mem_stacks_B=1616
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=9960
+mem_heap_B=2960952
+mem_heap_extra_B=2512
+mem_stacks_B=2464
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=15404
+mem_heap_B=2960952
+mem_heap_extra_B=2512
+mem_stacks_B=2416
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=16648
+mem_heap_B=6747296
+mem_heap_extra_B=2800
+mem_stacks_B=2016
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=18142
+mem_heap_B=6875952
+mem_heap_extra_B=2936
+mem_stacks_B=2416
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=19361
+mem_heap_B=7260704
+mem_heap_extra_B=4008
+mem_stacks_B=1968
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=20699
+mem_heap_B=5501944
+mem_heap_extra_B=4648
+mem_stacks_B=2032
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=21907
+mem_heap_B=5630776
+mem_heap_extra_B=4784
+mem_stacks_B=2352
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=22751
+mem_heap_B=5502304
+mem_heap_extra_B=4728
+mem_stacks_B=2320
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=23459
+mem_heap_B=5535080
+mem_heap_extra_B=4824
+mem_stacks_B=2320
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=24465
+mem_heap_B=5502168
+mem_heap_extra_B=4680
+mem_stacks_B=1920
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=25817
+mem_heap_B=5502400
+mem_heap_extra_B=4752
+mem_stacks_B=2320
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=33329
+mem_heap_B=6014824
+mem_heap_extra_B=4832
+mem_stacks_B=2320
+heap_tree=detailed
+n5: 6014824 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n5: 5604000 0x10CF83: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 2496000 0x10F14F: BinaryActivation<float, Matrix>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 2496000 0x10AE33: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 2176000 0x113EBF: MaxPooling<float, Matrix>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 2176000 0x10AE33: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 512000 0x124217: XNor_Convolution2D::backprop(Matrix<float>&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 512000 0x10B1CF: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n2: 420000 0x10D4DB: Matrix<float>::Matrix(std::vector<unsigned long, std::allocator<unsigned long> > const&, float, float const*) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 400000 0x10A70F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 20000 in 12 places, all below massif's threshold (1.00%)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 148000 0x10C43F: std::vector<float, std::allocator<float> >::operator=(std::vector<float, std::allocator<float> > const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n0: 128000 0x10B1E7: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n0: 20000 in 2 places, all below massif's threshold (1.00%)
+ n2: 105920 0x10FF7B: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 70000 0x1394FB: XNor_BatchNormConv<Matrix>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 70000 0x10AE33: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n0: 35920 in 4 places, all below massif's threshold (1.00%)
+ n0: 84200 in 135 places, all below massif's threshold (1.00%)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+#-----------
+snapshot=18
+#-----------
+time=33511
+mem_heap_B=9982304
+mem_heap_extra_B=4744
+mem_stacks_B=1680
+heap_tree=peak
+n4: 9982304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n4: 7140000 0x10CF83: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 2496000 0x10F14F: BinaryActivation<float, Matrix>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 2496000 0x10AE33: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n3: 2468000 0x10D4DB: Matrix<float>::Matrix(std::vector<unsigned long, std::allocator<unsigned long> > const&, float, float const*) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n1: 2048000 0x1133CB: MaxPooling<float, Matrix>::backprop(Matrix<float>&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+    n0: 2048000 0x10B1CF: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 400000 0x10A70F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 20000 in 11 places, all below massif's threshold (1.00%)
+  n1: 2176000 0x113EBF: MaxPooling<float, Matrix>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 2176000 0x10AE33: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n0: 0 in 2 places, all below massif's threshold (1.00%)
+ n2: 2580000 0x10C43F: std::vector<float, std::allocator<float> >::operator=(std::vector<float, std::allocator<float> > const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n0: 2560000 0x10B1E7: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n0: 20000 in 2 places, all below massif's threshold (1.00%)
+ n0: 156672 in 136 places, all below massif's threshold (1.00%)
+ n1: 105632 0x10FF7B: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n0: 105632 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=19
+#-----------
+time=34396
+mem_heap_B=7422168
+mem_heap_extra_B=4680
+mem_stacks_B=1984
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=35177
+mem_heap_B=7422400
+mem_heap_extra_B=4752
+mem_stacks_B=2464
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=39879
+mem_heap_B=7422976
+mem_heap_extra_B=4760
+mem_stacks_B=2448
+heap_tree=detailed
+n4: 7422976 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n4: 5092000 0x10CF83: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 2496000 0x10F14F: BinaryActivation<float, Matrix>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 2496000 0x10AE33: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 2176000 0x113EBF: MaxPooling<float, Matrix>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 2176000 0x10AE33: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n2: 420000 0x10D4DB: Matrix<float>::Matrix(std::vector<unsigned long, std::allocator<unsigned long> > const&, float, float const*) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 400000 0x10A70F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 20000 in 12 places, all below massif's threshold (1.00%)
+  n0: 0 in 2 places, all below massif's threshold (1.00%)
+ n2: 2068000 0x10C43F: std::vector<float, std::allocator<float> >::operator=(std::vector<float, std::allocator<float> > const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n0: 2048000 0x10B1E7: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n0: 20000 in 2 places, all below massif's threshold (1.00%)
+ n0: 157344 in 140 places, all below massif's threshold (1.00%)
+ n1: 105632 0x10FF7B: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n0: 105632 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=22
+#-----------
+time=39893
+mem_heap_B=7422168
+mem_heap_extra_B=4680
+mem_stacks_B=1536
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=45335
+mem_heap_B=7822608
+mem_heap_extra_B=4832
+mem_stacks_B=2416
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=46333
+mem_heap_B=7422200
+mem_heap_extra_B=4688
+mem_stacks_B=2016
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=47827
+mem_heap_B=7550856
+mem_heap_extra_B=4824
+mem_stacks_B=2416
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=48421
+mem_heap_B=7422832
+mem_heap_extra_B=4744
+mem_stacks_B=1968
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=49579
+mem_heap_B=5502168
+mem_heap_extra_B=4680
+mem_stacks_B=2032
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=50777
+mem_heap_B=5631000
+mem_heap_extra_B=4816
+mem_stacks_B=2352
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=52216
+mem_heap_B=5502400
+mem_heap_extra_B=4752
+mem_stacks_B=2320
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=53200
+mem_heap_B=5502168
+mem_heap_extra_B=4680
+mem_stacks_B=1920
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=54554
+mem_heap_B=5502400
+mem_heap_extra_B=4752
+mem_stacks_B=2320
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=62065
+mem_heap_B=6014824
+mem_heap_extra_B=4832
+mem_stacks_B=2320
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=63103
+mem_heap_B=7422168
+mem_heap_extra_B=4680
+mem_stacks_B=1984
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=63869
+mem_heap_B=7422168
+mem_heap_extra_B=4680
+mem_stacks_B=1888
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=68604
+mem_heap_B=7422976
+mem_heap_extra_B=4760
+mem_stacks_B=2448
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=74043
+mem_heap_B=7822608
+mem_heap_extra_B=4832
+mem_stacks_B=2416
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=75039
+mem_heap_B=7422200
+mem_heap_extra_B=4688
+mem_stacks_B=2016
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=76534
+mem_heap_B=7550856
+mem_heap_extra_B=4824
+mem_stacks_B=2416
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=77127
+mem_heap_B=7422832
+mem_heap_extra_B=4744
+mem_stacks_B=1968
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=78288
+mem_heap_B=5502168
+mem_heap_extra_B=4680
+mem_stacks_B=2032
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=79501
+mem_heap_B=5631000
+mem_heap_extra_B=4816
+mem_stacks_B=2352
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=80943
+mem_heap_B=5502400
+mem_heap_extra_B=4752
+mem_stacks_B=2320
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=81927
+mem_heap_B=5502168
+mem_heap_extra_B=4680
+mem_stacks_B=1920
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=83280
+mem_heap_B=5502400
+mem_heap_extra_B=4752
+mem_stacks_B=2320
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=90792
+mem_heap_B=6014824
+mem_heap_extra_B=4832
+mem_stacks_B=2320
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=91833
+mem_heap_B=7422168
+mem_heap_extra_B=4680
+mem_stacks_B=1984
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=92599
+mem_heap_B=7422168
+mem_heap_extra_B=4680
+mem_stacks_B=1888
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=97337
+mem_heap_B=7422976
+mem_heap_extra_B=4760
+mem_stacks_B=2448
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=97408
+mem_heap_B=4847048
+mem_heap_extra_B=4200
+mem_stacks_B=720
+heap_tree=detailed
+n4: 4847048 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n3: 4672000 0x10CF83: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 2496000 0x10F14F: BinaryActivation<float, Matrix>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 2496000 0x10AE33: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 2176000 0x113EBF: MaxPooling<float, Matrix>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 2176000 0x10AE33: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n0: 0 in 3 places, all below massif's threshold (1.00%)
+ n2: 105632 0x10FF7B: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 70000 0x1394FB: XNor_BatchNormConv<Matrix>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 70000 0x10AE33: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n0: 35632 in 4 places, all below massif's threshold (1.00%)
+ n1: 58488 0x12145F: std::vector<half, std::allocator<half> >::_M_fill_insert(__gnu_cxx::__normal_iterator<half*, std::vector<half, std::allocator<half> > >, unsigned long, half const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n0: 58488 in 7 places, all below massif's threshold (1.00%)
+ n0: 10928 in 140 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=50
+#-----------
+time=97422
+mem_heap_B=4846024
+mem_heap_extra_B=4192
+mem_stacks_B=704
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=97436
+mem_heap_B=4846024
+mem_heap_extra_B=4192
+mem_stacks_B=672
+heap_tree=empty

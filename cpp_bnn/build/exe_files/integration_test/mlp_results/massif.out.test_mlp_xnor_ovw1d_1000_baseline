@@ -1,0 +1,720 @@
+desc: --time-unit=ms --max-snapshots=100 --stacks=yes --depth=5 --massif-out-file=./integration_test/massif.out.test_mlp_xnor_ovw1d_1000_baseline
+cmd: ./naive_layer_test_exe/test_mlp_xnor_ovw 1000 0
+time_unit: ms
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=580
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5792
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=1096
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=6000
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=4492
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5520
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=5040
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1728
+heap_tree=detailed
+n3: 3248992 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3176000 0x10BF93: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_xnor_ovw)
+  n2: 3176000 0x10C71B: Matrix<float>::Matrix(std::vector<unsigned long, std::allocator<unsigned long> > const&, float, float const*) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_xnor_ovw)
+   n0: 3136000 0x109D4F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_xnor_ovw)
+   n0: 40000 0x109D93: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_xnor_ovw)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 288 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=5
+#-----------
+time=5866
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1520
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=6566
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1568
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=7266
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1504
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=7966
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1504
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=8666
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1568
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=9366
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1520
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=10066
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1520
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=10766
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1520
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=11466
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1504
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=12166
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1520
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=12516
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1520
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=13216
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1504
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=13916
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1504
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=14616
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1520
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=15316
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1520
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=16016
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1520
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=16716
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1520
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=17416
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1504
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=18116
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1520
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=18816
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1504
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=19516
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1520
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=20216
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1504
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=21196
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1520
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=22176
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1520
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=22666
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1504
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=23156
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1504
+heap_tree=detailed
+n3: 3248992 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3176000 0x10BF93: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_xnor_ovw)
+  n2: 3176000 0x10C71B: Matrix<float>::Matrix(std::vector<unsigned long, std::allocator<unsigned long> > const&, float, float const*) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_xnor_ovw)
+   n0: 3136000 0x109D4F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_xnor_ovw)
+   n0: 40000 0x109D93: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_xnor_ovw)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 288 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=31
+#-----------
+time=23646
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1504
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=24136
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1520
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=24626
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1520
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=25116
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1520
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=25606
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1568
+heap_tree=detailed
+n3: 3248992 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3176000 0x10BF93: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_xnor_ovw)
+  n2: 3176000 0x10C71B: Matrix<float>::Matrix(std::vector<unsigned long, std::allocator<unsigned long> > const&, float, float const*) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_xnor_ovw)
+   n0: 3136000 0x109D4F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_xnor_ovw)
+   n0: 40000 0x109D93: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_xnor_ovw)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 288 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=36
+#-----------
+time=26096
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1520
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=26586
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1520
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=27076
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1520
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=27566
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1520
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=28056
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1520
+heap_tree=detailed
+n3: 3248992 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3176000 0x10BF93: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_xnor_ovw)
+  n2: 3176000 0x10C71B: Matrix<float>::Matrix(std::vector<unsigned long, std::allocator<unsigned long> > const&, float, float const*) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_xnor_ovw)
+   n0: 3136000 0x109D4F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_xnor_ovw)
+   n0: 40000 0x109D93: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_xnor_ovw)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 288 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=41
+#-----------
+time=28546
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1504
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=29036
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1520
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=29526
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1568
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=30016
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1504
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=30506
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1520
+heap_tree=detailed
+n3: 3248992 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3176000 0x10BF93: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_xnor_ovw)
+  n2: 3176000 0x10C71B: Matrix<float>::Matrix(std::vector<unsigned long, std::allocator<unsigned long> > const&, float, float const*) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_xnor_ovw)
+   n0: 3136000 0x109D4F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_xnor_ovw)
+   n0: 40000 0x109D93: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_xnor_ovw)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 288 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=46
+#-----------
+time=30996
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1520
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=31486
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1520
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=31976
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1520
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=32466
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1504
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=32816
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1520
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=33166
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1504
+heap_tree=detailed
+n3: 3248992 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3176000 0x10BF93: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_xnor_ovw)
+  n2: 3176000 0x10C71B: Matrix<float>::Matrix(std::vector<unsigned long, std::allocator<unsigned long> > const&, float, float const*) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_xnor_ovw)
+   n0: 3136000 0x109D4F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_xnor_ovw)
+   n0: 40000 0x109D93: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_xnor_ovw)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 288 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=52
+#-----------
+time=33516
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1520
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=33866
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1504
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=34216
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1504
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=34566
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1520
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=34916
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1520
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=35266
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1504
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=35616
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1520
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=35966
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1504
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=36316
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1520
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=36666
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1504
+heap_tree=detailed
+n3: 3248992 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3176000 0x10BF93: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_xnor_ovw)
+  n2: 3176000 0x10C71B: Matrix<float>::Matrix(std::vector<unsigned long, std::allocator<unsigned long> > const&, float, float const*) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_xnor_ovw)
+   n0: 3136000 0x109D4F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_xnor_ovw)
+   n0: 40000 0x109D93: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_xnor_ovw)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 288 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=62
+#-----------
+time=37016
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1520
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=37366
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1520
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=37716
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1520
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=38066
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1568
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=38416
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1520
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=38766
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1520
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=39116
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1504
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=39466
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1520
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=39816
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1520
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=40166
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1520
+heap_tree=detailed
+n3: 3248992 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3176000 0x10BF93: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_xnor_ovw)
+  n2: 3176000 0x10C71B: Matrix<float>::Matrix(std::vector<unsigned long, std::allocator<unsigned long> > const&, float, float const*) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_xnor_ovw)
+   n0: 3136000 0x109D4F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_xnor_ovw)
+   n0: 40000 0x109D93: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_xnor_ovw)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 288 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=72
+#-----------
+time=40516
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1504
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=40866
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1520
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=41216
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1504
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=41566
+mem_heap_B=3248992
+mem_heap_extra_B=128
+mem_stacks_B=1520
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=41754
+mem_heap_B=6397000
+mem_heap_extra_B=1664
+mem_stacks_B=1584
+heap_tree=peak
+n4: 6397000 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3176000 0x10BF93: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_xnor_ovw)
+  n2: 3176000 0x10C71B: Matrix<float>::Matrix(std::vector<unsigned long, std::allocator<unsigned long> > const&, float, float const*) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_xnor_ovw)
+   n0: 3136000 0x109D4F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_xnor_ovw)
+   n0: 40000 in 1 place, below massif's threshold (1.00%)
+ n1: 3136000 0x10B83F: Matrix<float>::Matrix(Matrix<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_xnor_ovw)
+  n0: 3136000 0x10AA8B: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_xnor_ovw)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 12296 in 26 places, all below massif's threshold (1.00%)
