@@ -20,8 +20,6 @@ from model_architectures import get_model
 dataset='binarynet'
 Train=True
 Evaluate=True
-Inspect=False
-Inspect_fromscratch=False
 batch_size=100
 epochs=1000
 
@@ -151,104 +149,6 @@ if Evaluate:
 		model.compile(loss='sparse_categorical_crossentropy',optimizer=opt,metrics=['accuracy'])
 		score=model.evaluate(X_test,y_test,verbose=0, batch_size=batch_size)
 		print "with %d residuals, test loss was %0.4f, test accuracy was %0.4f"%(resid_levels,score[0],score[1])
-
-if Inspect:
-	#X_train = X_train[0:100,:,:,:]
-	#y_train = y_train[0:100]
-	X_test = X_test[0:100,:,:,:]
-	y_test = y_test[0:100]
-
-	for resid_levels in range(1):
-		weights_path='models/'+dataset+'/'+str(resid_levels)+'_residuals.h5'
-		model=get_model(dataset,resid_levels,batch_size)
-		model.load_weights(weights_path)
-
-		lr=1.0
-		#opt = keras.optimizers.Adam()
-		opt = keras.optimizers.SGD(lr=lr,momentum=0.9)
-		model.compile(loss='sparse_categorical_crossentropy',optimizer=opt,metrics=['accuracy'])
-		#model.fit(X_train, y_train,batch_size=batch_size, verbose=2,epochs=epochs)
-		#grads = K.gradients(model.total_loss, model.layers[1].output)
-		sess = K.get_session()
-		#cross_entropy = tf.nn.softmax_cross_entropy_with_logits(logits=model.output, labels=tf.one_hot(y_test,10))
-		cross_entropy = K.sparse_categorical_crossentropy(y_test,model.output)
-		loss_operation = tf.reduce_mean(cross_entropy)
-
-		##  Weight gradients
-		#y_val_d_evaluated = sess.run(tf.gradients(loss_operation, model.layers[27].trainable_weights), feed_dict={model.input: X_test})
-		#print("shape:")
-		#print(np.shape(y_val_d_evaluated))
-		#print("max:")
-		#print(np.max(np.abs(y_val_d_evaluated)))
-		#print("mean:")
-		#print((np.sum(y_val_d_evaluated))/np.sum(np.shape(y_val_d_evaluated)))
-		#print("std:")
-		#print(np.std(y_val_d_evaluated, axis=(0,1)))
-		##print(np.sqrt((np.sum(np.array(y_val_d_evaluated)**2,axis=(0,1,2,3)))/np.sum(np.shape(y_val_d_evaluated)[:-1])))
-		
-		#  Activation gradients
-		y_val_d_evaluated = sess.run(tf.gradients(loss_operation, model.layers[14].output), feed_dict={model.input: X_test})
-		print("shape:")
-		print(np.shape(y_val_d_evaluated))
-		print("max:")
-		print(np.max(np.abs(y_val_d_evaluated)))
-		print("mean:")
-		print((np.sum(y_val_d_evaluated))/np.sum(np.shape(y_val_d_evaluated)))
-		print("std:")
-		print(np.std(y_val_d_evaluated, axis=(0,1,2,3)))
-
-		##  Activation
-		#y_val_d_evaluated = sess.run(model.layers[27].output, feed_dict={model.input: X_test})
-		#print("shape:")
-		#print(np.shape(y_val_d_evaluated))
-		#print("max:")
-		#print(np.max(np.abs(y_val_d_evaluated)))
-		#print("mean:")
-		#print((np.sum(y_val_d_evaluated))/np.sum(np.shape(y_val_d_evaluated)))
-		#print("std:")
-		##print(np.std(y_val_d_evaluated, axis=(0,1)))
-		#print(np.sqrt((np.sum(np.array(y_val_d_evaluated)**2,axis=(0)))/np.sum(np.shape(y_val_d_evaluated)[:-1])))
-
-		#get_intermediate_output = K.function([model.layers[0].input],
-	#		[grads[0]])
-#		layer_output = get_intermediate_output([X_test])[0]
-#		print(np.shape(np.array(layer_output)))
-	
-		#print(np.shape(np.array(layer_grads)))
-		#print(np.array(layer_grads))
-		#get_intermediate_output = K.function([model.layers[0].input],
-		#	[model.layers[3].output])
-		#layer_output = get_intermediate_output([X_test])[0]
-		#print(np.shape(np.array(layer_output)))
-
-		
-if Inspect_fromscratch:
-	X_test = X_test[0:200,:,:,:]
-	y_test = y_test[0:200]
-
-	for resid_levels in range(1):
-		model=get_model(dataset,resid_levels,batch_size)
-		opt = keras.optimizers.Adam()
-		model.compile(loss='sparse_categorical_crossentropy',optimizer=opt,metrics=['accuracy'])
-		#model.fit(X_train, y_train,batch_size=batch_size, verbose=2,epochs=epochs)
-		#grads = K.gradients(model.total_loss, model.layers[1].output)
-		sess = K.get_session()
-		#cross_entropy = tf.nn.softmax_cross_entropy_with_logits(logits=model.output, labels=tf.one_hot(y_test,10))
-		cross_entropy = K.sparse_categorical_crossentropy(y_test,model.output)
-		loss_operation = tf.reduce_mean(cross_entropy)
-		model.fit(X_test, y_test, batch_size=100,validation_data=(X_test, y_test), verbose=2,epochs=1,callbacks=[])
-
-		#  Weight gradients
-		y_val_d_evaluated = sess.run(tf.gradients(loss_operation, model.layers[14].trainable_weights), feed_dict={model.input: X_test})
-		print("shape:")
-		print(np.shape(y_val_d_evaluated))
-		print("max:")
-		print(np.max(np.abs(y_val_d_evaluated)))
-		print("mean:")
-		print((np.sum(y_val_d_evaluated))/np.sum(np.shape(y_val_d_evaluated)))
-		print("std:")
-		print(np.std(y_val_d_evaluated, axis=(0,1,2,3)))
-		#print(np.sqrt((np.sum(np.array(y_val_d_evaluated)**2,axis=(0,1,2,3)))/np.sum(np.shape(y_val_d_evaluated)[:-1])))
 
 
 

@@ -335,13 +335,6 @@ class binary_conv(Layer):
 			# Padding
 			dy_pad_number = tf.constant([[0, 0,], [2, 2,],[2, 2,], [0, 0]])
 			dy_padded = tf.pad(dy, dy_pad_number)
-			# PO2 dY
-			dy_padded_max = K.max(K.abs(dy_padded))
-			dy_padded_bias = -K.round(log2(dy_padded_max)) + 8 # With 4-bit exp, we apply a bias of 2^4/2=8 to adjust the representable range
-			# Note: In our experiments with CNV network, we find that, with 4-bit PO2, a bias of 6 instead of 8 gives better performance
-			dy_padded = dy_padded * (2**(dy_padded_bias))
-			dy_padded = LOG_quantize(dy_padded, 4.0) # 4-bit exp
-			dy_padded = dy_padded * (2**(-dy_padded_bias))
 
 			# Backprop
 			dx = K.conv2d(dy_padded, kernel=w_reversed, padding="valid",strides=self.strides )
@@ -357,14 +350,6 @@ class binary_conv(Layer):
 			elif self.padding == "valid":
 				x_trans = tf.transpose(x, [3,1,2,0])
 			dy_trans = tf.transpose(dy, [1,2,0,3])
-
-			# PO2 dY
-			dy_trans_max = K.max(K.abs(dy_trans))
-			dy_trans_bias = -K.round(log2(dy_trans_max)) + 8 # With 4-bit exp, we apply a bias of 2^4/2=8 to adjust the representable range
-			# Note: In our experiments with CNV network, we find that, with 4-bit PO2, a bias of 6 instead of 8 gives better performance
-			dy_trans = dy_trans * (2**(dy_trans_bias))
-			dy_trans = LOG_quantize(dy_trans, 4.0) # 4-bit exp
-			dy_trans = dy_trans * (2**(-dy_trans_bias))
 
 			# First layer's input activations are not binarised
 			if self.first_layer:
@@ -422,14 +407,6 @@ class binary_dense(Layer):
 	def xnor_wg_dense_op(self, x, w):
 		result=K.dot(x, w)
 		def custom_grad(dy):
-
-			# PO2 dY
-			dy_max = K.max(K.abs(dy))
-			dy_bias = -K.round(log2(dy_max)) + 8 # With 4-bit exp, we apply a bias of 2^4/2=8 to adjust the representable range
-			# Note: In our experiments with CNV network, we find that, with 4-bit PO2, a bias of 6 instead of 8 gives better performance
-			dy = dy * (2**(dy_bias))
-			dy = LOG_quantize(dy, 4.0) # 4-bit exp
-			dy = dy * (2**(-dy_bias))
 
 			# Backprop
 			dx = K.dot(dy, K.transpose(w))
