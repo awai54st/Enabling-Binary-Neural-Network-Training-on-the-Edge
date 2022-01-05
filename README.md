@@ -1,6 +1,6 @@
 # Enabling Binary Neural Network Training on the Edge
 
-In this repository we introduce a low-cost binary neural network training strategy exhibiting sizable memory footprint and energy reductions while inducing little to no accuracy loss vs Courbariaux & Bengio's standard binary neural network (BNN) trainnig approach.
+In this repository we introduce a low-cost binary neural network training strategy exhibiting sizable memory footprint and energy reductions while inducing little to no accuracy loss vs Courbariaux & Bengio's standard binary neural network (BNN) training approach, thereby increasing the viability of deep neural network training on the edge.
 
 These resource decreases are primarily enabled by keeping activations exclusively in binary format throughout both forward and backward propagation, while the standard BNN training method stores activations only in forward propagation, not backward propagation.
 Please checkout our [paper](https://arxiv.org/abs/2102.04270) for more details.
