@@ -108,13 +108,12 @@ Memory profilers were also included with our Raspberry Pi prototypes to show our
 
 ## Citation
 
-If you make use of this code, please acknowledge us by citing our [paper](https://arxiv.org/abs/2102.04270):
-
-    @article{BNN_ON_EDGE,
-        author    = {Wang, Erwei and Davis, James J. and Moro, Daniele and Zielinski, Piotr and Coelho, Claudionor and Chatterjee, Satrajit and Cheung, Peter Y. K. and Constantinides, George A.},
-        title     = {Enabling Binary Neural Network Training on the Edge},
-        journal   = {CoRR},
-        year      = {2021},
-        eprinttype = {arXiv},
-        eprint    = {2102.04270}
-    }
+If you make use of this code, please acknowledge us by citing our [paper](https://dl.acm.org/doi/abs/10.1145/3469116.3470015):
+    
+    @inproceedings{BNN_ON_EDGE,
+        author = {Wang, Erwei and Davis, James J. and Moro, Daniele and Zielinski, Piotr and Lim, Jia Jie and Coelho, Claudionor and Chatterjee, Satrajit and Cheung, Peter Y. K. and Constantinides, George A.},
+        title = {Enabling Binary Neural Network Training on the Edge},
+        year = {2021},
+        doi = {10.1145/3469116.3470015},
+        booktitle = {Proceedings of the 5th International Workshop on Embedded and Mobile Deep Learning}
+        }
