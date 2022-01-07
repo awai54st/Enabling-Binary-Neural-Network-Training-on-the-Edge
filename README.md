@@ -14,6 +14,98 @@ Memory profilers were also included with our Raspberry Pi prototypes to show our
 * __rpi_prototype/python_bnn__: Python (TF) implementation of the standard method targetting Raspberry Pi (with PyPI memory profiler).
 * __training_emulation_on_gpu__: Emulation of our method using TF on GPUs.
 
+## Results
+
+### Results Obtained from GPU Emulation
+
+<table>
+  <tr>
+    <td>Dataset</td>
+    <td>Model</td>
+    <td>Batch size</td>
+    <td>Top-1 accuracy (%)</td>
+    <td>Modelled memory footprint savings (x&#8595;)</td>
+  </tr>
+  <tr>
+    <td>MNIST</td>
+    <td>Multilayer Perceptron</td>
+    <td>100</td>
+    <td>96.90</td>
+    <td>2.78</td>
+  </tr>
+  <tr>
+    <td>CIFAR-10</td>
+    <td>CNV</td>
+    <td>100</td>
+    <td>83.08</td>
+    <td>4.17</td>
+  </tr>
+  <tr>
+    <td>SVHN</td>
+    <td>CNV</td>
+    <td>100</td>
+    <td>94.28</td>
+    <td>4.17</td>
+  </tr>
+  <tr>
+    <td>CIFAR-10</td>
+    <td>BinaryNet</td>
+    <td>100</td>
+    <td>89.90</td>
+    <td>3.71</td>
+  </tr>
+  <tr>
+    <td>SVHN</td>
+    <td>BinaryNet</td>
+    <td>100</td>
+    <td>95.93</td>
+    <td>3.71</td>
+  </tr>
+  <tr>
+    <td>ImageNet</td>
+    <td>ResNetE-18</td>
+    <td>4096</td>
+    <td>57.04</td>
+    <td>3.78</td>
+  </tr>
+  <tr>
+    <td>ImageNet</td>
+    <td>Bi-Real-18</td>
+    <td>4096</td>
+    <td>54.45</td>
+    <td>3.78</td>
+  </tr>
+</table>
+
+### Results Measured from Training BNNs on Raspberry Pi 3B+
+
+<table>
+  <tr>
+    <td>Dataset</td>
+    <td>Model</td>
+    <td>Batch size</td>
+    <td>Training time per batch (s)</td>
+    <td>Memory footprint (MiB)</td>
+    <td>Energy per batch (J)</td>
+  </tr>
+  <tr>
+    <td>MNIST</td>
+    <td>Multilayer Perceptron</td>
+    <td>200</td>
+    <td>0.98</td>
+    <td>5.00 (52x&#8595; vs. Keras)</td>
+    <td>1.42</td>
+  </tr>
+  <tr>
+    <td>CIFAR-10</td>
+    <td>BinaryNet</td>
+    <td>40</td>
+    <td>121.20</td>
+    <td>154.37 (Keras doesn't fit)</td>
+    <td>136.53</td>
+  </tr>
+</table>
+
 ## Citation
 
 If you make use of this code, please acknowledge us by citing our [paper](https://arxiv.org/abs/2102.04270):
