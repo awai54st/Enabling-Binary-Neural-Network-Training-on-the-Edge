@@ -1,0 +1,698 @@
+desc: --time-unit=ms --max-snapshots=100 --stacks=yes --massif-out-file=.//memory_profile_results//Ofast/massif.outtest_neon_simd_Ofast_batch_size_512_mix_INT8_FP32
+cmd: .//test_exe//test_neon_simd_Ofast mix_8_32 512
+time_unit: ms
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=251
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5808
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=609
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5968
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=4229
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5488
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=4739
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5552
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=5100
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=752
+heap_tree=detailed
+n3: 2432000 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 2097152 0x10B5CB: std::vector<float, std::allocator<float> >::vector(unsigned long, std::allocator<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 1048576 0x109017: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 1048576 0x109027: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+ n1: 262144 0x10B647: std::vector<signed char, std::allocator<signed char> >::vector(unsigned long, std::allocator<signed char> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 262144 0x109003: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+#-----------
+snapshot=6
+#-----------
+time=5324
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=5612
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=5900
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=6188
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=6530
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=688
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=6980
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=7430
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=7880
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=8330
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=8780
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=9230
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=9680
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=10130
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=10580
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=11030
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=11480
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=11930
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=12380
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=12830
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=13280
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=13730
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=14180
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=14630
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=15080
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=15530
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=15980
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=16430
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=16880
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=17330
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=17780
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=18230
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=18680
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=19130
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=19580
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=20030
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=20480
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=20930
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=21380
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=688
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=21830
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=22280
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=688
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=22730
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=23180
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=23630
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=24080
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=24304
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=688
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=24528
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=24752
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=24976
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=640
+heap_tree=detailed
+n3: 2432000 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 2097152 0x10B5CB: std::vector<float, std::allocator<float> >::vector(unsigned long, std::allocator<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 1048576 0x109017: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 1048576 0x109027: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+ n1: 262144 0x10B647: std::vector<signed char, std::allocator<signed char> >::vector(unsigned long, std::allocator<signed char> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 262144 0x109003: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+#-----------
+snapshot=54
+#-----------
+time=25200
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=688
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=25424
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=25648
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=688
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=25872
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=26096
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=26320
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=26544
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=26768
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=26992
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=27216
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=640
+heap_tree=detailed
+n3: 2432000 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 2097152 0x10B5CB: std::vector<float, std::allocator<float> >::vector(unsigned long, std::allocator<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 1048576 0x109017: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 1048576 0x109027: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+ n1: 262144 0x10B647: std::vector<signed char, std::allocator<signed char> >::vector(unsigned long, std::allocator<signed char> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 262144 0x109003: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+#-----------
+snapshot=64
+#-----------
+time=27440
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=27664
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=27888
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=28112
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=28336
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=28560
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=688
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=28784
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=29008
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=29232
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=688
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=31715
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=624
+heap_tree=detailed
+n3: 2432000 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 2097152 0x10B5CB: std::vector<float, std::allocator<float> >::vector(unsigned long, std::allocator<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 1048576 0x109017: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 1048576 0x109027: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+ n1: 262144 0x10B647: std::vector<signed char, std::allocator<signed char> >::vector(unsigned long, std::allocator<signed char> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 262144 0x109003: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+#-----------
+snapshot=74
+#-----------
+time=31763
+mem_heap_B=3481600
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=detailed
+n4: 3481600 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n3: 3145728 0x10B5CB: std::vector<float, std::allocator<float> >::vector(unsigned long, std::allocator<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 1048576 0x109017: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 1048576 0x109027: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 1048576 0x1090EB: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+ n1: 262144 0x10B647: std::vector<signed char, std::allocator<signed char> >::vector(unsigned long, std::allocator<signed char> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 262144 0x109003: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 1024 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=75
+#-----------
+time=31797
+mem_heap_B=4530176
+mem_heap_extra_B=56
+mem_stacks_B=752
+heap_tree=peak
+n4: 4530176 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n4: 4194304 0x10B5CB: std::vector<float, std::allocator<float> >::vector(unsigned long, std::allocator<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 1048576 0x109017: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 1048576 0x109027: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 1048576 0x1090EB: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 1048576 0x109467: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+ n1: 262144 0x10B647: std::vector<signed char, std::allocator<signed char> >::vector(unsigned long, std::allocator<signed char> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+  n0: 262144 0x109003: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_neon_simd_Ofast)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 1024 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=76
+#-----------
+time=57934
+mem_heap_B=4530176
+mem_heap_extra_B=56
+mem_stacks_B=672
+heap_tree=empty
+#-----------
+snapshot=77
+#-----------
+time=58161
+mem_heap_B=73728
+mem_heap_extra_B=16
+mem_stacks_B=608
+heap_tree=empty

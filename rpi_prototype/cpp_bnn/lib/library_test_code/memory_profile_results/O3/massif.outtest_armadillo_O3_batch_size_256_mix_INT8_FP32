@@ -1,0 +1,612 @@
+desc: --time-unit=ms --max-snapshots=100 --stacks=yes --massif-out-file=.//memory_profile_results//O3/massif.outtest_armadillo_O3_batch_size_256_mix_INT8_FP32
+cmd: .//test_exe//test_armadillo_O3 mix_8_32 256
+time_unit: ms
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=146
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=7984
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=274
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5840
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=609
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5456
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=624
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=6000
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=4203
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5520
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=4211
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5392
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=4514
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5584
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=4516
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5376
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=5035
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5616
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=5077
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5440
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=5576
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5712
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=5580
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5904
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=6004
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5744
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=6118
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5776
+heap_tree=detailed
+n0: 0 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+#-----------
+snapshot=15
+#-----------
+time=6206
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=2416
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=6320
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=2944
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=6520
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=2944
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=6720
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=2416
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=6920
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=2688
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=7052
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=2944
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=7239
+mem_heap_B=38300
+mem_heap_extra_B=212
+mem_stacks_B=1568
+heap_tree=detailed
+n4: 38300 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 32816 0x4B38347: __alloc_dir (opendir.c:118)
+  n1: 32816 0x4B3842F: opendir_tail (opendir.c:69)
+   n1: 32816 0x4B69C2B: get_nprocs_conf (getsysstats.c:242)
+    n1: 32816 0x4B3F157: posix_sysconf (sysconf.c:628)
+     n1: 32816 0x4B3F157: linux_sysconf (sysconf.c:106)
+      n1: 32816 0x4B3F157: sysconf (sysconf.c:49)
+       n1: 32816 0x4DDFFEB: get_num_procs (in /usr/lib/aarch64-linux-gnu/openblas-pthread/libblas.so.3)
+        n1: 32816 0x4DE0087: blas_get_cpu_number (in /usr/lib/aarch64-linux-gnu/openblas-pthread/libblas.so.3)
+         n1: 32816 0x4C6D7FF: gotoblas_init (in /usr/lib/aarch64-linux-gnu/openblas-pthread/libblas.so.3)
+          n1: 32816 0x400E83B: call_init.part.0 (dl-init.c:72)
+           n1: 32816 0x400E93B: call_init (dl-init.c:30)
+            n1: 32816 0x400E93B: _dl_init (dl-init.c:119)
+             n0: 32816 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n2: 4088 0x648C2FF: ??? (in /usr/lib/aarch64-linux-gnu/libgfortran.so.5.0.0)
+  n5: 3800 0x6589D9B: ??? (in /usr/lib/aarch64-linux-gnu/libgfortran.so.5.0.0)
+   n1: 760 0x658A303: ??? (in /usr/lib/aarch64-linux-gnu/libgfortran.so.5.0.0)
+    n1: 760 0x648B7FF: ??? (in /usr/lib/aarch64-linux-gnu/libgfortran.so.5.0.0)
+     n1: 760 0x400E83B: call_init.part.0 (dl-init.c:72)
+      n1: 760 0x400E93B: call_init (dl-init.c:30)
+       n1: 760 0x400E93B: _dl_init (dl-init.c:119)
+        n0: 760 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+   n1: 760 0x658A31B: ??? (in /usr/lib/aarch64-linux-gnu/libgfortran.so.5.0.0)
+    n1: 760 0x648B7FF: ??? (in /usr/lib/aarch64-linux-gnu/libgfortran.so.5.0.0)
+     n1: 760 0x400E83B: call_init.part.0 (dl-init.c:72)
+      n1: 760 0x400E93B: call_init (dl-init.c:30)
+       n1: 760 0x400E93B: _dl_init (dl-init.c:119)
+        n0: 760 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+   n1: 760 0x658A34B: ??? (in /usr/lib/aarch64-linux-gnu/libgfortran.so.5.0.0)
+    n1: 760 0x648B7FF: ??? (in /usr/lib/aarch64-linux-gnu/libgfortran.so.5.0.0)
+     n1: 760 0x400E83B: call_init.part.0 (dl-init.c:72)
+      n1: 760 0x400E93B: call_init (dl-init.c:30)
+       n1: 760 0x400E93B: _dl_init (dl-init.c:119)
+        n0: 760 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+   n1: 760 0x658A3C7: ??? (in /usr/lib/aarch64-linux-gnu/libgfortran.so.5.0.0)
+    n1: 760 0x648B7FF: ??? (in /usr/lib/aarch64-linux-gnu/libgfortran.so.5.0.0)
+     n1: 760 0x400E83B: call_init.part.0 (dl-init.c:72)
+      n1: 760 0x400E93B: call_init (dl-init.c:30)
+       n1: 760 0x400E93B: _dl_init (dl-init.c:119)
+        n0: 760 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+   n1: 760 0x658A447: ??? (in /usr/lib/aarch64-linux-gnu/libgfortran.so.5.0.0)
+    n1: 760 0x648B7FF: ??? (in /usr/lib/aarch64-linux-gnu/libgfortran.so.5.0.0)
+     n1: 760 0x400E83B: call_init.part.0 (dl-init.c:72)
+      n1: 760 0x400E93B: call_init (dl-init.c:30)
+       n1: 760 0x400E93B: _dl_init (dl-init.c:119)
+        n0: 760 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+  n0: 288 in 1 place, below massif's threshold (1.00%)
+ n2: 1376 0x648C263: ??? (in /usr/lib/aarch64-linux-gnu/libgfortran.so.5.0.0)
+  n3: 1280 0x659299B: ??? (in /usr/lib/aarch64-linux-gnu/libgfortran.so.5.0.0)
+   n1: 512 0x658A42B: ??? (in /usr/lib/aarch64-linux-gnu/libgfortran.so.5.0.0)
+    n1: 512 0x648B7FF: ??? (in /usr/lib/aarch64-linux-gnu/libgfortran.so.5.0.0)
+     n1: 512 0x400E83B: call_init.part.0 (dl-init.c:72)
+      n1: 512 0x400E93B: call_init (dl-init.c:30)
+       n1: 512 0x400E93B: _dl_init (dl-init.c:119)
+        n0: 512 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+   n1: 512 0x658A4B3: ??? (in /usr/lib/aarch64-linux-gnu/libgfortran.so.5.0.0)
+    n1: 512 0x648B7FF: ??? (in /usr/lib/aarch64-linux-gnu/libgfortran.so.5.0.0)
+     n1: 512 0x400E83B: call_init.part.0 (dl-init.c:72)
+      n1: 512 0x400E93B: call_init (dl-init.c:30)
+       n1: 512 0x400E93B: _dl_init (dl-init.c:119)
+        n0: 512 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+   n0: 256 in 1 place, below massif's threshold (1.00%)
+  n0: 96 in 1 place, below massif's threshold (1.00%)
+ n0: 20 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=22
+#-----------
+time=7397
+mem_heap_B=79244
+mem_heap_extra_B=236
+mem_stacks_B=2848
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=7515
+mem_heap_B=79244
+mem_heap_extra_B=236
+mem_stacks_B=1712
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=7608
+mem_heap_B=672140
+mem_heap_extra_B=476
+mem_stacks_B=15728
+heap_tree=peak
+n4: 672140 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 524288 0x10EE4B: arma::Mat<float>::init_cold() (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_armadillo_O3)
+  n0: 262144 0x10A31B: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_armadillo_O3)
+  n0: 262144 0x10A33B: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_armadillo_O3)
+ n1: 72704 0x4928293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n1: 65536 0x10EF4B: arma::Mat<char>::init_cold() (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_armadillo_O3)
+  n0: 65536 0x10A303: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_armadillo_O3)
+ n0: 9612 in 9 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=25
+#-----------
+time=7719
+mem_heap_B=672140
+mem_heap_extra_B=476
+mem_stacks_B=14944
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=7919
+mem_heap_B=672140
+mem_heap_extra_B=476
+mem_stacks_B=14944
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=8119
+mem_heap_B=672140
+mem_heap_extra_B=476
+mem_stacks_B=14944
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=8319
+mem_heap_B=672140
+mem_heap_extra_B=476
+mem_stacks_B=14944
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=8519
+mem_heap_B=672140
+mem_heap_extra_B=476
+mem_stacks_B=14944
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=8719
+mem_heap_B=672140
+mem_heap_extra_B=476
+mem_stacks_B=14944
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=8919
+mem_heap_B=672140
+mem_heap_extra_B=476
+mem_stacks_B=14944
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=9119
+mem_heap_B=672140
+mem_heap_extra_B=476
+mem_stacks_B=14944
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=9319
+mem_heap_B=672140
+mem_heap_extra_B=476
+mem_stacks_B=14944
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=9519
+mem_heap_B=672140
+mem_heap_extra_B=476
+mem_stacks_B=14944
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=9719
+mem_heap_B=672140
+mem_heap_extra_B=476
+mem_stacks_B=14944
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=9919
+mem_heap_B=672140
+mem_heap_extra_B=476
+mem_stacks_B=14944
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=10019
+mem_heap_B=672140
+mem_heap_extra_B=476
+mem_stacks_B=14944
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=10119
+mem_heap_B=672140
+mem_heap_extra_B=476
+mem_stacks_B=14944
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=10219
+mem_heap_B=672140
+mem_heap_extra_B=476
+mem_stacks_B=14944
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=10319
+mem_heap_B=672140
+mem_heap_extra_B=476
+mem_stacks_B=14944
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=10419
+mem_heap_B=672140
+mem_heap_extra_B=476
+mem_stacks_B=14944
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=10519
+mem_heap_B=672140
+mem_heap_extra_B=476
+mem_stacks_B=14912
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=10619
+mem_heap_B=672140
+mem_heap_extra_B=476
+mem_stacks_B=14944
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=10719
+mem_heap_B=672140
+mem_heap_extra_B=476
+mem_stacks_B=14944
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=10819
+mem_heap_B=672140
+mem_heap_extra_B=476
+mem_stacks_B=14912
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=10919
+mem_heap_B=672140
+mem_heap_extra_B=476
+mem_stacks_B=14944
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=11019
+mem_heap_B=672140
+mem_heap_extra_B=476
+mem_stacks_B=14944
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=11131
+mem_heap_B=80268
+mem_heap_extra_B=244
+mem_stacks_B=1568
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=11246
+mem_heap_B=2080
+mem_heap_extra_B=32
+mem_stacks_B=1408
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=11249
+mem_heap_B=2080
+mem_heap_extra_B=32
+mem_stacks_B=1440
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=11251
+mem_heap_B=2080
+mem_heap_extra_B=32
+mem_stacks_B=1520
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=11253
+mem_heap_B=1056
+mem_heap_extra_B=24
+mem_stacks_B=1408
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=11255
+mem_heap_B=1056
+mem_heap_extra_B=24
+mem_stacks_B=1440
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=11257
+mem_heap_B=1056
+mem_heap_extra_B=24
+mem_stacks_B=1408
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=11259
+mem_heap_B=1056
+mem_heap_extra_B=24
+mem_stacks_B=1552
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=11261
+mem_heap_B=1056
+mem_heap_extra_B=24
+mem_stacks_B=1520
+heap_tree=detailed
+n2: 1056 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1056 0x4010B3F: allocate_dtv (dl-tls.c:286)
+  n1: 1056 0x40113CF: _dl_allocate_tls (dl-tls.c:532)
+   n1: 1056 0x6448F73: allocate_stack (allocatestack.c:622)
+    n1: 1056 0x6448F73: pthread_create@@GLIBC_2.17 (pthread_create.c:660)
+     n1: 1056 0x4DE0BA7: blas_thread_init (in /usr/lib/aarch64-linux-gnu/openblas-pthread/libblas.so.3)
+      n1: 1056 0x4C6D807: gotoblas_init (in /usr/lib/aarch64-linux-gnu/openblas-pthread/libblas.so.3)
+       n1: 1056 0x400E83B: call_init.part.0 (dl-init.c:72)
+        n1: 1056 0x400E93B: call_init (dl-init.c:30)
+         n1: 1056 0x400E93B: _dl_init (dl-init.c:119)
+          n0: 1056 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 0 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=57
+#-----------
+time=11263
+mem_heap_B=1056
+mem_heap_extra_B=24
+mem_stacks_B=1408
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=11265
+mem_heap_B=1056
+mem_heap_extra_B=24
+mem_stacks_B=1488
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=11267
+mem_heap_B=1056
+mem_heap_extra_B=24
+mem_stacks_B=1488
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=11269
+mem_heap_B=1056
+mem_heap_extra_B=24
+mem_stacks_B=1504
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=11271
+mem_heap_B=1056
+mem_heap_extra_B=24
+mem_stacks_B=1552
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=11273
+mem_heap_B=704
+mem_heap_extra_B=16
+mem_stacks_B=1632
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=11275
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=2000
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=11277
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=1408
+heap_tree=empty

@@ -1,0 +1,820 @@
+desc: --time-unit=ms --max-snapshots=100 --stacks=yes --massif-out-file=.//memory_profile_results//O2/massif.outtest_eigen3_O2_batch_size_512_mix_INT8_FP32
+cmd: .//test_exe//test_eigen3_O2 mix_8_32 512
+time_unit: ms
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=60
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=1536
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=129
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=2096
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=203
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=8704
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=252
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5808
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=596
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5424
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=615
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5968
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=4247
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5488
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=4255
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5888
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=4758
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5552
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=4818
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=3008
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=4915
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=3008
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=4971
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=2688
+heap_tree=detailed
+n0: 0 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+#-----------
+snapshot=13
+#-----------
+time=5045
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=192
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=5094
+mem_heap_B=72704
+mem_heap_extra_B=8
+mem_stacks_B=1808
+heap_tree=detailed
+n1: 72704 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+#-----------
+snapshot=15
+#-----------
+time=5187
+mem_heap_B=72704
+mem_heap_extra_B=8
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=5284
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=896
+heap_tree=peak
+n3: 2432000 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 2097152 0x10C2A7: Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 1, -1, -1> >::PlainObjectBase<Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<float>, Eigen::Matrix<float, -1, -1, 1, -1, -1> > >(Eigen::DenseBase<Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<float>, Eigen::Matrix<float, -1, -1, 1, -1, -1> > > const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+  n0: 1048576 0x10951F: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+  n0: 1048576 0x10953B: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+ n1: 262144 0x10BBAB: Eigen::PlainObjectBase<Eigen::Matrix<signed char, -1, -1, 1, -1, -1> >::PlainObjectBase<Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<signed char>, Eigen::Matrix<signed char, -1, -1, 1, -1, -1> > >(Eigen::DenseBase<Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<signed char>, Eigen::Matrix<signed char, -1, -1, 1, -1, -1> > > const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+  n0: 262144 0x109503: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+#-----------
+snapshot=17
+#-----------
+time=5361
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=5415
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=5490
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=5576
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=5673
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=5749
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=5847
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=5933
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=detailed
+n4: 2436096 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 2097152 0x10C2A7: Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 1, -1, -1> >::PlainObjectBase<Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<float>, Eigen::Matrix<float, -1, -1, 1, -1, -1> > >(Eigen::DenseBase<Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<float>, Eigen::Matrix<float, -1, -1, 1, -1, -1> > > const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+  n0: 1048576 0x10951F: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+  n0: 1048576 0x10953B: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+ n1: 262144 0x10BBAB: Eigen::PlainObjectBase<Eigen::Matrix<signed char, -1, -1, 1, -1, -1> >::PlainObjectBase<Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<signed char>, Eigen::Matrix<signed char, -1, -1, 1, -1, -1> > >(Eigen::DenseBase<Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<signed char>, Eigen::Matrix<signed char, -1, -1, 1, -1, -1> > > const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+  n0: 262144 0x109503: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 4096 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=25
+#-----------
+time=6030
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=6127
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=6213
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=6257
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=detailed
+n4: 2436096 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 2097152 0x10C2A7: Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 1, -1, -1> >::PlainObjectBase<Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<float>, Eigen::Matrix<float, -1, -1, 1, -1, -1> > >(Eigen::DenseBase<Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<float>, Eigen::Matrix<float, -1, -1, 1, -1, -1> > > const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+  n0: 1048576 0x10951F: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+  n0: 1048576 0x10953B: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+ n1: 262144 0x10BBAB: Eigen::PlainObjectBase<Eigen::Matrix<signed char, -1, -1, 1, -1, -1> >::PlainObjectBase<Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<signed char>, Eigen::Matrix<signed char, -1, -1, 1, -1, -1> > >(Eigen::DenseBase<Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<signed char>, Eigen::Matrix<signed char, -1, -1, 1, -1, -1> > > const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+  n0: 262144 0x109503: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 4096 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=29
+#-----------
+time=6333
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=6408
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=6462
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=6548
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=6634
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=6742
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=6850
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=6904
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=detailed
+n4: 2436096 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 2097152 0x10C2A7: Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 1, -1, -1> >::PlainObjectBase<Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<float>, Eigen::Matrix<float, -1, -1, 1, -1, -1> > >(Eigen::DenseBase<Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<float>, Eigen::Matrix<float, -1, -1, 1, -1, -1> > > const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+  n0: 1048576 0x10951F: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+  n0: 1048576 0x10953B: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+ n1: 262144 0x10BBAB: Eigen::PlainObjectBase<Eigen::Matrix<signed char, -1, -1, 1, -1, -1> >::PlainObjectBase<Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<signed char>, Eigen::Matrix<signed char, -1, -1, 1, -1, -1> > >(Eigen::DenseBase<Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<signed char>, Eigen::Matrix<signed char, -1, -1, 1, -1, -1> > > const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+  n0: 262144 0x109503: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 4096 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=37
+#-----------
+time=6990
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=7034
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=7109
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=7206
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=7271
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=7368
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=7422
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=7476
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=7552
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=detailed
+n4: 2436096 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 2097152 0x10C2A7: Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 1, -1, -1> >::PlainObjectBase<Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<float>, Eigen::Matrix<float, -1, -1, 1, -1, -1> > >(Eigen::DenseBase<Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<float>, Eigen::Matrix<float, -1, -1, 1, -1, -1> > > const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+  n0: 1048576 0x10951F: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+  n0: 1048576 0x10953B: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+ n1: 262144 0x10BBAB: Eigen::PlainObjectBase<Eigen::Matrix<signed char, -1, -1, 1, -1, -1> >::PlainObjectBase<Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<signed char>, Eigen::Matrix<signed char, -1, -1, 1, -1, -1> > >(Eigen::DenseBase<Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<signed char>, Eigen::Matrix<signed char, -1, -1, 1, -1, -1> > > const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+  n0: 262144 0x109503: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 4096 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=46
+#-----------
+time=7606
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=7681
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=7767
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=detailed
+n4: 2436096 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 2097152 0x10C2A7: Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 1, -1, -1> >::PlainObjectBase<Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<float>, Eigen::Matrix<float, -1, -1, 1, -1, -1> > >(Eigen::DenseBase<Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<float>, Eigen::Matrix<float, -1, -1, 1, -1, -1> > > const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+  n0: 1048576 0x10951F: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+  n0: 1048576 0x10953B: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+ n1: 262144 0x10BBAB: Eigen::PlainObjectBase<Eigen::Matrix<signed char, -1, -1, 1, -1, -1> >::PlainObjectBase<Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<signed char>, Eigen::Matrix<signed char, -1, -1, 1, -1, -1> > >(Eigen::DenseBase<Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<signed char>, Eigen::Matrix<signed char, -1, -1, 1, -1, -1> > > const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+  n0: 262144 0x109503: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 4096 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=49
+#-----------
+time=7854
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=7865
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=7876
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=detailed
+n4: 2436096 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 2097152 0x10C2A7: Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 1, -1, -1> >::PlainObjectBase<Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<float>, Eigen::Matrix<float, -1, -1, 1, -1, -1> > >(Eigen::DenseBase<Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<float>, Eigen::Matrix<float, -1, -1, 1, -1, -1> > > const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+  n0: 1048576 0x10951F: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+  n0: 1048576 0x10953B: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+ n1: 262144 0x10BBAB: Eigen::PlainObjectBase<Eigen::Matrix<signed char, -1, -1, 1, -1, -1> >::PlainObjectBase<Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<signed char>, Eigen::Matrix<signed char, -1, -1, 1, -1, -1> > >(Eigen::DenseBase<Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<signed char>, Eigen::Matrix<signed char, -1, -1, 1, -1, -1> > > const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+  n0: 262144 0x109503: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 4096 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=52
+#-----------
+time=7887
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=7897
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=7908
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=7919
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=7929
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=7940
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=7951
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=7961
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=7972
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=7983
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=detailed
+n4: 2436096 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 2097152 0x10C2A7: Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 1, -1, -1> >::PlainObjectBase<Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<float>, Eigen::Matrix<float, -1, -1, 1, -1, -1> > >(Eigen::DenseBase<Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<float>, Eigen::Matrix<float, -1, -1, 1, -1, -1> > > const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+  n0: 1048576 0x10951F: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+  n0: 1048576 0x10953B: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+ n1: 262144 0x10BBAB: Eigen::PlainObjectBase<Eigen::Matrix<signed char, -1, -1, 1, -1, -1> >::PlainObjectBase<Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<signed char>, Eigen::Matrix<signed char, -1, -1, 1, -1, -1> > >(Eigen::DenseBase<Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<signed char>, Eigen::Matrix<signed char, -1, -1, 1, -1, -1> > > const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+  n0: 262144 0x109503: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 4096 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=62
+#-----------
+time=7994
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=8005
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=8015
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=8026
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=8037
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=8048
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=8058
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=8069
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=8080
+mem_heap_B=2436096
+mem_heap_extra_B=48
+mem_stacks_B=752
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=8088
+mem_heap_B=2432000
+mem_heap_extra_B=32
+mem_stacks_B=2688
+heap_tree=detailed
+n4: 2432000 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 2097152 0x10C2A7: Eigen::PlainObjectBase<Eigen::Matrix<float, -1, -1, 1, -1, -1> >::PlainObjectBase<Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<float>, Eigen::Matrix<float, -1, -1, 1, -1, -1> > >(Eigen::DenseBase<Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<float>, Eigen::Matrix<float, -1, -1, 1, -1, -1> > > const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+  n0: 1048576 0x10951F: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+  n0: 1048576 0x10953B: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+ n1: 262144 0x10BBAB: Eigen::PlainObjectBase<Eigen::Matrix<signed char, -1, -1, 1, -1, -1> >::PlainObjectBase<Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<signed char>, Eigen::Matrix<signed char, -1, -1, 1, -1, -1> > >(Eigen::DenseBase<Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<signed char>, Eigen::Matrix<signed char, -1, -1, 1, -1, -1> > > const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+  n0: 262144 0x109503: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 0 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=72
+#-----------
+time=8096
+mem_heap_B=2433024
+mem_heap_extra_B=40
+mem_stacks_B=2784
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=8112
+mem_heap_B=2433024
+mem_heap_extra_B=40
+mem_stacks_B=2688
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=8120
+mem_heap_B=2433024
+mem_heap_extra_B=40
+mem_stacks_B=2720
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=8128
+mem_heap_B=73728
+mem_heap_extra_B=16
+mem_stacks_B=832
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=8136
+mem_heap_B=73728
+mem_heap_extra_B=16
+mem_stacks_B=544
+heap_tree=empty
+#-----------
+snapshot=77
+#-----------
+time=8144
+mem_heap_B=73728
+mem_heap_extra_B=16
+mem_stacks_B=848
+heap_tree=empty
+#-----------
+snapshot=78
+#-----------
+time=8152
+mem_heap_B=73728
+mem_heap_extra_B=16
+mem_stacks_B=688
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=8160
+mem_heap_B=73728
+mem_heap_extra_B=16
+mem_stacks_B=1024
+heap_tree=empty
+#-----------
+snapshot=80
+#-----------
+time=8168
+mem_heap_B=73728
+mem_heap_extra_B=16
+mem_stacks_B=608
+heap_tree=empty
+#-----------
+snapshot=81
+#-----------
+time=8176
+mem_heap_B=73728
+mem_heap_extra_B=16
+mem_stacks_B=640
+heap_tree=detailed
+n3: 73728 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n1: 1024 0x4ADD5C7: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x4AEC4DB: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4AEB807: _IO_file_overflow@@GLIBC_2.17 (fileops.c:745)
+    n1: 1024 0x4AEA937: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 1024 0x4AEA937: _IO_file_xsputn@@GLIBC_2.17 (fileops.c:1197)
+      n1: 1024 0x4AD3FC7: __vfprintf_internal (vfprintf-internal.c:1373)
+       n1: 1024 0x4B58AF7: __printf_chk (printf_chk.c:33)
+        n0: 1024 0x1098EF: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_eigen3_O2)
+ n0: 0 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=82
+#-----------
+time=8184
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=592
+heap_tree=empty
+#-----------
+snapshot=83
+#-----------
+time=8192
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=672
+heap_tree=empty
+#-----------
+snapshot=84
+#-----------
+time=8200
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=704
+heap_tree=empty
+#-----------
+snapshot=85
+#-----------
+time=8208
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=720
+heap_tree=empty

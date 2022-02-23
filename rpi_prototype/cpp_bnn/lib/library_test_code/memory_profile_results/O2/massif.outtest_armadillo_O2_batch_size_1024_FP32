@@ -1,0 +1,494 @@
+desc: --time-unit=ms --max-snapshots=100 --stacks=yes --massif-out-file=.//memory_profile_results//O2/massif.outtest_armadillo_O2_batch_size_1024_FP32
+cmd: .//test_exe//test_armadillo_O2 float32 1024
+time_unit: ms
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=266
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5216
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=609
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5280
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=4060
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5520
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=4367
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5344
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=4876
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5616
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=4917
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5424
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=5414
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5712
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=5839
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5744
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=6183
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=2944
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=6583
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=2688
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=6784
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=2416
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=7123
+mem_heap_B=6188
+mem_heap_extra_B=220
+mem_stacks_B=1280
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=7445
+mem_heap_B=12662156
+mem_heap_extra_B=308
+mem_stacks_B=539728
+heap_tree=peak
+n3: 12662156 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 8388608 0x10E45B: arma::Mat<float>::init_cold() (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_armadillo_O2)
+  n0: 4194304 0x10A137: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_armadillo_O2)
+  n0: 4194304 0x10A153: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_armadillo_O2)
+ n1: 4194304 0x10D69F: void arma::glue_times::apply<float, false, false, false, arma::Mat<float>, arma::Mat<float> >(arma::Mat<float>&, arma::Mat<float> const&, arma::Mat<float> const&, float) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_armadillo_O2)
+  n0: 4194304 0x10AA2B: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_armadillo_O2)
+ n0: 79244 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=14
+#-----------
+time=7657
+mem_heap_B=12662156
+mem_heap_extra_B=308
+mem_stacks_B=540160
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=7951
+mem_heap_B=12662156
+mem_heap_extra_B=308
+mem_stacks_B=541632
+heap_tree=detailed
+n3: 12662156 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 8388608 0x10E45B: arma::Mat<float>::init_cold() (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_armadillo_O2)
+  n0: 4194304 0x10A137: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_armadillo_O2)
+  n0: 4194304 0x10A153: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_armadillo_O2)
+ n1: 4194304 0x10D69F: void arma::glue_times::apply<float, false, false, false, arma::Mat<float>, arma::Mat<float> >(arma::Mat<float>&, arma::Mat<float> const&, arma::Mat<float> const&, float) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_armadillo_O2)
+  n0: 4194304 0x10AA2B: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_armadillo_O2)
+ n0: 79244 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=16
+#-----------
+time=8155
+mem_heap_B=12662156
+mem_heap_extra_B=308
+mem_stacks_B=541632
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=8481
+mem_heap_B=12662156
+mem_heap_extra_B=308
+mem_stacks_B=541456
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=8706
+mem_heap_B=12662156
+mem_heap_extra_B=308
+mem_stacks_B=541456
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=8946
+mem_heap_B=12662156
+mem_heap_extra_B=308
+mem_stacks_B=541632
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=9241
+mem_heap_B=12662156
+mem_heap_extra_B=308
+mem_stacks_B=541808
+heap_tree=detailed
+n3: 12662156 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 8388608 0x10E45B: arma::Mat<float>::init_cold() (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_armadillo_O2)
+  n0: 4194304 0x10A137: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_armadillo_O2)
+  n0: 4194304 0x10A153: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_armadillo_O2)
+ n1: 4194304 0x10D69F: void arma::glue_times::apply<float, false, false, false, arma::Mat<float>, arma::Mat<float> >(arma::Mat<float>&, arma::Mat<float> const&, arma::Mat<float> const&, float) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_armadillo_O2)
+  n0: 4194304 0x10AA2B: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_armadillo_O2)
+ n0: 79244 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=21
+#-----------
+time=9470
+mem_heap_B=12662156
+mem_heap_extra_B=308
+mem_stacks_B=541808
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=9858
+mem_heap_B=12662156
+mem_heap_extra_B=308
+mem_stacks_B=541632
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=10130
+mem_heap_B=12662156
+mem_heap_extra_B=308
+mem_stacks_B=541456
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=10355
+mem_heap_B=12662156
+mem_heap_extra_B=308
+mem_stacks_B=541456
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=10638
+mem_heap_B=12662156
+mem_heap_extra_B=308
+mem_stacks_B=541456
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=10922
+mem_heap_B=12662156
+mem_heap_extra_B=308
+mem_stacks_B=541456
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=11360
+mem_heap_B=12662156
+mem_heap_extra_B=308
+mem_stacks_B=541456
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=11772
+mem_heap_B=12662156
+mem_heap_extra_B=308
+mem_stacks_B=541808
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=12031
+mem_heap_B=12662156
+mem_heap_extra_B=308
+mem_stacks_B=541456
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=12300
+mem_heap_B=12662156
+mem_heap_extra_B=308
+mem_stacks_B=541456
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=12611
+mem_heap_B=12662156
+mem_heap_extra_B=308
+mem_stacks_B=541632
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=12974
+mem_heap_B=12662156
+mem_heap_extra_B=308
+mem_stacks_B=541808
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=13350
+mem_heap_B=12662156
+mem_heap_extra_B=308
+mem_stacks_B=541808
+heap_tree=detailed
+n3: 12662156 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 8388608 0x10E45B: arma::Mat<float>::init_cold() (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_armadillo_O2)
+  n0: 4194304 0x10A137: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_armadillo_O2)
+  n0: 4194304 0x10A153: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_armadillo_O2)
+ n1: 4194304 0x10D69F: void arma::glue_times::apply<float, false, false, false, arma::Mat<float>, arma::Mat<float> >(arma::Mat<float>&, arma::Mat<float> const&, arma::Mat<float> const&, float) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_armadillo_O2)
+  n0: 4194304 0x10AA2B: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_armadillo_O2)
+ n0: 79244 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=34
+#-----------
+time=13783
+mem_heap_B=12662156
+mem_heap_extra_B=308
+mem_stacks_B=541808
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=14000
+mem_heap_B=12662156
+mem_heap_extra_B=308
+mem_stacks_B=541808
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=14285
+mem_heap_B=12662156
+mem_heap_extra_B=308
+mem_stacks_B=541632
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=14624
+mem_heap_B=12662156
+mem_heap_extra_B=308
+mem_stacks_B=541456
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=14833
+mem_heap_B=12662156
+mem_heap_extra_B=308
+mem_stacks_B=541456
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=15191
+mem_heap_B=12662156
+mem_heap_extra_B=308
+mem_stacks_B=541456
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=15603
+mem_heap_B=12662156
+mem_heap_extra_B=308
+mem_stacks_B=541632
+heap_tree=detailed
+n3: 12662156 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 8388608 0x10E45B: arma::Mat<float>::init_cold() (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_armadillo_O2)
+  n0: 4194304 0x10A137: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_armadillo_O2)
+  n0: 4194304 0x10A153: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_armadillo_O2)
+ n1: 4194304 0x10D69F: void arma::glue_times::apply<float, false, false, false, arma::Mat<float>, arma::Mat<float> >(arma::Mat<float>&, arma::Mat<float> const&, arma::Mat<float> const&, float) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_armadillo_O2)
+  n0: 4194304 0x10AA2B: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_armadillo_O2)
+ n0: 79244 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=41
+#-----------
+time=16031
+mem_heap_B=12662156
+mem_heap_extra_B=308
+mem_stacks_B=541808
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=16285
+mem_heap_B=12662156
+mem_heap_extra_B=308
+mem_stacks_B=541808
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=16555
+mem_heap_B=12662156
+mem_heap_extra_B=308
+mem_stacks_B=541808
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=16769
+mem_heap_B=12662156
+mem_heap_extra_B=308
+mem_stacks_B=541984
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=17098
+mem_heap_B=12662156
+mem_heap_extra_B=308
+mem_stacks_B=541808
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=17366
+mem_heap_B=12662156
+mem_heap_extra_B=308
+mem_stacks_B=541808
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=17658
+mem_heap_B=12662156
+mem_heap_extra_B=308
+mem_stacks_B=541456
+heap_tree=detailed
+n3: 12662156 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 8388608 0x10E45B: arma::Mat<float>::init_cold() (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_armadillo_O2)
+  n0: 4194304 0x10A137: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_armadillo_O2)
+  n0: 4194304 0x10A153: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_armadillo_O2)
+ n1: 4194304 0x10D69F: void arma::glue_times::apply<float, false, false, false, arma::Mat<float>, arma::Mat<float> >(arma::Mat<float>&, arma::Mat<float> const&, arma::Mat<float> const&, float) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_armadillo_O2)
+  n0: 4194304 0x10AA2B: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_armadillo_O2)
+ n0: 79244 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=48
+#-----------
+time=18090
+mem_heap_B=12662156
+mem_heap_extra_B=308
+mem_stacks_B=541456
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=18331
+mem_heap_B=80268
+mem_heap_extra_B=244
+mem_stacks_B=1968
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=18372
+mem_heap_B=80268
+mem_heap_extra_B=244
+mem_stacks_B=1664
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=18415
+mem_heap_B=74784
+mem_heap_extra_B=40
+mem_stacks_B=1456
+heap_tree=detailed
+n4: 74784 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4928293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n1: 1056 0x4010B3F: allocate_dtv (dl-tls.c:286)
+  n1: 1056 0x40113CF: _dl_allocate_tls (dl-tls.c:532)
+   n1: 1056 0x6448F73: allocate_stack (allocatestack.c:622)
+    n1: 1056 0x6448F73: pthread_create@@GLIBC_2.17 (pthread_create.c:660)
+     n1: 1056 0x4DE0BA7: blas_thread_init (in /usr/lib/aarch64-linux-gnu/openblas-pthread/libblas.so.3)
+      n1: 1056 0x4C6D807: gotoblas_init (in /usr/lib/aarch64-linux-gnu/openblas-pthread/libblas.so.3)
+       n1: 1056 0x400E83B: call_init.part.0 (dl-init.c:72)
+        n1: 1056 0x400E93B: call_init (dl-init.c:30)
+         n1: 1056 0x400E93B: _dl_init (dl-init.c:119)
+          n0: 1056 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n1: 1024 0x4AFC5C7: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x4B0B4DB: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4B0A807: _IO_file_overflow@@GLIBC_2.17 (fileops.c:745)
+    n1: 1024 0x4B09937: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 1024 0x4B09937: _IO_file_xsputn@@GLIBC_2.17 (fileops.c:1197)
+      n1: 1024 0x4AF2FC7: __vfprintf_internal (vfprintf-internal.c:1373)
+       n1: 1024 0x4B77AF7: __printf_chk (printf_chk.c:33)
+        n0: 1024 0x10AA4F: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_armadillo_O2)
+ n0: 0 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=52
+#-----------
+time=18456
+mem_heap_B=1056
+mem_heap_extra_B=24
+mem_stacks_B=1552
+heap_tree=empty

@@ -1,0 +1,62 @@
+CPP = aarch64-linux-gnu-g++
+CFLAGS = -std=c++17 -ftree-vectorize -unroll-loops # -lblas -llapack -pg -lblas -fopenmp
+CBLAS = -lblas -lopenblas -lpthread #-lcblas -latlas 
+EIGEN = -I/usr/include/eigen3/
+ARMADILLO = -larmadillo #-lblas # -llapack  #-lopenblas # -lf2c
+ITENSOR = -L/home/ubuntu/itensor/
+
+
+BLAS = -lblas
+ARMV8_A = -mcpu=native -mtune=cortex-a53 -march=armv8-a+crc+simd+fp -mlittle-endian 
+PYTHON = -fPIC  -I/usr/include/python3.8 -shared -lboost_python
+MASSIF = --tool=massif --time-unit=ms --max-snapshots=100 #--detailed-freq=1 
+
+OPTIMIZE = -ftree-vectorize -faggressive-loop-optimizations -ffast-math -floop-nest-optimize -floop-parallelize-all -mfix-cortex-a53-835769 -fsel-sched-pipelining -fsel-sched-pipelining-outer-loops -fopenmp
+
+
+ROOT_PATH = ../../lib/
+TEST_EXE_PATH = $(ROOT_PATH)/tests/tests_exe/
+
+
+test: ../../lib/boost_tutorial.cpp ../../lib/cpp_profile_mat_test.cpp
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $(EIGEN) $? -o $@ $(ARMADILLO)
+    
+
+test_data_type: $(ROOT_PATH)/tests/test_data_types.cpp
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $? -o $(TEST_EXE_PATH)/$@
+	$(TEST_EXE_PATH)/$@
+
+
+test_conv_utils_ovw: $(ROOT_PATH)/tests/test_conv_utils_ovw.cpp
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $? -o $(TEST_EXE_PATH)/$@
+	$(TEST_EXE_PATH)/$@
+
+test_conv_utils: $(ROOT_PATH)/tests/test_conv_utils.cpp
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $? -o $(TEST_EXE_PATH)/$@
+	$(TEST_EXE_PATH)/$@
+
+test_csv_reader: $(ROOT_PATH)/tests/test_csv_reader.cpp
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $? -o $(TEST_EXE_PATH)/$@
+	$(TEST_EXE_PATH)/$@
+
+test_initialiser: $(ROOT_PATH)/tests/test_initialiser.cpp
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $? -o $(TEST_EXE_PATH)/$@
+	$(TEST_EXE_PATH)/$@
+
+test_blas: $(ROOT_PATH)/tests/test_optimized_mattrix_operations.cpp
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $? -o $(TEST_EXE_PATH)/$@ $(BLAS)
+	$(TEST_EXE_PATH)/$@
+
+
+#	valgrind --tool=massif --time-unit=ms --max-snapshots=100 --massif-out-file=./boost_test/massif.out.$@_50_boost_bool ./$@ 50 boost_bool #--detailed-freq=1
+#with -pg cflags
+#	./$@ 50 5
+#	gprof -b $@ gmon.out > @_50_5.txt
+#	valgrind --tool=callgrind  --simulate-cache=yes --callgrind-out-file=callgrind.out.test ./$@
+#	ms_print --x=1000 --y=1000 massif.out.$@
+
+
+
+
+  
+  

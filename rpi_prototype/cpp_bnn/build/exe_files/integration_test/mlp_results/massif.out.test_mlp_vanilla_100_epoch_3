@@ -1,0 +1,1004 @@
+desc: --time-unit=ms --max-snapshots=100 --stacks=yes --depth=5 --massif-out-file=././integration_test//massif.out.test_mlp_vanilla_100_epoch_3
+cmd: ./naive_layer_test_exe//test_mlp_vanilla 100 3
+time_unit: ms
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=4523
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5520
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=9340
+mem_heap_B=425464
+mem_heap_extra_B=1664
+mem_stacks_B=2736
+heap_tree=detailed
+n7: 425464 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 313600 0x10D463: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 313600 0x10DFDF: Matrix<float> read_csv<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::vector<unsigned long, std::allocator<unsigned long> >, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 313600 0x10B233: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n1: 12615 0x49A6DF3: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 12615 0x49A86D7: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+   n2: 12615 0x492750F: std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, char) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+    n1: 12615 0x10DA33: Matrix<float> read_csv<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::vector<unsigned long, std::allocator<unsigned long> >, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+     n0: 12615 0x10B233: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 8204 in 39 places, all below massif's threshold (1.00%)
+ n1: 8192 0x4971C53: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 8192 0x49755FB: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+   n1: 8192 0x10D97F: Matrix<float> read_csv<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::vector<unsigned long, std::allocator<unsigned long> >, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+    n0: 8192 0x10B233: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+ n1: 5229 0x10DE07: Matrix<float> read_csv<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::vector<unsigned long, std::allocator<unsigned long> >, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n0: 5229 0x10B233: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+ n1: 4920 0x10C5B7: std::_MakeUniq<Vanilla_BatchNormDense<Matrix> >::__single_object std::make_unique<Vanilla_BatchNormDense<Matrix>, float const&>(float const&) [clone .isra.0] [clone .constprop.0] (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n0: 4920 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=3
+#-----------
+time=12140
+mem_heap_B=425537
+mem_heap_extra_B=1671
+mem_stacks_B=2864
+heap_tree=detailed
+n7: 425537 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 313600 0x10D463: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 313600 0x10DFDF: Matrix<float> read_csv<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::vector<unsigned long, std::allocator<unsigned long> >, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 313600 0x10B233: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n1: 12615 0x49A6DF3: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 12615 0x49A86D7: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+   n2: 12615 0x492750F: std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, char) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+    n1: 12615 0x10DA33: Matrix<float> read_csv<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::vector<unsigned long, std::allocator<unsigned long> >, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+     n0: 12615 0x10B233: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 8204 in 39 places, all below massif's threshold (1.00%)
+ n1: 8192 0x4971C53: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 8192 0x49755FB: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+   n1: 8192 0x10D97F: Matrix<float> read_csv<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::vector<unsigned long, std::allocator<unsigned long> >, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+    n0: 8192 0x10B233: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+ n1: 5302 0x10DE07: Matrix<float> read_csv<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::vector<unsigned long, std::allocator<unsigned long> >, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n0: 5302 0x10B233: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+ n1: 4920 0x10C5B7: std::_MakeUniq<Vanilla_BatchNormDense<Matrix> >::__single_object std::make_unique<Vanilla_BatchNormDense<Matrix>, float const&>(float const&) [clone .isra.0] [clone .constprop.0] (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n0: 4920 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=4
+#-----------
+time=15090
+mem_heap_B=427474
+mem_heap_extra_B=1670
+mem_stacks_B=3232
+heap_tree=detailed
+n7: 427474 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 313600 0x10D463: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 313600 0x10DFDF: Matrix<float> read_csv<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::vector<unsigned long, std::allocator<unsigned long> >, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 313600 0x10B233: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n1: 12615 0x49A6DF3: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 12615 0x49A86D7: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+   n2: 12615 0x492750F: std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, char) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+    n1: 12615 0x10DA33: Matrix<float> read_csv<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::vector<unsigned long, std::allocator<unsigned long> >, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+     n0: 12615 0x10B233: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 8204 in 39 places, all below massif's threshold (1.00%)
+ n1: 8192 0x4971C53: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 8192 0x49755FB: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+   n1: 8192 0x10D97F: Matrix<float> read_csv<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::vector<unsigned long, std::allocator<unsigned long> >, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+    n0: 8192 0x10B233: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+ n1: 7239 0x10DE07: Matrix<float> read_csv<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::vector<unsigned long, std::allocator<unsigned long> >, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n0: 7239 0x10B233: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+ n1: 4920 0x10C5B7: std::_MakeUniq<Vanilla_BatchNormDense<Matrix> >::__single_object std::make_unique<Vanilla_BatchNormDense<Matrix>, float const&>(float const&) [clone .isra.0] [clone .constprop.0] (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n0: 4920 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=5
+#-----------
+time=18090
+mem_heap_B=427138
+mem_heap_extra_B=1678
+mem_stacks_B=3104
+heap_tree=detailed
+n7: 427138 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 313600 0x10D463: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 313600 0x10DFDF: Matrix<float> read_csv<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::vector<unsigned long, std::allocator<unsigned long> >, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 313600 0x10B233: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n1: 12646 0x49A6DF3: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 12646 0x49A86D7: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+   n2: 12646 0x492750F: std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, char) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+    n1: 12615 0x10DA33: Matrix<float> read_csv<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::vector<unsigned long, std::allocator<unsigned long> >, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+     n0: 12615 0x10B233: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+    n0: 31 in 1 place, below massif's threshold (1.00%)
+ n0: 8204 in 39 places, all below massif's threshold (1.00%)
+ n1: 8192 0x4971C53: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 8192 0x49755FB: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+   n1: 8192 0x10D97F: Matrix<float> read_csv<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::vector<unsigned long, std::allocator<unsigned long> >, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+    n0: 8192 0x10B233: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+ n1: 6872 0x10DE07: Matrix<float> read_csv<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::vector<unsigned long, std::allocator<unsigned long> >, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n0: 6872 0x10B233: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+ n1: 4920 0x10C5B7: std::_MakeUniq<Vanilla_BatchNormDense<Matrix> >::__single_object std::make_unique<Vanilla_BatchNormDense<Matrix>, float const&>(float const&) [clone .isra.0] [clone .constprop.0] (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n0: 4920 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=6
+#-----------
+time=21265
+mem_heap_B=2132556
+mem_heap_extra_B=1796
+mem_stacks_B=2064
+heap_tree=detailed
+n4: 2132556 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n4: 2021632 0x10D463: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 802816 0x11C0A3: Vanilla_BNNDense::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 802816 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 802816 0x11C0B7: Vanilla_BNNDense::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 802816 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 313600 0x10DFDF: Matrix<float> read_csv<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::vector<unsigned long, std::allocator<unsigned long> >, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 313600 0x10B233: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 102400 0x11301B: Matrix<float>::Matrix(std::vector<unsigned long, std::allocator<unsigned long> > const&, float, float const*) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n1: 102400 0x11BBEB: Vanilla_BNNDense::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+    n0: 102400 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n1: 25088 0x11177B: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 25088 0x11DFAB: Matrix<bool>::Matrix(std::vector<unsigned long, std::allocator<unsigned long> > const&, bool, bool const*) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n1: 25088 0x11BB4F: Vanilla_BNNDense::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+    n0: 25088 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+ n0: 13132 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=7
+#-----------
+time=27141
+mem_heap_B=2132572
+mem_heap_extra_B=1804
+mem_stacks_B=2080
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=31483
+mem_heap_B=4628364
+mem_heap_extra_B=2788
+mem_stacks_B=2064
+heap_tree=detailed
+n4: 4628364 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n6: 3917056 0x10D463: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 1589248 0x11C0A3: Vanilla_BNNDense::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 1589248 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 1589248 0x11C0B7: Vanilla_BNNDense::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 1589248 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 313600 0x10DFDF: Matrix<float> read_csv<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::vector<unsigned long, std::allocator<unsigned long> >, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 313600 0x10B233: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 307200 0x11094F: BinaryActivation<float, Matrix, float>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 307200 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n2: 102400 0x11301B: Matrix<float>::Matrix(std::vector<unsigned long, std::allocator<unsigned long> > const&, float, float const*) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n1: 102400 0x11BBEB: Vanilla_BNNDense::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+    n0: 102400 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+  n0: 15360 in 5 places, all below massif's threshold (1.00%)
+ n2: 614400 0x10C95F: std::vector<float, std::allocator<float> >::operator=(std::vector<float, std::allocator<float> > const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 307200 0x11BA1B: Vanilla_BNNDense::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 307200 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 307200 0x1234EB: Vanilla_BatchNormDense<Matrix>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 307200 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 24204 in 74 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=9
+#-----------
+time=34705
+mem_heap_B=4651252
+mem_heap_extra_B=3420
+mem_stacks_B=2160
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=38527
+mem_heap_B=4759812
+mem_heap_extra_B=3428
+mem_stacks_B=2128
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=40498
+mem_heap_B=4759812
+mem_heap_extra_B=3428
+mem_stacks_B=2144
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=44355
+mem_heap_B=4759812
+mem_heap_extra_B=3428
+mem_stacks_B=2144
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=49669
+mem_heap_B=4990659
+mem_heap_extra_B=3421
+mem_stacks_B=2784
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=53769
+mem_heap_B=4989482
+mem_heap_extra_B=3406
+mem_stacks_B=2864
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=59181
+mem_heap_B=4990834
+mem_heap_extra_B=3422
+mem_stacks_B=2784
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=61805
+mem_heap_B=4989088
+mem_heap_extra_B=3424
+mem_stacks_B=2864
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=67418
+mem_heap_B=4962668
+mem_heap_extra_B=3364
+mem_stacks_B=1888
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=67538
+mem_heap_B=8260588
+mem_heap_extra_B=4196
+mem_stacks_B=2144
+heap_tree=peak
+n4: 8260588 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n5: 4153544 0x10D463: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 1599488 0x11C0A3: Vanilla_BNNDense::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 1599488 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 1599488 0x11C0B7: Vanilla_BNNDense::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 1599488 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n3: 524288 0x11301B: Matrix<float>::Matrix(std::vector<unsigned long, std::allocator<unsigned long> > const&, float, float const*) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n1: 262144 0x127A13: Adam<float>::update(std::vector<std::unique_ptr<BaseLayer<Matrix, float>, std::default_delete<BaseLayer<Matrix, float> > >, std::allocator<std::unique_ptr<BaseLayer<Matrix, float>, std::default_delete<BaseLayer<Matrix, float> > > > >&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+    n0: 262144 0x10BC3F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n1: 262144 0x127A27: Adam<float>::update(std::vector<std::unique_ptr<BaseLayer<Matrix, float>, std::default_delete<BaseLayer<Matrix, float> > >, std::allocator<std::unique_ptr<BaseLayer<Matrix, float>, std::default_delete<BaseLayer<Matrix, float> > > > >&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+    n0: 262144 0x10BC3F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 0 in 10 places, all below massif's threshold (1.00%)
+  n1: 409600 0x11094F: BinaryActivation<float, Matrix, float>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 409600 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n0: 20680 in 6 places, all below massif's threshold (1.00%)
+ n3: 3184640 0x10CAFF: Matrix<float>::Matrix(Matrix<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 1592320 0x127A3B: Adam<float>::update(std::vector<std::unique_ptr<BaseLayer<Matrix, float>, std::default_delete<BaseLayer<Matrix, float> > >, std::allocator<std::unique_ptr<BaseLayer<Matrix, float>, std::default_delete<BaseLayer<Matrix, float> > > > >&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 1592320 0x10BC3F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 1592320 0x127A5B: Adam<float>::update(std::vector<std::unique_ptr<BaseLayer<Matrix, float>, std::default_delete<BaseLayer<Matrix, float> > >, std::allocator<std::unique_ptr<BaseLayer<Matrix, float>, std::default_delete<BaseLayer<Matrix, float> > > > >&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 1592320 0x10BC3F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n0: 0 in 7 places, all below massif's threshold (1.00%)
+ n3: 827200 0x10C95F: std::vector<float, std::allocator<float> >::operator=(std::vector<float, std::allocator<float> > const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 413600 0x1234EB: Vanilla_BatchNormDense<Matrix>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 413600 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 409600 0x11BA1B: Vanilla_BNNDense::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 409600 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n0: 4000 in 2 places, all below massif's threshold (1.00%)
+ n0: 95204 in 98 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=19
+#-----------
+time=73208
+mem_heap_B=8100075
+mem_heap_extra_B=4565
+mem_stacks_B=2736
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=77288
+mem_heap_B=8101089
+mem_heap_extra_B=4567
+mem_stacks_B=2832
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=81128
+mem_heap_B=8099478
+mem_heap_extra_B=4570
+mem_stacks_B=2832
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=83663
+mem_heap_B=8098524
+mem_heap_extra_B=4612
+mem_stacks_B=1840
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=89539
+mem_heap_B=8201092
+mem_heap_extra_B=4700
+mem_stacks_B=2080
+heap_tree=detailed
+n4: 8201092 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n6: 4045256 0x10D463: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 1599488 0x11C0A3: Vanilla_BNNDense::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 1599488 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 1599488 0x11C0B7: Vanilla_BNNDense::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 1599488 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 409600 0x11094F: BinaryActivation<float, Matrix, float>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 409600 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n2: 313600 0x10DFDF: Matrix<float> read_csv<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::vector<unsigned long, std::allocator<unsigned long> >, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 313600 0x10B233: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 0 in 3 places, all below massif's threshold (1.00%)
+  n2: 102400 0x11301B: Matrix<float>::Matrix(std::vector<unsigned long, std::allocator<unsigned long> > const&, float, float const*) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n1: 102400 0x11BBEB: Vanilla_BNNDense::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+    n0: 102400 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 0 in 11 places, all below massif's threshold (1.00%)
+  n0: 20680 in 5 places, all below massif's threshold (1.00%)
+ n3: 3207248 0x10CAFF: Matrix<float>::Matrix(Matrix<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 1603624 0x127A3B: Adam<float>::update(std::vector<std::unique_ptr<BaseLayer<Matrix, float>, std::default_delete<BaseLayer<Matrix, float> > >, std::allocator<std::unique_ptr<BaseLayer<Matrix, float>, std::default_delete<BaseLayer<Matrix, float> > > > >&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 1603624 0x10BC3F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 1603624 0x127A5B: Adam<float>::update(std::vector<std::unique_ptr<BaseLayer<Matrix, float>, std::default_delete<BaseLayer<Matrix, float> > >, std::allocator<std::unique_ptr<BaseLayer<Matrix, float>, std::default_delete<BaseLayer<Matrix, float> > > > >&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 1603624 0x10BC3F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n0: 0 in 7 places, all below massif's threshold (1.00%)
+ n3: 827200 0x10C95F: std::vector<float, std::allocator<float> >::operator=(std::vector<float, std::allocator<float> > const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 413600 0x1234EB: Vanilla_BatchNormDense<Matrix>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 413600 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 409600 0x11BA1B: Vanilla_BNNDense::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 409600 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n0: 4000 in 2 places, all below massif's threshold (1.00%)
+ n0: 121388 in 98 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=24
+#-----------
+time=93445
+mem_heap_B=8184196
+mem_heap_extra_B=4700
+mem_stacks_B=2080
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=96513
+mem_heap_B=7866724
+mem_heap_extra_B=4668
+mem_stacks_B=2128
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=100372
+mem_heap_B=7972996
+mem_heap_extra_B=4668
+mem_stacks_B=2128
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=104231
+mem_heap_B=7972996
+mem_heap_extra_B=4668
+mem_stacks_B=2128
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=108088
+mem_heap_B=7972996
+mem_heap_extra_B=4668
+mem_stacks_B=2128
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=111448
+mem_heap_B=8204523
+mem_heap_extra_B=4685
+mem_stacks_B=2864
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=115288
+mem_heap_B=8197115
+mem_heap_extra_B=4637
+mem_stacks_B=2800
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=117448
+mem_heap_B=8203625
+mem_heap_extra_B=4671
+mem_stacks_B=2736
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=121288
+mem_heap_B=8202045
+mem_heap_extra_B=4683
+mem_stacks_B=2864
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=123568
+mem_heap_B=8203342
+mem_heap_extra_B=4682
+mem_stacks_B=3232
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=129231
+mem_heap_B=8175852
+mem_heap_extra_B=4604
+mem_stacks_B=1888
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=132647
+mem_heap_B=8100691
+mem_heap_extra_B=4557
+mem_stacks_B=2864
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=135407
+mem_heap_B=8100904
+mem_heap_extra_B=4592
+mem_stacks_B=3232
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=139247
+mem_heap_B=8100217
+mem_heap_extra_B=4575
+mem_stacks_B=3104
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=141407
+mem_heap_B=8100342
+mem_heap_extra_B=4578
+mem_stacks_B=2864
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=145367
+mem_heap_B=8101213
+mem_heap_extra_B=4571
+mem_stacks_B=2912
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=151315
+mem_heap_B=8201092
+mem_heap_extra_B=4700
+mem_stacks_B=2080
+heap_tree=detailed
+n4: 8201092 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n6: 4045256 0x10D463: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 1599488 0x11C0A3: Vanilla_BNNDense::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 1599488 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 1599488 0x11C0B7: Vanilla_BNNDense::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 1599488 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 409600 0x11094F: BinaryActivation<float, Matrix, float>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 409600 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n2: 313600 0x10DFDF: Matrix<float> read_csv<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::vector<unsigned long, std::allocator<unsigned long> >, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 313600 0x10B233: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 0 in 3 places, all below massif's threshold (1.00%)
+  n2: 102400 0x11301B: Matrix<float>::Matrix(std::vector<unsigned long, std::allocator<unsigned long> > const&, float, float const*) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n1: 102400 0x11BBEB: Vanilla_BNNDense::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+    n0: 102400 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 0 in 11 places, all below massif's threshold (1.00%)
+  n0: 20680 in 5 places, all below massif's threshold (1.00%)
+ n3: 3207248 0x10CAFF: Matrix<float>::Matrix(Matrix<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 1603624 0x127A3B: Adam<float>::update(std::vector<std::unique_ptr<BaseLayer<Matrix, float>, std::default_delete<BaseLayer<Matrix, float> > >, std::allocator<std::unique_ptr<BaseLayer<Matrix, float>, std::default_delete<BaseLayer<Matrix, float> > > > >&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 1603624 0x10BC3F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 1603624 0x127A5B: Adam<float>::update(std::vector<std::unique_ptr<BaseLayer<Matrix, float>, std::default_delete<BaseLayer<Matrix, float> > >, std::allocator<std::unique_ptr<BaseLayer<Matrix, float>, std::default_delete<BaseLayer<Matrix, float> > > > >&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 1603624 0x10BC3F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n0: 0 in 7 places, all below massif's threshold (1.00%)
+ n3: 827200 0x10C95F: std::vector<float, std::allocator<float> >::operator=(std::vector<float, std::allocator<float> > const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 413600 0x1234EB: Vanilla_BatchNormDense<Matrix>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 413600 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 409600 0x11BA1B: Vanilla_BNNDense::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 409600 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n0: 4000 in 2 places, all below massif's threshold (1.00%)
+ n0: 121388 in 98 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=41
+#-----------
+time=155221
+mem_heap_B=8184196
+mem_heap_extra_B=4700
+mem_stacks_B=2080
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=158306
+mem_heap_B=7866724
+mem_heap_extra_B=4668
+mem_stacks_B=2128
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=162174
+mem_heap_B=7972996
+mem_heap_extra_B=4668
+mem_stacks_B=2128
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=166050
+mem_heap_B=7972996
+mem_heap_extra_B=4668
+mem_stacks_B=2128
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=168023
+mem_heap_B=7972996
+mem_heap_extra_B=4668
+mem_stacks_B=2144
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=171839
+mem_heap_B=8202248
+mem_heap_extra_B=4672
+mem_stacks_B=2736
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=175679
+mem_heap_B=8203409
+mem_heap_extra_B=4679
+mem_stacks_B=2736
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=179519
+mem_heap_B=8202753
+mem_heap_extra_B=4679
+mem_stacks_B=3104
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=181679
+mem_heap_B=8202878
+mem_heap_extra_B=4682
+mem_stacks_B=2784
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=181799
+mem_heap_B=8202952
+mem_heap_extra_B=4672
+mem_stacks_B=2736
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=181919
+mem_heap_B=8201987
+mem_heap_extra_B=4677
+mem_stacks_B=2736
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=182039
+mem_heap_B=8204238
+mem_heap_extra_B=4658
+mem_stacks_B=2896
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=182159
+mem_heap_B=8204269
+mem_heap_extra_B=4683
+mem_stacks_B=3104
+heap_tree=detailed
+n4: 8204269 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n5: 3942856 0x10D463: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 1599488 0x11C0A3: Vanilla_BNNDense::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 1599488 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 1599488 0x11C0B7: Vanilla_BNNDense::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 1599488 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 409600 0x11094F: BinaryActivation<float, Matrix, float>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 409600 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n2: 313600 0x10DFDF: Matrix<float> read_csv<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::vector<unsigned long, std::allocator<unsigned long> >, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 313600 0x10BB27: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 0 in 3 places, all below massif's threshold (1.00%)
+  n0: 20680 in 6 places, all below massif's threshold (1.00%)
+ n3: 3207248 0x10CAFF: Matrix<float>::Matrix(Matrix<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 1603624 0x127A3B: Adam<float>::update(std::vector<std::unique_ptr<BaseLayer<Matrix, float>, std::default_delete<BaseLayer<Matrix, float> > >, std::allocator<std::unique_ptr<BaseLayer<Matrix, float>, std::default_delete<BaseLayer<Matrix, float> > > > >&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 1603624 0x10BC3F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 1603624 0x127A5B: Adam<float>::update(std::vector<std::unique_ptr<BaseLayer<Matrix, float>, std::default_delete<BaseLayer<Matrix, float> > >, std::allocator<std::unique_ptr<BaseLayer<Matrix, float>, std::default_delete<BaseLayer<Matrix, float> > > > >&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 1603624 0x10BC3F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n0: 0 in 7 places, all below massif's threshold (1.00%)
+ n4: 929600 0x10C95F: std::vector<float, std::allocator<float> >::operator=(std::vector<float, std::allocator<float> > const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 413600 0x1234EB: Vanilla_BatchNormDense<Matrix>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 413600 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 409600 0x11BA1B: Vanilla_BNNDense::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 409600 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n0: 102400 0x10B907: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n0: 4000 in 1 place, below massif's threshold (1.00%)
+ n0: 124565 in 98 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=54
+#-----------
+time=182279
+mem_heap_B=8203209
+mem_heap_extra_B=4671
+mem_stacks_B=2736
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=182399
+mem_heap_B=8201872
+mem_heap_extra_B=4680
+mem_stacks_B=2864
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=182519
+mem_heap_B=8202714
+mem_heap_extra_B=4646
+mem_stacks_B=3104
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=182639
+mem_heap_B=8202745
+mem_heap_extra_B=4671
+mem_stacks_B=2736
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=182759
+mem_heap_B=8203426
+mem_heap_extra_B=4678
+mem_stacks_B=2736
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=182879
+mem_heap_B=8202688
+mem_heap_extra_B=4680
+mem_stacks_B=2784
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=182999
+mem_heap_B=8204409
+mem_heap_extra_B=4671
+mem_stacks_B=3104
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=183119
+mem_heap_B=8203596
+mem_heap_extra_B=4660
+mem_stacks_B=2896
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=183239
+mem_heap_B=8203627
+mem_heap_extra_B=4685
+mem_stacks_B=2736
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=183359
+mem_heap_B=8202668
+mem_heap_extra_B=4684
+mem_stacks_B=2896
+heap_tree=detailed
+n4: 8202668 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n5: 3942856 0x10D463: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 1599488 0x11C0A3: Vanilla_BNNDense::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 1599488 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 1599488 0x11C0B7: Vanilla_BNNDense::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 1599488 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 409600 0x11094F: BinaryActivation<float, Matrix, float>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 409600 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n2: 313600 0x10DFDF: Matrix<float> read_csv<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::vector<unsigned long, std::allocator<unsigned long> >, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 313600 0x10BB27: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 0 in 3 places, all below massif's threshold (1.00%)
+  n0: 20680 in 6 places, all below massif's threshold (1.00%)
+ n3: 3207248 0x10CAFF: Matrix<float>::Matrix(Matrix<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 1603624 0x127A3B: Adam<float>::update(std::vector<std::unique_ptr<BaseLayer<Matrix, float>, std::default_delete<BaseLayer<Matrix, float> > >, std::allocator<std::unique_ptr<BaseLayer<Matrix, float>, std::default_delete<BaseLayer<Matrix, float> > > > >&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 1603624 0x10BC3F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 1603624 0x127A5B: Adam<float>::update(std::vector<std::unique_ptr<BaseLayer<Matrix, float>, std::default_delete<BaseLayer<Matrix, float> > >, std::allocator<std::unique_ptr<BaseLayer<Matrix, float>, std::default_delete<BaseLayer<Matrix, float> > > > >&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 1603624 0x10BC3F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n0: 0 in 7 places, all below massif's threshold (1.00%)
+ n4: 929600 0x10C95F: std::vector<float, std::allocator<float> >::operator=(std::vector<float, std::allocator<float> > const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 413600 0x1234EB: Vanilla_BatchNormDense<Matrix>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 413600 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 409600 0x11BA1B: Vanilla_BNNDense::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 409600 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n0: 102400 0x10B907: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n0: 4000 in 1 place, below massif's threshold (1.00%)
+ n0: 122964 in 98 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=64
+#-----------
+time=183479
+mem_heap_B=8204090
+mem_heap_extra_B=4670
+mem_stacks_B=2896
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=183599
+mem_heap_B=8202650
+mem_heap_extra_B=4646
+mem_stacks_B=3104
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=183719
+mem_heap_B=8202681
+mem_heap_extra_B=4671
+mem_stacks_B=2784
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=183839
+mem_heap_B=8202560
+mem_heap_extra_B=4680
+mem_stacks_B=3104
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=183959
+mem_heap_B=8202650
+mem_heap_extra_B=4670
+mem_stacks_B=3232
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=184079
+mem_heap_B=8202197
+mem_heap_extra_B=4675
+mem_stacks_B=3104
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=184199
+mem_heap_B=8203250
+mem_heap_extra_B=4654
+mem_stacks_B=2864
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=184319
+mem_heap_B=8203281
+mem_heap_extra_B=4679
+mem_stacks_B=3104
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=184439
+mem_heap_B=8203051
+mem_heap_extra_B=4685
+mem_stacks_B=3184
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=184559
+mem_heap_B=8204553
+mem_heap_extra_B=4671
+mem_stacks_B=3104
+heap_tree=detailed
+n4: 8204553 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n5: 3942856 0x10D463: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 1599488 0x11C0A3: Vanilla_BNNDense::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 1599488 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 1599488 0x11C0B7: Vanilla_BNNDense::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 1599488 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 409600 0x11094F: BinaryActivation<float, Matrix, float>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 409600 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n2: 313600 0x10DFDF: Matrix<float> read_csv<float>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::vector<unsigned long, std::allocator<unsigned long> >, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 313600 0x10BB27: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 0 in 3 places, all below massif's threshold (1.00%)
+  n0: 20680 in 6 places, all below massif's threshold (1.00%)
+ n3: 3207248 0x10CAFF: Matrix<float>::Matrix(Matrix<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 1603624 0x127A3B: Adam<float>::update(std::vector<std::unique_ptr<BaseLayer<Matrix, float>, std::default_delete<BaseLayer<Matrix, float> > >, std::allocator<std::unique_ptr<BaseLayer<Matrix, float>, std::default_delete<BaseLayer<Matrix, float> > > > >&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 1603624 0x10BC3F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 1603624 0x127A5B: Adam<float>::update(std::vector<std::unique_ptr<BaseLayer<Matrix, float>, std::default_delete<BaseLayer<Matrix, float> > >, std::allocator<std::unique_ptr<BaseLayer<Matrix, float>, std::default_delete<BaseLayer<Matrix, float> > > > >&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 1603624 0x10BC3F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n0: 0 in 7 places, all below massif's threshold (1.00%)
+ n4: 929600 0x10C95F: std::vector<float, std::allocator<float> >::operator=(std::vector<float, std::allocator<float> > const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 413600 0x1234EB: Vanilla_BatchNormDense<Matrix>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 413600 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 409600 0x11BA1B: Vanilla_BNNDense::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 409600 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n0: 102400 0x10B907: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n0: 4000 in 1 place, below massif's threshold (1.00%)
+ n0: 124849 in 98 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=74
+#-----------
+time=184679
+mem_heap_B=8203679
+mem_heap_extra_B=4657
+mem_stacks_B=3232
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=184799
+mem_heap_B=8203710
+mem_heap_extra_B=4682
+mem_stacks_B=3232
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=184919
+mem_heap_B=8203278
+mem_heap_extra_B=4682
+mem_stacks_B=3248
+heap_tree=empty
+#-----------
+snapshot=77
+#-----------
+time=185039
+mem_heap_B=8203614
+mem_heap_extra_B=4682
+mem_stacks_B=2736
+heap_tree=empty
+#-----------
+snapshot=78
+#-----------
+time=185159
+mem_heap_B=8202969
+mem_heap_extra_B=4647
+mem_stacks_B=3104
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=185279
+mem_heap_B=8203000
+mem_heap_extra_B=4672
+mem_stacks_B=2896
+heap_tree=empty
+#-----------
+snapshot=80
+#-----------
+time=185399
+mem_heap_B=8203571
+mem_heap_extra_B=4677
+mem_stacks_B=2784
+heap_tree=empty
+#-----------
+snapshot=81
+#-----------
+time=185519
+mem_heap_B=8203749
+mem_heap_extra_B=4675
+mem_stacks_B=3104
+heap_tree=empty
+#-----------
+snapshot=82
+#-----------
+time=191200
+mem_heap_B=8175852
+mem_heap_extra_B=4604
+mem_stacks_B=1888
+heap_tree=empty
+#-----------
+snapshot=83
+#-----------
+time=191737
+mem_heap_B=7759548
+mem_heap_extra_B=4444
+mem_stacks_B=1440
+heap_tree=detailed
+n4: 7759548 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n4: 3629256 0x10D463: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 1599488 0x11C0A3: Vanilla_BNNDense::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 1599488 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 1599488 0x11C0B7: Vanilla_BNNDense::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 1599488 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 409600 0x11094F: BinaryActivation<float, Matrix, float>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 409600 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n0: 20680 in 7 places, all below massif's threshold (1.00%)
+ n3: 3207248 0x10CAFF: Matrix<float>::Matrix(Matrix<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 1603624 0x127A3B: Adam<float>::update(std::vector<std::unique_ptr<BaseLayer<Matrix, float>, std::default_delete<BaseLayer<Matrix, float> > >, std::allocator<std::unique_ptr<BaseLayer<Matrix, float>, std::default_delete<BaseLayer<Matrix, float> > > > >&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 1603624 0x10BC3F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 1603624 0x127A5B: Adam<float>::update(std::vector<std::unique_ptr<BaseLayer<Matrix, float>, std::default_delete<BaseLayer<Matrix, float> > >, std::allocator<std::unique_ptr<BaseLayer<Matrix, float>, std::default_delete<BaseLayer<Matrix, float> > > > >&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 1603624 0x10BC3F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n0: 0 in 7 places, all below massif's threshold (1.00%)
+ n3: 827200 0x10C95F: std::vector<float, std::allocator<float> >::operator=(std::vector<float, std::allocator<float> > const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 413600 0x1234EB: Vanilla_BatchNormDense<Matrix>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 413600 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 409600 0x11BA1B: Vanilla_BNNDense::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 409600 0x10BACB: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n0: 4000 in 2 places, all below massif's threshold (1.00%)
+ n0: 95844 in 98 places, all below massif's threshold (1.00%)

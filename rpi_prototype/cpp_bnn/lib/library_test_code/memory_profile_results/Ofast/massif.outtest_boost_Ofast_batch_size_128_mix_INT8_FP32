@@ -1,0 +1,607 @@
+desc: --time-unit=ms --max-snapshots=100 --stacks=yes --massif-out-file=.//memory_profile_results//Ofast/massif.outtest_boost_Ofast_batch_size_128_mix_INT8_FP32
+cmd: .//test_exe//test_boost_Ofast mix_8_32 128
+time_unit: ms
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=34
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=1360
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=83
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=2096
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=147
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=7984
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=202
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=8704
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=250
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5808
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=585
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5424
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=604
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5968
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=4215
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5488
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=4224
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5888
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=4726
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5552
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=4771
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=2400
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=4838
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=2688
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=4902
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=2688
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=4966
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=2944
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=5009
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=208
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=5077
+mem_heap_B=72704
+mem_heap_extra_B=8
+mem_stacks_B=800
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=5115
+mem_heap_B=72704
+mem_heap_extra_B=8
+mem_stacks_B=864
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=5166
+mem_heap_B=72704
+mem_heap_extra_B=8
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=5214
+mem_heap_B=72704
+mem_heap_extra_B=8
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=5252
+mem_heap_B=302080
+mem_heap_extra_B=40
+mem_stacks_B=800
+heap_tree=peak
+n4: 302080 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 131072 0x10C5EF: boost::numeric::ublas::unbounded_array<float, std::allocator<float> >::unbounded_array(unsigned long, float const&, std::allocator<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+  n2: 131072 0x10C6E7: boost::numeric::ublas::matrix<float, boost::numeric::ublas::basic_row_major<unsigned long, long>, boost::numeric::ublas::unbounded_array<float, std::allocator<float> > >::matrix(unsigned long, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+   n0: 65536 0x109DEF: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+   n0: 65536 0x109E0B: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n1: 65536 0x10C59B: boost::numeric::ublas::unbounded_array<float, std::allocator<float> >::unbounded_array(unsigned long, std::allocator<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+  n0: 65536 0x109E3F: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+ n1: 32768 0x10C83F: boost::numeric::ublas::unbounded_array<short, std::allocator<short> >::unbounded_array(unsigned long, short const&, std::allocator<short> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+  n1: 32768 0x10C967: boost::numeric::ublas::matrix<short, boost::numeric::ublas::basic_row_major<unsigned long, long>, boost::numeric::ublas::unbounded_array<short, std::allocator<short> > >::matrix(unsigned long, unsigned long, short const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+   n0: 32768 0x109DCF: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+#-----------
+snapshot=21
+#-----------
+time=5295
+mem_heap_B=302080
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=5343
+mem_heap_B=302080
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=5415
+mem_heap_B=302080
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=5487
+mem_heap_B=302080
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=5559
+mem_heap_B=302080
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=detailed
+n4: 302080 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 131072 0x10C5EF: boost::numeric::ublas::unbounded_array<float, std::allocator<float> >::unbounded_array(unsigned long, float const&, std::allocator<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+  n2: 131072 0x10C6E7: boost::numeric::ublas::matrix<float, boost::numeric::ublas::basic_row_major<unsigned long, long>, boost::numeric::ublas::unbounded_array<float, std::allocator<float> > >::matrix(unsigned long, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+   n0: 65536 0x109DEF: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+   n0: 65536 0x109E0B: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n1: 65536 0x10C59B: boost::numeric::ublas::unbounded_array<float, std::allocator<float> >::unbounded_array(unsigned long, std::allocator<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+  n0: 65536 0x109E3F: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+ n1: 32768 0x10C83F: boost::numeric::ublas::unbounded_array<short, std::allocator<short> >::unbounded_array(unsigned long, short const&, std::allocator<short> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+  n1: 32768 0x10C967: boost::numeric::ublas::matrix<short, boost::numeric::ublas::basic_row_major<unsigned long, long>, boost::numeric::ublas::unbounded_array<short, std::allocator<short> > >::matrix(unsigned long, unsigned long, short const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+   n0: 32768 0x109DCF: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+#-----------
+snapshot=26
+#-----------
+time=5631
+mem_heap_B=302080
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=5703
+mem_heap_B=302080
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=5775
+mem_heap_B=302080
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=5847
+mem_heap_B=302080
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=5919
+mem_heap_B=302080
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=detailed
+n4: 302080 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 131072 0x10C5EF: boost::numeric::ublas::unbounded_array<float, std::allocator<float> >::unbounded_array(unsigned long, float const&, std::allocator<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+  n2: 131072 0x10C6E7: boost::numeric::ublas::matrix<float, boost::numeric::ublas::basic_row_major<unsigned long, long>, boost::numeric::ublas::unbounded_array<float, std::allocator<float> > >::matrix(unsigned long, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+   n0: 65536 0x109DEF: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+   n0: 65536 0x109E0B: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n1: 65536 0x10C59B: boost::numeric::ublas::unbounded_array<float, std::allocator<float> >::unbounded_array(unsigned long, std::allocator<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+  n0: 65536 0x109E3F: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+ n1: 32768 0x10C83F: boost::numeric::ublas::unbounded_array<short, std::allocator<short> >::unbounded_array(unsigned long, short const&, std::allocator<short> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+  n1: 32768 0x10C967: boost::numeric::ublas::matrix<short, boost::numeric::ublas::basic_row_major<unsigned long, long>, boost::numeric::ublas::unbounded_array<short, std::allocator<short> > >::matrix(unsigned long, unsigned long, short const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+   n0: 32768 0x109DCF: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+#-----------
+snapshot=31
+#-----------
+time=5991
+mem_heap_B=302080
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=6063
+mem_heap_B=302080
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=6099
+mem_heap_B=302080
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=detailed
+n4: 302080 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 131072 0x10C5EF: boost::numeric::ublas::unbounded_array<float, std::allocator<float> >::unbounded_array(unsigned long, float const&, std::allocator<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+  n2: 131072 0x10C6E7: boost::numeric::ublas::matrix<float, boost::numeric::ublas::basic_row_major<unsigned long, long>, boost::numeric::ublas::unbounded_array<float, std::allocator<float> > >::matrix(unsigned long, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+   n0: 65536 0x109DEF: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+   n0: 65536 0x109E0B: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n1: 65536 0x10C59B: boost::numeric::ublas::unbounded_array<float, std::allocator<float> >::unbounded_array(unsigned long, std::allocator<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+  n0: 65536 0x109E3F: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+ n1: 32768 0x10C83F: boost::numeric::ublas::unbounded_array<short, std::allocator<short> >::unbounded_array(unsigned long, short const&, std::allocator<short> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+  n1: 32768 0x10C967: boost::numeric::ublas::matrix<short, boost::numeric::ublas::basic_row_major<unsigned long, long>, boost::numeric::ublas::unbounded_array<short, std::allocator<short> > >::matrix(unsigned long, unsigned long, short const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+   n0: 32768 0x109DCF: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+#-----------
+snapshot=34
+#-----------
+time=6135
+mem_heap_B=302080
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=6171
+mem_heap_B=302080
+mem_heap_extra_B=40
+mem_stacks_B=864
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=6207
+mem_heap_B=302080
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=6261
+mem_heap_B=302080
+mem_heap_extra_B=40
+mem_stacks_B=864
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=6297
+mem_heap_B=302080
+mem_heap_extra_B=40
+mem_stacks_B=864
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=6333
+mem_heap_B=302080
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=6369
+mem_heap_B=302080
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=detailed
+n4: 302080 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 131072 0x10C5EF: boost::numeric::ublas::unbounded_array<float, std::allocator<float> >::unbounded_array(unsigned long, float const&, std::allocator<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+  n2: 131072 0x10C6E7: boost::numeric::ublas::matrix<float, boost::numeric::ublas::basic_row_major<unsigned long, long>, boost::numeric::ublas::unbounded_array<float, std::allocator<float> > >::matrix(unsigned long, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+   n0: 65536 0x109DEF: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+   n0: 65536 0x109E0B: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n1: 65536 0x10C59B: boost::numeric::ublas::unbounded_array<float, std::allocator<float> >::unbounded_array(unsigned long, std::allocator<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+  n0: 65536 0x109E3F: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+ n1: 32768 0x10C83F: boost::numeric::ublas::unbounded_array<short, std::allocator<short> >::unbounded_array(unsigned long, short const&, std::allocator<short> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+  n1: 32768 0x10C967: boost::numeric::ublas::matrix<short, boost::numeric::ublas::basic_row_major<unsigned long, long>, boost::numeric::ublas::unbounded_array<short, std::allocator<short> > >::matrix(unsigned long, unsigned long, short const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+   n0: 32768 0x109DCF: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+#-----------
+snapshot=41
+#-----------
+time=6405
+mem_heap_B=302080
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=6441
+mem_heap_B=302080
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=6477
+mem_heap_B=302080
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=6513
+mem_heap_B=302080
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=6549
+mem_heap_B=302080
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=detailed
+n4: 302080 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 131072 0x10C5EF: boost::numeric::ublas::unbounded_array<float, std::allocator<float> >::unbounded_array(unsigned long, float const&, std::allocator<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+  n2: 131072 0x10C6E7: boost::numeric::ublas::matrix<float, boost::numeric::ublas::basic_row_major<unsigned long, long>, boost::numeric::ublas::unbounded_array<float, std::allocator<float> > >::matrix(unsigned long, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+   n0: 65536 0x109DEF: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+   n0: 65536 0x109E0B: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n1: 65536 0x10C59B: boost::numeric::ublas::unbounded_array<float, std::allocator<float> >::unbounded_array(unsigned long, std::allocator<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+  n0: 65536 0x109E3F: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+ n1: 32768 0x10C83F: boost::numeric::ublas::unbounded_array<short, std::allocator<short> >::unbounded_array(unsigned long, short const&, std::allocator<short> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+  n1: 32768 0x10C967: boost::numeric::ublas::matrix<short, boost::numeric::ublas::basic_row_major<unsigned long, long>, boost::numeric::ublas::unbounded_array<short, std::allocator<short> > >::matrix(unsigned long, unsigned long, short const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+   n0: 32768 0x109DCF: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+#-----------
+snapshot=46
+#-----------
+time=6585
+mem_heap_B=302080
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=6621
+mem_heap_B=302080
+mem_heap_extra_B=40
+mem_stacks_B=864
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=6657
+mem_heap_B=302080
+mem_heap_extra_B=40
+mem_stacks_B=960
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=6714
+mem_heap_B=237568
+mem_heap_extra_B=40
+mem_stacks_B=2672
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=6729
+mem_heap_B=237568
+mem_heap_extra_B=40
+mem_stacks_B=2624
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=6738
+mem_heap_B=237568
+mem_heap_extra_B=40
+mem_stacks_B=2720
+heap_tree=detailed
+n5: 237568 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n1: 65536 0x10C59B: boost::numeric::ublas::unbounded_array<float, std::allocator<float> >::unbounded_array(unsigned long, std::allocator<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+  n0: 65536 0x109E3F: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+ n1: 65536 0x10C5EF: boost::numeric::ublas::unbounded_array<float, std::allocator<float> >::unbounded_array(unsigned long, float const&, std::allocator<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+  n2: 65536 0x10C6E7: boost::numeric::ublas::matrix<float, boost::numeric::ublas::basic_row_major<unsigned long, long>, boost::numeric::ublas::unbounded_array<float, std::allocator<float> > >::matrix(unsigned long, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+   n0: 65536 0x109DEF: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 32768 0x10C83F: boost::numeric::ublas::unbounded_array<short, std::allocator<short> >::unbounded_array(unsigned long, short const&, std::allocator<short> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+  n1: 32768 0x10C967: boost::numeric::ublas::matrix<short, boost::numeric::ublas::basic_row_major<unsigned long, long>, boost::numeric::ublas::unbounded_array<short, std::allocator<short> > >::matrix(unsigned long, unsigned long, short const&) (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+   n0: 32768 0x109DCF: main (in /home/ubuntu/imperial_project/BNN/core/cython/lib/library_test_code/test_exe/test_boost_Ofast)
+ n0: 1024 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=52
+#-----------
+time=6747
+mem_heap_B=73728
+mem_heap_extra_B=16
+mem_stacks_B=464
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=6756
+mem_heap_B=73728
+mem_heap_extra_B=16
+mem_stacks_B=496
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=6765
+mem_heap_B=73728
+mem_heap_extra_B=16
+mem_stacks_B=800
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=6774
+mem_heap_B=73728
+mem_heap_extra_B=16
+mem_stacks_B=672
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=6783
+mem_heap_B=73728
+mem_heap_extra_B=16
+mem_stacks_B=592
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=6793
+mem_heap_B=73728
+mem_heap_extra_B=16
+mem_stacks_B=640
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=6802
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=1456
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=6811
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=6820
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=624
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=6829
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=672
+heap_tree=detailed
+n1: 0 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 0 in 5 places, all below massif's threshold (1.00%)

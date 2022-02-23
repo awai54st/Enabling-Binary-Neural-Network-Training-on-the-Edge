@@ -1,0 +1,784 @@
+desc: --time-unit=ms --max-snapshots=100 --stacks=yes --depth=5 --massif-out-file=./integration_test/massif.out.test_mlp_vanilla_opt_100_baseline
+cmd: ./naive_layer_test_exe/test_mlp_vanilla 100 0
+time_unit: ms
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=149
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=8096
+heap_tree=detailed
+n0: 0 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+#-----------
+snapshot=2
+#-----------
+time=242
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5808
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=548
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5424
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=554
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5840
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=881
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5456
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=884
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5824
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=1380
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5488
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=1394
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=6032
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=4800
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5552
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=4808
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5376
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=5277
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5616
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=5342
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=2416
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=5431
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=2944
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=5495
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=2688
+heap_tree=detailed
+n0: 0 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+#-----------
+snapshot=15
+#-----------
+time=5591
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=2944
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=5657
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=2688
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=5753
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=3008
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=5874
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=2240
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=6013
+mem_heap_B=72704
+mem_heap_extra_B=8
+mem_stacks_B=224
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=6127
+mem_heap_B=73616
+mem_heap_extra_B=32
+mem_stacks_B=2048
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=6201
+mem_heap_B=73616
+mem_heap_extra_B=32
+mem_stacks_B=2176
+heap_tree=detailed
+n3: 73616 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x51EF293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n1: 912 0x4010B3F: allocate_dtv (dl-tls.c:286)
+  n1: 912 0x40113CF: _dl_allocate_tls (dl-tls.c:532)
+   n1: 912 0x5581F6F: allocate_stack (allocatestack.c:622)
+    n1: 912 0x5581F6F: pthread_create@@GLIBC_2.17 (pthread_create.c:660)
+     n1: 912 0x4A44BA7: blas_thread_init (in /usr/lib/aarch64-linux-gnu/openblas-pthread/libblas.so.3)
+      n0: 912 0x48D1807: gotoblas_init (in /usr/lib/aarch64-linux-gnu/openblas-pthread/libblas.so.3)
+ n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=22
+#-----------
+time=6299
+mem_heap_B=391504
+mem_heap_extra_B=152
+mem_stacks_B=2832
+heap_tree=detailed
+n3: 391504 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 317600 0x10BB13: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n2: 317600 0x10C29F: Matrix<float>::Matrix(std::vector<unsigned long, std::allocator<unsigned long> > const&, float, float const*) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 313600 0x10975F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 4000 0x1097A3: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+ n1: 72704 0x51EF293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 1200 in 7 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=23
+#-----------
+time=6395
+mem_heap_B=391504
+mem_heap_extra_B=152
+mem_stacks_B=2624
+heap_tree=detailed
+n3: 391504 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 317600 0x10BB13: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n2: 317600 0x10C29F: Matrix<float>::Matrix(std::vector<unsigned long, std::allocator<unsigned long> > const&, float, float const*) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 313600 0x10975F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 4000 0x1097A3: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+ n1: 72704 0x51EF293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 1200 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=24
+#-----------
+time=6461
+mem_heap_B=391504
+mem_heap_extra_B=152
+mem_stacks_B=2672
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=6611
+mem_heap_B=391504
+mem_heap_extra_B=152
+mem_stacks_B=2672
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=6761
+mem_heap_B=391504
+mem_heap_extra_B=152
+mem_stacks_B=2624
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=6911
+mem_heap_B=391504
+mem_heap_extra_B=152
+mem_stacks_B=2672
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=7061
+mem_heap_B=391504
+mem_heap_extra_B=152
+mem_stacks_B=2624
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=7211
+mem_heap_B=391504
+mem_heap_extra_B=152
+mem_stacks_B=2624
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=7361
+mem_heap_B=391504
+mem_heap_extra_B=152
+mem_stacks_B=2624
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=7511
+mem_heap_B=391504
+mem_heap_extra_B=152
+mem_stacks_B=2624
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=7661
+mem_heap_B=391504
+mem_heap_extra_B=152
+mem_stacks_B=2608
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=7811
+mem_heap_B=391504
+mem_heap_extra_B=152
+mem_stacks_B=2608
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=7961
+mem_heap_B=391504
+mem_heap_extra_B=152
+mem_stacks_B=2624
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=8111
+mem_heap_B=391504
+mem_heap_extra_B=152
+mem_stacks_B=2608
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=8261
+mem_heap_B=391504
+mem_heap_extra_B=152
+mem_stacks_B=2608
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=8411
+mem_heap_B=391504
+mem_heap_extra_B=152
+mem_stacks_B=2624
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=8561
+mem_heap_B=391504
+mem_heap_extra_B=152
+mem_stacks_B=2608
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=8711
+mem_heap_B=391504
+mem_heap_extra_B=152
+mem_stacks_B=2608
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=8861
+mem_heap_B=391504
+mem_heap_extra_B=152
+mem_stacks_B=2672
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=9011
+mem_heap_B=391504
+mem_heap_extra_B=152
+mem_stacks_B=2624
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=9161
+mem_heap_B=391504
+mem_heap_extra_B=152
+mem_stacks_B=2624
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=9311
+mem_heap_B=391504
+mem_heap_extra_B=152
+mem_stacks_B=2672
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=9461
+mem_heap_B=391504
+mem_heap_extra_B=152
+mem_stacks_B=2624
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=9611
+mem_heap_B=391504
+mem_heap_extra_B=152
+mem_stacks_B=2624
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=9761
+mem_heap_B=391504
+mem_heap_extra_B=152
+mem_stacks_B=2624
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=9911
+mem_heap_B=391504
+mem_heap_extra_B=152
+mem_stacks_B=2624
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=10011
+mem_heap_B=716928
+mem_heap_extra_B=1648
+mem_stacks_B=2688
+heap_tree=peak
+n4: 716928 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 317600 0x10BB13: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n2: 317600 0x10C29F: Matrix<float>::Matrix(std::vector<unsigned long, std::allocator<unsigned long> > const&, float, float const*) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 313600 0x10975F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 4000 in 1 place, below massif's threshold (1.00%)
+ n1: 313600 0x10B3BF: Matrix<float>::Matrix(Matrix<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n0: 313600 0x10A60F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+ n1: 72704 0x51EF293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 13024 in 40 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=49
+#-----------
+time=10057
+mem_heap_B=75776
+mem_heap_extra_B=1328
+mem_stacks_B=1824
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=10060
+mem_heap_B=75776
+mem_heap_extra_B=1328
+mem_stacks_B=1840
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=10063
+mem_heap_B=75776
+mem_heap_extra_B=1328
+mem_stacks_B=2000
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=10066
+mem_heap_B=75776
+mem_heap_extra_B=1328
+mem_stacks_B=2128
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=10069
+mem_heap_B=75776
+mem_heap_extra_B=1328
+mem_stacks_B=2160
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=10072
+mem_heap_B=75776
+mem_heap_extra_B=1328
+mem_stacks_B=2048
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=10075
+mem_heap_B=75776
+mem_heap_extra_B=1328
+mem_stacks_B=2048
+heap_tree=detailed
+n3: 75776 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x51EF293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 2160 in 45 places, all below massif's threshold (1.00%)
+ n1: 912 0x4010B3F: allocate_dtv (dl-tls.c:286)
+  n1: 912 0x40113CF: _dl_allocate_tls (dl-tls.c:532)
+   n1: 912 0x5581F6F: allocate_stack (allocatestack.c:622)
+    n1: 912 0x5581F6F: pthread_create@@GLIBC_2.17 (pthread_create.c:660)
+     n1: 912 0x4A44BA7: blas_thread_init (in /usr/lib/aarch64-linux-gnu/openblas-pthread/libblas.so.3)
+      n0: 912 0x48D1807: gotoblas_init (in /usr/lib/aarch64-linux-gnu/openblas-pthread/libblas.so.3)
+#-----------
+snapshot=56
+#-----------
+time=10078
+mem_heap_B=75776
+mem_heap_extra_B=1328
+mem_stacks_B=2048
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=10082
+mem_heap_B=75776
+mem_heap_extra_B=1328
+mem_stacks_B=1872
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=10085
+mem_heap_B=75776
+mem_heap_extra_B=1328
+mem_stacks_B=1840
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=10088
+mem_heap_B=75776
+mem_heap_extra_B=1328
+mem_stacks_B=1696
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=10091
+mem_heap_B=75776
+mem_heap_extra_B=1328
+mem_stacks_B=1920
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=10094
+mem_heap_B=75776
+mem_heap_extra_B=1328
+mem_stacks_B=1760
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=10097
+mem_heap_B=75776
+mem_heap_extra_B=1328
+mem_stacks_B=1536
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=10100
+mem_heap_B=75776
+mem_heap_extra_B=1328
+mem_stacks_B=1648
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=10103
+mem_heap_B=75776
+mem_heap_extra_B=1328
+mem_stacks_B=1552
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=10106
+mem_heap_B=75776
+mem_heap_extra_B=1328
+mem_stacks_B=1424
+heap_tree=detailed
+n3: 75776 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x51EF293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 2160 in 45 places, all below massif's threshold (1.00%)
+ n1: 912 0x4010B3F: allocate_dtv (dl-tls.c:286)
+  n1: 912 0x40113CF: _dl_allocate_tls (dl-tls.c:532)
+   n1: 912 0x5581F6F: allocate_stack (allocatestack.c:622)
+    n1: 912 0x5581F6F: pthread_create@@GLIBC_2.17 (pthread_create.c:660)
+     n1: 912 0x4A44BA7: blas_thread_init (in /usr/lib/aarch64-linux-gnu/openblas-pthread/libblas.so.3)
+      n0: 912 0x48D1807: gotoblas_init (in /usr/lib/aarch64-linux-gnu/openblas-pthread/libblas.so.3)
+#-----------
+snapshot=66
+#-----------
+time=10109
+mem_heap_B=75776
+mem_heap_extra_B=1328
+mem_stacks_B=1424
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=10114
+mem_heap_B=75776
+mem_heap_extra_B=1328
+mem_stacks_B=1424
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=10118
+mem_heap_B=75776
+mem_heap_extra_B=1328
+mem_stacks_B=1280
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=10121
+mem_heap_B=3072
+mem_heap_extra_B=1320
+mem_stacks_B=1408
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=10124
+mem_heap_B=3072
+mem_heap_extra_B=1320
+mem_stacks_B=1680
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=10127
+mem_heap_B=3072
+mem_heap_extra_B=1320
+mem_stacks_B=1424
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=10130
+mem_heap_B=3072
+mem_heap_extra_B=1320
+mem_stacks_B=1424
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=10133
+mem_heap_B=3072
+mem_heap_extra_B=1320
+mem_stacks_B=1408
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=10136
+mem_heap_B=3072
+mem_heap_extra_B=1320
+mem_stacks_B=1408
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=10139
+mem_heap_B=3072
+mem_heap_extra_B=1320
+mem_stacks_B=1408
+heap_tree=detailed
+n13: 3072 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 912 0x4010B3F: allocate_dtv (dl-tls.c:286)
+  n1: 912 0x40113CF: _dl_allocate_tls (dl-tls.c:532)
+   n1: 912 0x5581F6F: allocate_stack (allocatestack.c:622)
+    n1: 912 0x5581F6F: pthread_create@@GLIBC_2.17 (pthread_create.c:660)
+     n1: 912 0x4A44BA7: blas_thread_init (in /usr/lib/aarch64-linux-gnu/openblas-pthread/libblas.so.3)
+      n0: 912 0x48D1807: gotoblas_init (in /usr/lib/aarch64-linux-gnu/openblas-pthread/libblas.so.3)
+ n0: 432 in 35 places, all below massif's threshold (1.00%)
+ n1: 160 0x1108FB: OPT_Vanilla_Dense::OPT_Vanilla_Dense(unsigned long, bool, int) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 160 0x10AADB: std::_MakeUniq<OPT_Vanilla_Dense>::__single_object std::make_unique<OPT_Vanilla_Dense, int, bool, int>(int&&, bool&&, int&&) [clone .isra.0] (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 160 in 5 places, all below massif's threshold (1.00%)
+ n1: 160 0x110997: OPT_Vanilla_Dense::OPT_Vanilla_Dense(unsigned long, bool, int) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 160 0x10AADB: std::_MakeUniq<OPT_Vanilla_Dense>::__single_object std::make_unique<OPT_Vanilla_Dense, int, bool, int>(int&&, bool&&, int&&) [clone .isra.0] (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 160 in 5 places, all below massif's threshold (1.00%)
+ n1: 160 0x110A33: OPT_Vanilla_Dense::OPT_Vanilla_Dense(unsigned long, bool, int) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 160 0x10AADB: std::_MakeUniq<OPT_Vanilla_Dense>::__single_object std::make_unique<OPT_Vanilla_Dense, int, bool, int>(int&&, bool&&, int&&) [clone .isra.0] (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 160 in 5 places, all below massif's threshold (1.00%)
+ n1: 160 0x1130DF: Vanilla_BatchNormDense::Vanilla_BatchNormDense(float) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 160 0x10AB8B: std::_MakeUniq<Vanilla_BatchNormDense>::__single_object std::make_unique<Vanilla_BatchNormDense, float const&>(float const&) [clone .isra.0] [clone .constprop.0] (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 160 in 5 places, all below massif's threshold (1.00%)
+ n1: 160 0x11318B: Vanilla_BatchNormDense::Vanilla_BatchNormDense(float) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 160 0x10AB8B: std::_MakeUniq<Vanilla_BatchNormDense>::__single_object std::make_unique<Vanilla_BatchNormDense, float const&>(float const&) [clone .isra.0] [clone .constprop.0] (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 160 in 5 places, all below massif's threshold (1.00%)
+ n1: 160 0x11322F: Vanilla_BatchNormDense::Vanilla_BatchNormDense(float) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 160 0x10AB8B: std::_MakeUniq<Vanilla_BatchNormDense>::__single_object std::make_unique<Vanilla_BatchNormDense, float const&>(float const&) [clone .isra.0] [clone .constprop.0] (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 160 in 5 places, all below massif's threshold (1.00%)
+ n1: 160 0x1132D3: Vanilla_BatchNormDense::Vanilla_BatchNormDense(float) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 160 0x10AB8B: std::_MakeUniq<Vanilla_BatchNormDense>::__single_object std::make_unique<Vanilla_BatchNormDense, float const&>(float const&) [clone .isra.0] [clone .constprop.0] (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 160 in 5 places, all below massif's threshold (1.00%)
+ n1: 160 0x11337B: Vanilla_BatchNormDense::Vanilla_BatchNormDense(float) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 160 0x10AB8B: std::_MakeUniq<Vanilla_BatchNormDense>::__single_object std::make_unique<Vanilla_BatchNormDense, float const&>(float const&) [clone .isra.0] [clone .constprop.0] (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 160 in 5 places, all below massif's threshold (1.00%)
+ n1: 160 0x11341F: Vanilla_BatchNormDense::Vanilla_BatchNormDense(float) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 160 0x10AB8B: std::_MakeUniq<Vanilla_BatchNormDense>::__single_object std::make_unique<Vanilla_BatchNormDense, float const&>(float const&) [clone .isra.0] [clone .constprop.0] (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 160 in 5 places, all below massif's threshold (1.00%)
+ n1: 160 0x1134C3: Vanilla_BatchNormDense::Vanilla_BatchNormDense(float) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 160 0x10AB8B: std::_MakeUniq<Vanilla_BatchNormDense>::__single_object std::make_unique<Vanilla_BatchNormDense, float const&>(float const&) [clone .isra.0] [clone .constprop.0] (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 160 in 5 places, all below massif's threshold (1.00%)
+ n1: 128 0x10C95B: BinaryActivation<float>::BinaryActivation() (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+  n1: 128 0x10AFEF: std::_MakeUniq<BinaryActivation<float> >::__single_object std::make_unique<BinaryActivation<float>>() (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/naive_layer_test_exe/test_mlp_vanilla)
+   n0: 128 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=76
+#-----------
+time=10142
+mem_heap_B=3072
+mem_heap_extra_B=1320
+mem_stacks_B=1440
+heap_tree=empty
+#-----------
+snapshot=77
+#-----------
+time=10145
+mem_heap_B=3072
+mem_heap_extra_B=1320
+mem_stacks_B=1552
+heap_tree=empty
+#-----------
+snapshot=78
+#-----------
+time=10148
+mem_heap_B=3072
+mem_heap_extra_B=1320
+mem_stacks_B=1536
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=10152
+mem_heap_B=3072
+mem_heap_extra_B=1320
+mem_stacks_B=1520
+heap_tree=empty
+#-----------
+snapshot=80
+#-----------
+time=10155
+mem_heap_B=3072
+mem_heap_extra_B=1320
+mem_stacks_B=2384
+heap_tree=empty
+#-----------
+snapshot=81
+#-----------
+time=10158
+mem_heap_B=2768
+mem_heap_extra_B=1312
+mem_stacks_B=1552
+heap_tree=empty
+#-----------
+snapshot=82
+#-----------
+time=10161
+mem_heap_B=2160
+mem_heap_extra_B=1296
+mem_stacks_B=1488
+heap_tree=empty

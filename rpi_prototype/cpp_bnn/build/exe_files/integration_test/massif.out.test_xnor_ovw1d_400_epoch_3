@@ -1,0 +1,1086 @@
+desc: --time-unit=ms --max-snapshots=100 --stacks=yes --depth=5 --massif-out-file=././integration_test//massif.out.test_xnor_ovw1d_400_epoch_3
+cmd: ./test_xnor_ovw1d 400 3
+time_unit: ms
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=94678
+mem_heap_B=20159348
+mem_heap_extra_B=6108
+mem_stacks_B=2368
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=234687
+mem_heap_B=23949924
+mem_heap_extra_B=6452
+mem_stacks_B=2368
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=449305
+mem_heap_B=23949924
+mem_heap_extra_B=6452
+mem_stacks_B=2368
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=606271
+mem_heap_B=23949924
+mem_heap_extra_B=6452
+mem_stacks_B=2368
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=822849
+mem_heap_B=23949924
+mem_heap_extra_B=6452
+mem_stacks_B=2368
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=963243
+mem_heap_B=23949924
+mem_heap_extra_B=6452
+mem_stacks_B=2368
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=1118001
+mem_heap_B=27707644
+mem_heap_extra_B=6652
+mem_stacks_B=1920
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=1276753
+mem_heap_B=27707612
+mem_heap_extra_B=6644
+mem_stacks_B=1920
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=1445771
+mem_heap_B=8811423
+mem_heap_extra_B=3585
+mem_stacks_B=2912
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=1577555
+mem_heap_B=28916732
+mem_heap_extra_B=7796
+mem_stacks_B=2048
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=3662387
+mem_heap_B=28916956
+mem_heap_extra_B=7860
+mem_stacks_B=2480
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=3876340
+mem_heap_B=28923684
+mem_heap_extra_B=7940
+mem_stacks_B=2640
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=4059946
+mem_heap_B=28923684
+mem_heap_extra_B=7940
+mem_stacks_B=2640
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=4209133
+mem_heap_B=28923684
+mem_heap_extra_B=7940
+mem_stacks_B=2640
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=4315954
+mem_heap_B=28923684
+mem_heap_extra_B=7940
+mem_stacks_B=2640
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=4449452
+mem_heap_B=28923684
+mem_heap_extra_B=7940
+mem_stacks_B=2640
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=4556358
+mem_heap_B=28923684
+mem_heap_extra_B=7940
+mem_stacks_B=2640
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=4743353
+mem_heap_B=28923684
+mem_heap_extra_B=7940
+mem_stacks_B=2640
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=4888728
+mem_heap_B=29544068
+mem_heap_extra_B=7852
+mem_stacks_B=1824
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=5000292
+mem_heap_B=11168845
+mem_heap_extra_B=5003
+mem_stacks_B=2864
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=5135312
+mem_heap_B=30592956
+mem_heap_extra_B=9092
+mem_stacks_B=2368
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=5242062
+mem_heap_B=30592956
+mem_heap_extra_B=9092
+mem_stacks_B=2368
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=5375470
+mem_heap_B=30592956
+mem_heap_extra_B=9092
+mem_stacks_B=2368
+heap_tree=detailed
+n4: 30592956 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n3: 20904120 0x10F04F: std::vector<half, std::allocator<half> >::_M_fill_insert(__gnu_cxx::__normal_iterator<half*, std::vector<half, std::allocator<half> > >, unsigned long, half const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 20070400 0x1349F7: void _align_memory_before_conv<half, unsigned long>(Matrix<half>&, std::vector<unsigned long, std::allocator<unsigned long> >, std::vector<unsigned long, std::allocator<unsigned long> >) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n1: 20070400 0x12F68B: XNor_Convolution2D_OWH1D::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+    n0: 20070400 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 812288 0x127AF7: XNor_Dense_OVW1D::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 812288 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n0: 21432 in 19 places, all below massif's threshold (1.00%)
+ n6: 7912816 0x11331B: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 2515200 0x113F8B: BinaryActivation<bool, Matrix, half, Matrix<half>&>::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 2515200 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 2508800 0x146E1F: XNor_BatchNormConv<Matrix, Matrix<half>&>::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 2508800 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 1254400 0x11B49F: MaxPooling<bool, Matrix, half, Matrix<half>&>::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 1254400 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 1254400 0x12F477: XNor_Convolution2D_OWH1D::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 1254400 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 320000 0x127DC7: XNor_Dense_OVW1D::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 320000 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n0: 60016 in 4 places, all below massif's threshold (1.00%)
+ n2: 1663400 0x125E7F: Matrix<half>::Matrix(Matrix<half> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 831700 0x126DA7: Adam<half, Matrix<half>&>::update(std::vector<std::unique_ptr<BaseLayer<Matrix, half, Matrix<half>&>, std::default_delete<BaseLayer<Matrix, half, Matrix<half>&> > >, std::allocator<std::unique_ptr<BaseLayer<Matrix, half, Matrix<half>&>, std::default_delete<BaseLayer<Matrix, half, Matrix<half>&> > > > >&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 831700 0x10D11B: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 831700 0x126DC7: Adam<half, Matrix<half>&>::update(std::vector<std::unique_ptr<BaseLayer<Matrix, half, Matrix<half>&>, std::default_delete<BaseLayer<Matrix, half, Matrix<half>&> > >, std::allocator<std::unique_ptr<BaseLayer<Matrix, half, Matrix<half>&>, std::default_delete<BaseLayer<Matrix, half, Matrix<half>&> > > > >&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 831700 0x10D11B: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+ n0: 112620 in 227 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=24
+#-----------
+time=5562311
+mem_heap_B=30592956
+mem_heap_extra_B=9092
+mem_stacks_B=2368
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=5695881
+mem_heap_B=30592956
+mem_heap_extra_B=9092
+mem_stacks_B=2368
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=5829409
+mem_heap_B=30592956
+mem_heap_extra_B=9092
+mem_stacks_B=2368
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=5997936
+mem_heap_B=30586132
+mem_heap_extra_B=8980
+mem_stacks_B=1920
+heap_tree=detailed
+n4: 30586132 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n3: 20904120 0x10F04F: std::vector<half, std::allocator<half> >::_M_fill_insert(__gnu_cxx::__normal_iterator<half*, std::vector<half, std::allocator<half> > >, unsigned long, half const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 20070400 0x1349F7: void _align_memory_before_conv<half, unsigned long>(Matrix<half>&, std::vector<unsigned long, std::allocator<unsigned long> >, std::vector<unsigned long, std::allocator<unsigned long> >) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n1: 20070400 0x12F68B: XNor_Convolution2D_OWH1D::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+    n0: 20070400 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 812288 0x127AF7: XNor_Dense_OVW1D::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 812288 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n0: 21432 in 19 places, all below massif's threshold (1.00%)
+ n6: 7911664 0x11331B: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 2515200 0x113F8B: BinaryActivation<bool, Matrix, half, Matrix<half>&>::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 2515200 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 2508800 0x146E1F: XNor_BatchNormConv<Matrix, Matrix<half>&>::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 2508800 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 1254400 0x11B49F: MaxPooling<bool, Matrix, half, Matrix<half>&>::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 1254400 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 1254400 0x12F477: XNor_Convolution2D_OWH1D::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 1254400 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 320000 0x127DC7: XNor_Dense_OVW1D::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 320000 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n0: 58864 in 4 places, all below massif's threshold (1.00%)
+ n2: 1663400 0x125E7F: Matrix<half>::Matrix(Matrix<half> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 831700 0x126DA7: Adam<half, Matrix<half>&>::update(std::vector<std::unique_ptr<BaseLayer<Matrix, half, Matrix<half>&>, std::default_delete<BaseLayer<Matrix, half, Matrix<half>&> > >, std::allocator<std::unique_ptr<BaseLayer<Matrix, half, Matrix<half>&>, std::default_delete<BaseLayer<Matrix, half, Matrix<half>&> > > > >&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 831700 0x10D11B: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 831700 0x126DC7: Adam<half, Matrix<half>&>::update(std::vector<std::unique_ptr<BaseLayer<Matrix, half, Matrix<half>&>, std::default_delete<BaseLayer<Matrix, half, Matrix<half>&> > >, std::allocator<std::unique_ptr<BaseLayer<Matrix, half, Matrix<half>&>, std::default_delete<BaseLayer<Matrix, half, Matrix<half>&> > > > >&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 831700 0x10D11B: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+ n0: 106948 in 227 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=28
+#-----------
+time=6131316
+mem_heap_B=30586196
+mem_heap_extra_B=8996
+mem_stacks_B=1920
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=6331488
+mem_heap_B=30648972
+mem_heap_extra_B=9052
+mem_stacks_B=2160
+heap_tree=detailed
+n4: 30648972 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n3: 20904120 0x10F04F: std::vector<half, std::allocator<half> >::_M_fill_insert(__gnu_cxx::__normal_iterator<half*, std::vector<half, std::allocator<half> > >, unsigned long, half const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 20070400 0x1349F7: void _align_memory_before_conv<half, unsigned long>(Matrix<half>&, std::vector<unsigned long, std::allocator<unsigned long> >, std::vector<unsigned long, std::allocator<unsigned long> >) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n1: 20070400 0x12F68B: XNor_Convolution2D_OWH1D::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+    n0: 20070400 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 812288 0x127AF7: XNor_Dense_OVW1D::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 812288 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n0: 21432 in 19 places, all below massif's threshold (1.00%)
+ n6: 7961840 0x11331B: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 2515200 0x113F8B: BinaryActivation<bool, Matrix, half, Matrix<half>&>::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 2515200 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 2508800 0x146E1F: XNor_BatchNormConv<Matrix, Matrix<half>&>::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 2508800 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 1254400 0x11B49F: MaxPooling<bool, Matrix, half, Matrix<half>&>::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 1254400 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 1254400 0x12F477: XNor_Convolution2D_OWH1D::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 1254400 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 320000 0x127DC7: XNor_Dense_OVW1D::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 320000 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n0: 109040 in 4 places, all below massif's threshold (1.00%)
+ n2: 1663400 0x125E7F: Matrix<half>::Matrix(Matrix<half> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 831700 0x126DA7: Adam<half, Matrix<half>&>::update(std::vector<std::unique_ptr<BaseLayer<Matrix, half, Matrix<half>&>, std::default_delete<BaseLayer<Matrix, half, Matrix<half>&> > >, std::allocator<std::unique_ptr<BaseLayer<Matrix, half, Matrix<half>&>, std::default_delete<BaseLayer<Matrix, half, Matrix<half>&> > > > >&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 831700 0x10D11B: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 831700 0x126DC7: Adam<half, Matrix<half>&>::update(std::vector<std::unique_ptr<BaseLayer<Matrix, half, Matrix<half>&>, std::default_delete<BaseLayer<Matrix, half, Matrix<half>&> > >, std::allocator<std::unique_ptr<BaseLayer<Matrix, half, Matrix<half>&>, std::default_delete<BaseLayer<Matrix, half, Matrix<half>&> > > > >&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 831700 0x10D11B: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+ n0: 119612 in 227 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=30
+#-----------
+time=6465899
+mem_heap_B=35603796
+mem_heap_extra_B=13036
+mem_stacks_B=2144
+heap_tree=peak
+n4: 35603796 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n4: 25921720 0x10F04F: std::vector<half, std::allocator<half> >::_M_fill_insert(__gnu_cxx::__normal_iterator<half*, std::vector<half, std::allocator<half> > >, unsigned long, half const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 20070400 0x116E33: void _align_memory_before_pool<Matrix, half>(Matrix<half>&, std::vector<unsigned long, std::allocator<unsigned long> >, unsigned long) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n1: 20070400 0x1173FB: MaxPooling<bool, Matrix, half, Matrix<half>&>::backprop(Matrix<half>&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+    n0: 20070400 0x10CD33: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 5017600 0x12AFAF: void _align_memory_before_dot<half>(Matrix<half>&, std::vector<unsigned long, std::allocator<unsigned long> >&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n1: 5017600 0x12B6BB: void float_dot_bit<half, bool>(Matrix<half>&, Matrix<bool>&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+    n1: 5017600 0x128CA3: XNor_Dense_OVW1D::backprop(Matrix<half>&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+     n0: 5017600 0x10CD33: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 812288 0x127AF7: XNor_Dense_OVW1D::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 812288 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n0: 21432 in 18 places, all below massif's threshold (1.00%)
+ n5: 7911664 0x11331B: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 2515200 0x113F8B: BinaryActivation<bool, Matrix, half, Matrix<half>&>::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 2515200 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 2508800 0x146E1F: XNor_BatchNormConv<Matrix, Matrix<half>&>::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 2508800 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 1254400 0x11B49F: MaxPooling<bool, Matrix, half, Matrix<half>&>::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 1254400 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 1254400 0x12F477: XNor_Convolution2D_OWH1D::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 1254400 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n0: 378864 in 5 places, all below massif's threshold (1.00%)
+ n2: 1663400 0x125E7F: Matrix<half>::Matrix(Matrix<half> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 831700 0x126DA7: Adam<half, Matrix<half>&>::update(std::vector<std::unique_ptr<BaseLayer<Matrix, half, Matrix<half>&>, std::default_delete<BaseLayer<Matrix, half, Matrix<half>&> > >, std::allocator<std::unique_ptr<BaseLayer<Matrix, half, Matrix<half>&>, std::default_delete<BaseLayer<Matrix, half, Matrix<half>&> > > > >&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 831700 0x10D11B: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 831700 0x126DC7: Adam<half, Matrix<half>&>::update(std::vector<std::unique_ptr<BaseLayer<Matrix, half, Matrix<half>&>, std::default_delete<BaseLayer<Matrix, half, Matrix<half>&> > >, std::allocator<std::unique_ptr<BaseLayer<Matrix, half, Matrix<half>&>, std::default_delete<BaseLayer<Matrix, half, Matrix<half>&> > > > >&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 831700 0x10D11B: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+ n0: 107012 in 227 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=31
+#-----------
+time=6499343
+mem_heap_B=30586068
+mem_heap_extra_B=8964
+mem_stacks_B=2048
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=8592007
+mem_heap_B=30586292
+mem_heap_extra_B=9028
+mem_stacks_B=2480
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=8759190
+mem_heap_B=30593020
+mem_heap_extra_B=9108
+mem_stacks_B=2640
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=8859506
+mem_heap_B=30593020
+mem_heap_extra_B=9108
+mem_stacks_B=2640
+heap_tree=detailed
+n4: 30593020 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n3: 20904120 0x10F04F: std::vector<half, std::allocator<half> >::_M_fill_insert(__gnu_cxx::__normal_iterator<half*, std::vector<half, std::allocator<half> > >, unsigned long, half const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 20070400 0x116E33: void _align_memory_before_pool<Matrix, half>(Matrix<half>&, std::vector<unsigned long, std::allocator<unsigned long> >, unsigned long) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n1: 20070400 0x1173FB: MaxPooling<bool, Matrix, half, Matrix<half>&>::backprop(Matrix<half>&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+    n0: 20070400 0x10CD33: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 812288 0x127AF7: XNor_Dense_OVW1D::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 812288 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n0: 21432 in 19 places, all below massif's threshold (1.00%)
+ n6: 7912816 0x11331B: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 2515200 0x113F8B: BinaryActivation<bool, Matrix, half, Matrix<half>&>::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 2515200 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 2508800 0x146E1F: XNor_BatchNormConv<Matrix, Matrix<half>&>::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 2508800 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 1254400 0x11B49F: MaxPooling<bool, Matrix, half, Matrix<half>&>::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 1254400 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 1254400 0x12F477: XNor_Convolution2D_OWH1D::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 1254400 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 320000 0x127DC7: XNor_Dense_OVW1D::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 320000 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n0: 60016 in 4 places, all below massif's threshold (1.00%)
+ n2: 1663400 0x125E7F: Matrix<half>::Matrix(Matrix<half> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 831700 0x126DA7: Adam<half, Matrix<half>&>::update(std::vector<std::unique_ptr<BaseLayer<Matrix, half, Matrix<half>&>, std::default_delete<BaseLayer<Matrix, half, Matrix<half>&> > >, std::allocator<std::unique_ptr<BaseLayer<Matrix, half, Matrix<half>&>, std::default_delete<BaseLayer<Matrix, half, Matrix<half>&> > > > >&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 831700 0x10D11B: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 831700 0x126DC7: Adam<half, Matrix<half>&>::update(std::vector<std::unique_ptr<BaseLayer<Matrix, half, Matrix<half>&>, std::default_delete<BaseLayer<Matrix, half, Matrix<half>&> > >, std::allocator<std::unique_ptr<BaseLayer<Matrix, half, Matrix<half>&>, std::default_delete<BaseLayer<Matrix, half, Matrix<half>&> > > > >&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 831700 0x10D11B: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+ n0: 112684 in 227 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=35
+#-----------
+time=9026429
+mem_heap_B=30593020
+mem_heap_extra_B=9108
+mem_stacks_B=2640
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=9160181
+mem_heap_B=30593020
+mem_heap_extra_B=9108
+mem_stacks_B=2640
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=9360665
+mem_heap_B=30593020
+mem_heap_extra_B=9108
+mem_stacks_B=2640
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=9494565
+mem_heap_B=30593020
+mem_heap_extra_B=9108
+mem_stacks_B=2640
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=9628604
+mem_heap_B=30593020
+mem_heap_extra_B=9108
+mem_stacks_B=2640
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=9795982
+mem_heap_B=31239984
+mem_heap_extra_B=9096
+mem_stacks_B=3008
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=9880482
+mem_heap_B=31213628
+mem_heap_extra_B=9084
+mem_stacks_B=2256
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=10015313
+mem_heap_B=30586100
+mem_heap_extra_B=8972
+mem_stacks_B=1776
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=10216141
+mem_heap_B=30592956
+mem_heap_extra_B=9092
+mem_stacks_B=2368
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=10417069
+mem_heap_B=30592956
+mem_heap_extra_B=9092
+mem_stacks_B=2368
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=10551047
+mem_heap_B=30592956
+mem_heap_extra_B=9092
+mem_stacks_B=2368
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=10684966
+mem_heap_B=30592956
+mem_heap_extra_B=9092
+mem_stacks_B=2368
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=10785433
+mem_heap_B=30592956
+mem_heap_extra_B=9092
+mem_stacks_B=2368
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=10919338
+mem_heap_B=30586132
+mem_heap_extra_B=8980
+mem_stacks_B=1920
+heap_tree=detailed
+n4: 30586132 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n3: 20904120 0x10F04F: std::vector<half, std::allocator<half> >::_M_fill_insert(__gnu_cxx::__normal_iterator<half*, std::vector<half, std::allocator<half> > >, unsigned long, half const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 20070400 0x1349F7: void _align_memory_before_conv<half, unsigned long>(Matrix<half>&, std::vector<unsigned long, std::allocator<unsigned long> >, std::vector<unsigned long, std::allocator<unsigned long> >) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n1: 20070400 0x12F68B: XNor_Convolution2D_OWH1D::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+    n0: 20070400 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 812288 0x127AF7: XNor_Dense_OVW1D::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 812288 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n0: 21432 in 19 places, all below massif's threshold (1.00%)
+ n6: 7911664 0x11331B: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 2515200 0x113F8B: BinaryActivation<bool, Matrix, half, Matrix<half>&>::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 2515200 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 2508800 0x146E1F: XNor_BatchNormConv<Matrix, Matrix<half>&>::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 2508800 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 1254400 0x11B49F: MaxPooling<bool, Matrix, half, Matrix<half>&>::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 1254400 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 1254400 0x12F477: XNor_Convolution2D_OWH1D::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 1254400 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 320000 0x127DC7: XNor_Dense_OVW1D::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 320000 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n0: 58864 in 4 places, all below massif's threshold (1.00%)
+ n2: 1663400 0x125E7F: Matrix<half>::Matrix(Matrix<half> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 831700 0x126DA7: Adam<half, Matrix<half>&>::update(std::vector<std::unique_ptr<BaseLayer<Matrix, half, Matrix<half>&>, std::default_delete<BaseLayer<Matrix, half, Matrix<half>&> > >, std::allocator<std::unique_ptr<BaseLayer<Matrix, half, Matrix<half>&>, std::default_delete<BaseLayer<Matrix, half, Matrix<half>&> > > > >&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 831700 0x10D11B: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 831700 0x126DC7: Adam<half, Matrix<half>&>::update(std::vector<std::unique_ptr<BaseLayer<Matrix, half, Matrix<half>&>, std::default_delete<BaseLayer<Matrix, half, Matrix<half>&> > >, std::allocator<std::unique_ptr<BaseLayer<Matrix, half, Matrix<half>&>, std::default_delete<BaseLayer<Matrix, half, Matrix<half>&> > > > >&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 831700 0x10D11B: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+ n0: 106948 in 227 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=49
+#-----------
+time=11019670
+mem_heap_B=30586132
+mem_heap_extra_B=8980
+mem_stacks_B=1840
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=11053114
+mem_heap_B=30586164
+mem_heap_extra_B=8988
+mem_stacks_B=1920
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=11086558
+mem_heap_B=30586196
+mem_heap_extra_B=8996
+mem_stacks_B=1840
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=11120002
+mem_heap_B=30586132
+mem_heap_extra_B=8980
+mem_stacks_B=1840
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=11153446
+mem_heap_B=30586164
+mem_heap_extra_B=8988
+mem_stacks_B=1840
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=11186890
+mem_heap_B=30586164
+mem_heap_extra_B=8988
+mem_stacks_B=1840
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=11220334
+mem_heap_B=30586164
+mem_heap_extra_B=8988
+mem_stacks_B=1920
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=11254597
+mem_heap_B=30636396
+mem_heap_extra_B=9028
+mem_stacks_B=2080
+heap_tree=detailed
+n4: 30636396 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n3: 20904120 0x10F04F: std::vector<half, std::allocator<half> >::_M_fill_insert(__gnu_cxx::__normal_iterator<half*, std::vector<half, std::allocator<half> > >, unsigned long, half const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 20070400 0x1349F7: void _align_memory_before_conv<half, unsigned long>(Matrix<half>&, std::vector<unsigned long, std::allocator<unsigned long> >, std::vector<unsigned long, std::allocator<unsigned long> >) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n1: 20070400 0x12F68B: XNor_Convolution2D_OWH1D::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+    n0: 20070400 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 812288 0x127AF7: XNor_Dense_OVW1D::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 812288 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n0: 21432 in 19 places, all below massif's threshold (1.00%)
+ n6: 7961840 0x11331B: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 2515200 0x113F8B: BinaryActivation<bool, Matrix, half, Matrix<half>&>::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 2515200 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 2508800 0x146E1F: XNor_BatchNormConv<Matrix, Matrix<half>&>::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 2508800 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 1254400 0x11B49F: MaxPooling<bool, Matrix, half, Matrix<half>&>::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 1254400 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 1254400 0x12F477: XNor_Convolution2D_OWH1D::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 1254400 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 320000 0x127DC7: XNor_Dense_OVW1D::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 320000 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n0: 109040 in 4 places, all below massif's threshold (1.00%)
+ n2: 1663400 0x125E7F: Matrix<half>::Matrix(Matrix<half> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 831700 0x126DA7: Adam<half, Matrix<half>&>::update(std::vector<std::unique_ptr<BaseLayer<Matrix, half, Matrix<half>&>, std::default_delete<BaseLayer<Matrix, half, Matrix<half>&> > >, std::allocator<std::unique_ptr<BaseLayer<Matrix, half, Matrix<half>&>, std::default_delete<BaseLayer<Matrix, half, Matrix<half>&> > > > >&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 831700 0x10D11B: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 831700 0x126DC7: Adam<half, Matrix<half>&>::update(std::vector<std::unique_ptr<BaseLayer<Matrix, half, Matrix<half>&>, std::default_delete<BaseLayer<Matrix, half, Matrix<half>&> > >, std::allocator<std::unique_ptr<BaseLayer<Matrix, half, Matrix<half>&>, std::default_delete<BaseLayer<Matrix, half, Matrix<half>&> > > > >&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 831700 0x10D11B: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+ n0: 107036 in 227 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=57
+#-----------
+time=11288088
+mem_heap_B=30648972
+mem_heap_extra_B=9052
+mem_stacks_B=2160
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=11355316
+mem_heap_B=10566900
+mem_heap_extra_B=4948
+mem_stacks_B=2288
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=11388811
+mem_heap_B=15583740
+mem_heap_extra_B=9044
+mem_stacks_B=2224
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=11429659
+mem_heap_B=30586068
+mem_heap_extra_B=8964
+mem_stacks_B=2048
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=13547542
+mem_heap_B=30586292
+mem_heap_extra_B=9028
+mem_stacks_B=2480
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=13581002
+mem_heap_B=30593020
+mem_heap_extra_B=9108
+mem_stacks_B=2640
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=13614457
+mem_heap_B=30593020
+mem_heap_extra_B=9108
+mem_stacks_B=2640
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=13647917
+mem_heap_B=30593020
+mem_heap_extra_B=9108
+mem_stacks_B=2640
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=13681383
+mem_heap_B=30593020
+mem_heap_extra_B=9108
+mem_stacks_B=2640
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=13714835
+mem_heap_B=30593020
+mem_heap_extra_B=9108
+mem_stacks_B=2640
+heap_tree=detailed
+n4: 30593020 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n3: 20904120 0x10F04F: std::vector<half, std::allocator<half> >::_M_fill_insert(__gnu_cxx::__normal_iterator<half*, std::vector<half, std::allocator<half> > >, unsigned long, half const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 20070400 0x116E33: void _align_memory_before_pool<Matrix, half>(Matrix<half>&, std::vector<unsigned long, std::allocator<unsigned long> >, unsigned long) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n1: 20070400 0x1173FB: MaxPooling<bool, Matrix, half, Matrix<half>&>::backprop(Matrix<half>&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+    n0: 20070400 0x10CD33: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 812288 0x127AF7: XNor_Dense_OVW1D::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 812288 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n0: 21432 in 19 places, all below massif's threshold (1.00%)
+ n6: 7912816 0x11331B: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 2515200 0x113F8B: BinaryActivation<bool, Matrix, half, Matrix<half>&>::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 2515200 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 2508800 0x146E1F: XNor_BatchNormConv<Matrix, Matrix<half>&>::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 2508800 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 1254400 0x11B49F: MaxPooling<bool, Matrix, half, Matrix<half>&>::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 1254400 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 1254400 0x12F477: XNor_Convolution2D_OWH1D::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 1254400 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 320000 0x127DC7: XNor_Dense_OVW1D::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 320000 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n0: 60016 in 4 places, all below massif's threshold (1.00%)
+ n2: 1663400 0x125E7F: Matrix<half>::Matrix(Matrix<half> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 831700 0x126DA7: Adam<half, Matrix<half>&>::update(std::vector<std::unique_ptr<BaseLayer<Matrix, half, Matrix<half>&>, std::default_delete<BaseLayer<Matrix, half, Matrix<half>&> > >, std::allocator<std::unique_ptr<BaseLayer<Matrix, half, Matrix<half>&>, std::default_delete<BaseLayer<Matrix, half, Matrix<half>&> > > > >&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 831700 0x10D11B: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 831700 0x126DC7: Adam<half, Matrix<half>&>::update(std::vector<std::unique_ptr<BaseLayer<Matrix, half, Matrix<half>&>, std::default_delete<BaseLayer<Matrix, half, Matrix<half>&> > >, std::allocator<std::unique_ptr<BaseLayer<Matrix, half, Matrix<half>&>, std::default_delete<BaseLayer<Matrix, half, Matrix<half>&> > > > >&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 831700 0x10D11B: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+ n0: 112684 in 227 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=67
+#-----------
+time=13748285
+mem_heap_B=30593020
+mem_heap_extra_B=9108
+mem_stacks_B=2640
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=13781743
+mem_heap_B=30593020
+mem_heap_extra_B=9108
+mem_stacks_B=2640
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=13815199
+mem_heap_B=30593020
+mem_heap_extra_B=9108
+mem_stacks_B=2640
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=13848669
+mem_heap_B=30593020
+mem_heap_extra_B=9108
+mem_stacks_B=2640
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=13882144
+mem_heap_B=30593020
+mem_heap_extra_B=9108
+mem_stacks_B=2640
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=13915618
+mem_heap_B=30593020
+mem_heap_extra_B=9108
+mem_stacks_B=2640
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=13949096
+mem_heap_B=30593020
+mem_heap_extra_B=9108
+mem_stacks_B=2640
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=13982565
+mem_heap_B=30593020
+mem_heap_extra_B=9108
+mem_stacks_B=2640
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=14016023
+mem_heap_B=30593020
+mem_heap_extra_B=9108
+mem_stacks_B=2640
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=14049524
+mem_heap_B=30593020
+mem_heap_extra_B=9108
+mem_stacks_B=2640
+heap_tree=detailed
+n4: 30593020 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n3: 20904120 0x10F04F: std::vector<half, std::allocator<half> >::_M_fill_insert(__gnu_cxx::__normal_iterator<half*, std::vector<half, std::allocator<half> > >, unsigned long, half const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 20070400 0x116E33: void _align_memory_before_pool<Matrix, half>(Matrix<half>&, std::vector<unsigned long, std::allocator<unsigned long> >, unsigned long) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n1: 20070400 0x1173FB: MaxPooling<bool, Matrix, half, Matrix<half>&>::backprop(Matrix<half>&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+    n0: 20070400 0x10CD33: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 812288 0x127AF7: XNor_Dense_OVW1D::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 812288 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n0: 21432 in 19 places, all below massif's threshold (1.00%)
+ n6: 7912816 0x11331B: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 2515200 0x113F8B: BinaryActivation<bool, Matrix, half, Matrix<half>&>::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 2515200 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 2508800 0x146E1F: XNor_BatchNormConv<Matrix, Matrix<half>&>::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 2508800 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 1254400 0x11B49F: MaxPooling<bool, Matrix, half, Matrix<half>&>::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 1254400 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 1254400 0x12F477: XNor_Convolution2D_OWH1D::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 1254400 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 320000 0x127DC7: XNor_Dense_OVW1D::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 320000 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n0: 60016 in 4 places, all below massif's threshold (1.00%)
+ n2: 1663400 0x125E7F: Matrix<half>::Matrix(Matrix<half> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 831700 0x126DA7: Adam<half, Matrix<half>&>::update(std::vector<std::unique_ptr<BaseLayer<Matrix, half, Matrix<half>&>, std::default_delete<BaseLayer<Matrix, half, Matrix<half>&> > >, std::allocator<std::unique_ptr<BaseLayer<Matrix, half, Matrix<half>&>, std::default_delete<BaseLayer<Matrix, half, Matrix<half>&> > > > >&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 831700 0x10D11B: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 831700 0x126DC7: Adam<half, Matrix<half>&>::update(std::vector<std::unique_ptr<BaseLayer<Matrix, half, Matrix<half>&>, std::default_delete<BaseLayer<Matrix, half, Matrix<half>&> > >, std::allocator<std::unique_ptr<BaseLayer<Matrix, half, Matrix<half>&>, std::default_delete<BaseLayer<Matrix, half, Matrix<half>&> > > > >&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 831700 0x10D11B: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+ n0: 112684 in 227 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=77
+#-----------
+time=14083038
+mem_heap_B=30593020
+mem_heap_extra_B=9108
+mem_stacks_B=2640
+heap_tree=empty
+#-----------
+snapshot=78
+#-----------
+time=14116551
+mem_heap_B=30593020
+mem_heap_extra_B=9108
+mem_stacks_B=2640
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=14150007
+mem_heap_B=30593020
+mem_heap_extra_B=9108
+mem_stacks_B=2640
+heap_tree=empty
+#-----------
+snapshot=80
+#-----------
+time=14183505
+mem_heap_B=30593020
+mem_heap_extra_B=9108
+mem_stacks_B=2640
+heap_tree=empty
+#-----------
+snapshot=81
+#-----------
+time=14217002
+mem_heap_B=30593020
+mem_heap_extra_B=9108
+mem_stacks_B=2640
+heap_tree=empty
+#-----------
+snapshot=82
+#-----------
+time=14250494
+mem_heap_B=30593020
+mem_heap_extra_B=9108
+mem_stacks_B=2640
+heap_tree=empty
+#-----------
+snapshot=83
+#-----------
+time=14283992
+mem_heap_B=30593020
+mem_heap_extra_B=9108
+mem_stacks_B=2640
+heap_tree=empty
+#-----------
+snapshot=84
+#-----------
+time=14317484
+mem_heap_B=30593020
+mem_heap_extra_B=9108
+mem_stacks_B=2640
+heap_tree=empty
+#-----------
+snapshot=85
+#-----------
+time=14350976
+mem_heap_B=30593020
+mem_heap_extra_B=9108
+mem_stacks_B=2640
+heap_tree=empty
+#-----------
+snapshot=86
+#-----------
+time=14384468
+mem_heap_B=30593020
+mem_heap_extra_B=9108
+mem_stacks_B=2640
+heap_tree=detailed
+n4: 30593020 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n3: 20904120 0x10F04F: std::vector<half, std::allocator<half> >::_M_fill_insert(__gnu_cxx::__normal_iterator<half*, std::vector<half, std::allocator<half> > >, unsigned long, half const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 20070400 0x116E33: void _align_memory_before_pool<Matrix, half>(Matrix<half>&, std::vector<unsigned long, std::allocator<unsigned long> >, unsigned long) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n1: 20070400 0x1173FB: MaxPooling<bool, Matrix, half, Matrix<half>&>::backprop(Matrix<half>&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+    n0: 20070400 0x10CD33: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 812288 0x127AF7: XNor_Dense_OVW1D::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 812288 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n0: 21432 in 19 places, all below massif's threshold (1.00%)
+ n6: 7912816 0x11331B: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 2515200 0x113F8B: BinaryActivation<bool, Matrix, half, Matrix<half>&>::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 2515200 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 2508800 0x146E1F: XNor_BatchNormConv<Matrix, Matrix<half>&>::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 2508800 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 1254400 0x11B49F: MaxPooling<bool, Matrix, half, Matrix<half>&>::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 1254400 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 1254400 0x12F477: XNor_Convolution2D_OWH1D::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 1254400 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 320000 0x127DC7: XNor_Dense_OVW1D::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 320000 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n0: 60016 in 4 places, all below massif's threshold (1.00%)
+ n2: 1663400 0x125E7F: Matrix<half>::Matrix(Matrix<half> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 831700 0x126DA7: Adam<half, Matrix<half>&>::update(std::vector<std::unique_ptr<BaseLayer<Matrix, half, Matrix<half>&>, std::default_delete<BaseLayer<Matrix, half, Matrix<half>&> > >, std::allocator<std::unique_ptr<BaseLayer<Matrix, half, Matrix<half>&>, std::default_delete<BaseLayer<Matrix, half, Matrix<half>&> > > > >&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 831700 0x10D11B: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 831700 0x126DC7: Adam<half, Matrix<half>&>::update(std::vector<std::unique_ptr<BaseLayer<Matrix, half, Matrix<half>&>, std::default_delete<BaseLayer<Matrix, half, Matrix<half>&> > >, std::allocator<std::unique_ptr<BaseLayer<Matrix, half, Matrix<half>&>, std::default_delete<BaseLayer<Matrix, half, Matrix<half>&> > > > >&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 831700 0x10D11B: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+ n0: 112684 in 227 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=87
+#-----------
+time=14417960
+mem_heap_B=30593020
+mem_heap_extra_B=9108
+mem_stacks_B=2640
+heap_tree=empty
+#-----------
+snapshot=88
+#-----------
+time=14451456
+mem_heap_B=30593020
+mem_heap_extra_B=9108
+mem_stacks_B=2640
+heap_tree=empty
+#-----------
+snapshot=89
+#-----------
+time=14484970
+mem_heap_B=30593020
+mem_heap_extra_B=9108
+mem_stacks_B=2640
+heap_tree=empty
+#-----------
+snapshot=90
+#-----------
+time=14518421
+mem_heap_B=30593020
+mem_heap_extra_B=9108
+mem_stacks_B=2640
+heap_tree=empty
+#-----------
+snapshot=91
+#-----------
+time=14551961
+mem_heap_B=30593020
+mem_heap_extra_B=9108
+mem_stacks_B=2640
+heap_tree=empty
+#-----------
+snapshot=92
+#-----------
+time=14585502
+mem_heap_B=30593020
+mem_heap_extra_B=9108
+mem_stacks_B=2640
+heap_tree=empty
+#-----------
+snapshot=93
+#-----------
+time=14619043
+mem_heap_B=30593020
+mem_heap_extra_B=9108
+mem_stacks_B=2640
+heap_tree=empty
+#-----------
+snapshot=94
+#-----------
+time=14652487
+mem_heap_B=30593020
+mem_heap_extra_B=9108
+mem_stacks_B=2640
+heap_tree=empty
+#-----------
+snapshot=95
+#-----------
+time=14689398
+mem_heap_B=30586660
+mem_heap_extra_B=9092
+mem_stacks_B=2304
+heap_tree=empty
+#-----------
+snapshot=96
+#-----------
+time=14722842
+mem_heap_B=31241299
+mem_heap_extra_B=9093
+mem_stacks_B=3248
+heap_tree=detailed
+n4: 31241299 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n4: 21531320 0x10F04F: std::vector<half, std::allocator<half> >::_M_fill_insert(__gnu_cxx::__normal_iterator<half*, std::vector<half, std::allocator<half> > >, unsigned long, half const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 20070400 0x116E33: void _align_memory_before_pool<Matrix, half>(Matrix<half>&, std::vector<unsigned long, std::allocator<unsigned long> >, unsigned long) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n1: 20070400 0x1173FB: MaxPooling<bool, Matrix, half, Matrix<half>&>::backprop(Matrix<half>&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+    n0: 20070400 0x10CD33: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 812288 0x127AF7: XNor_Dense_OVW1D::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 812288 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n2: 627200 0x10FA63: Matrix<half> read_csv<half>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::vector<unsigned long, std::allocator<unsigned long> >, unsigned long, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 627200 0x10CF0F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+  n0: 21432 in 18 places, all below massif's threshold (1.00%)
+ n6: 7911664 0x11331B: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 2515200 0x113F8B: BinaryActivation<bool, Matrix, half, Matrix<half>&>::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 2515200 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 2508800 0x146E1F: XNor_BatchNormConv<Matrix, Matrix<half>&>::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 2508800 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 1254400 0x11B49F: MaxPooling<bool, Matrix, half, Matrix<half>&>::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 1254400 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 1254400 0x12F477: XNor_Convolution2D_OWH1D::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 1254400 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 320000 0x127DC7: XNor_Dense_OVW1D::forward(Matrix<half>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 320000 0x10C757: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n0: 58864 in 4 places, all below massif's threshold (1.00%)
+ n2: 1663400 0x125E7F: Matrix<half>::Matrix(Matrix<half> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 831700 0x126DA7: Adam<half, Matrix<half>&>::update(std::vector<std::unique_ptr<BaseLayer<Matrix, half, Matrix<half>&>, std::default_delete<BaseLayer<Matrix, half, Matrix<half>&> > >, std::allocator<std::unique_ptr<BaseLayer<Matrix, half, Matrix<half>&>, std::default_delete<BaseLayer<Matrix, half, Matrix<half>&> > > > >&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 831700 0x10D11B: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+  n1: 831700 0x126DC7: Adam<half, Matrix<half>&>::update(std::vector<std::unique_ptr<BaseLayer<Matrix, half, Matrix<half>&>, std::default_delete<BaseLayer<Matrix, half, Matrix<half>&> > >, std::allocator<std::unique_ptr<BaseLayer<Matrix, half, Matrix<half>&>, std::default_delete<BaseLayer<Matrix, half, Matrix<half>&> > > > >&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+   n0: 831700 0x10D11B: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/test_xnor_ovw1d)
+ n0: 134915 in 227 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=97
+#-----------
+time=14770448
+mem_heap_B=31213404
+mem_heap_extra_B=9020
+mem_stacks_B=1824
+heap_tree=empty
+#-----------
+snapshot=98
+#-----------
+time=14828922
+mem_heap_B=31213628
+mem_heap_extra_B=9084
+mem_stacks_B=2256
+heap_tree=empty

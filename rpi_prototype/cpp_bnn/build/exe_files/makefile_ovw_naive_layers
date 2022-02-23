@@ -1,0 +1,60 @@
+CPP = aarch64-linux-gnu-g++
+CFLAGS = -std=c++17 -ftree-vectorize -unroll-loops
+ARMV8_A = -mcpu=native -mtune=cortex-a53 -march=armv8-a+crc+simd+fp -mlittle-endian
+
+PROJECT_DIR = ../../lib/naive_layers_ov/
+OUTPUT_DIR = ./naive_layers/
+
+VANILLA_LAYERS = $(PROJECT_DIR)/vanilla_layers/
+VANILLA_LAYERS_OUTPUT = $(OUTPUT_DIR)/vanilla_layers/
+XNOR_LAYERS = $(PROJECT_DIR)/xnor_layers/
+XNOR_LAYERS_OUTPUT = $(OUTPUT_DIR)/xnor_layers/
+COMMON_LAYERS = $(PROJECT_DIR)/common_layers/
+COMMON_LAYERS_OUTPUT = $(OUTPUT_DIR)/common_layers/
+LOSS_LAYERS = $(PROJECT_DIR)/loss/
+COMMON_LAYERS_OUTPUT = $(OUTPUT_DIR)/common_layers/
+
+MASSIF = --tool=massif --time-unit=ms --max-snapshots=100 --stacks=yes --depth=5 #--detailed-freq=1 
+    
+    
+    
+# vanilla layers ------------------------------------------------------------------------------------
+
+build_vanilla_dense:
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) -c $(VANILLA_LAYERS)/dense/vanilla_dense_ovw.cpp -o $(VANILLA_LAYERS_OUTPUT)/vanilla_dense_ovw.o
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $(VANILLA_LAYERS)/dense/test_dense_main.cpp -o test_dense_ovw $(VANILLA_LAYERS_OUTPUT)/vanilla_dense_ovw.o
+	./test_dense_ovw 0 0
+    
+build_vanilla_dense_1d:
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) -c $(VANILLA_LAYERS)/dense/vanilla_dense_ovw1d.cpp -o $(VANILLA_LAYERS_OUTPUT)/vanilla_dense_ovw1d.o
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $(VANILLA_LAYERS)/dense/test_dense_main.cpp -o test_dense_ovw $(VANILLA_LAYERS_OUTPUT)/vanilla_dense_ovw.o $(VANILLA_LAYERS_OUTPUT)/vanilla_dense_ovw1d.o
+	./test_dense_ovw 0 0
+    
+build_vanilla_convolution_layer:
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) -c $(VANILLA_LAYERS)/convolution/xnor_convolution.cpp -o $(VANILLA_LAYERS_OUTPUT)/xnor_convolution.o
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $(VANILLA_LAYERS)/convolution/test_convolution_main.cpp -o test_conv_ovw $(VANILLA_LAYERS_OUTPUT)/xnor_convolution.o
+	./test_conv
+
+
+# xnor layers ------------------------------------------------------------------------------------
+
+build_dense:
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) -c $(XNOR_LAYERS)/dense/xnor_dense_ovw.cpp -o $(XNOR_LAYERS_OUTPUT)/xnor_dense_ovw.o
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $(XNOR_LAYERS)/dense/test_dense_main.cpp -o test_dense_ovw $(XNOR_LAYERS_OUTPUT)/xnor_dense_ovw.o
+	./test_dense_ovw 0 0
+
+build_xnor_dense:
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) -c $(XNOR_LAYERS)/dense/xnor_dense_ovw.cpp -o $(XNOR_LAYERS_OUTPUT)/xnor_dense_ovw1d.o
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $(XNOR_LAYERS)/dense/test_dense_main.cpp -o test_dense_ovw $(XNOR_LAYERS_OUTPUT)/xnor_dense_ovw1d.o
+	./test_dense_ovw 0 0
+    
+    
+build_convolution_layer:
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) -c $(XNOR_LAYERS)/convolution/xnor_convolution.cpp -o $(XNOR_LAYERS_OUTPUT)/xnor_convolution.o
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $(XNOR_LAYERS)/convolution/test_convolution_main.cpp -o test_conv $(XNOR_LAYERS_OUTPUT)/xnor_convolution.o
+	./test_conv
+
+
+
+activation_layer_bool:
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) -c ../../lib/activation_layer/activation_layer.cpp -o $@.o

@@ -1,0 +1,1228 @@
+desc: --time-unit=ms --max-snapshots=100 --stacks=yes --depth=5 --massif-out-file=././integration_test//massif.out.xnor_naive_layer_test_100_epoch_3
+cmd: ./xnor_naive_layer_test 100 3
+time_unit: ms
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=1099
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=6000
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=4521
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5520
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=5352
+mem_heap_B=658832
+mem_heap_extra_B=136
+mem_stacks_B=1648
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=6566
+mem_heap_B=3239072
+mem_heap_extra_B=2528
+mem_stacks_B=2512
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=7577
+mem_heap_B=3239072
+mem_heap_extra_B=2528
+mem_stacks_B=2512
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=8344
+mem_heap_B=3239072
+mem_heap_extra_B=2528
+mem_stacks_B=2512
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=9647
+mem_heap_B=3239072
+mem_heap_extra_B=2528
+mem_stacks_B=2512
+heap_tree=detailed
+n3: 3239072 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 3144800 0x10D8C3: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 2560000 0x12F96F: void _align_memory_before_conv<float, unsigned long>(Matrix<float>&, std::vector<unsigned long, std::allocator<unsigned long> >, std::vector<unsigned long, std::allocator<unsigned long> >) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n1: 2560000 0x1310B3: void _convolution<float, bool, unsigned long>(Matrix<float>&, Matrix<bool>&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long, float) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+    n1: 2560000 0x12B45B: XNor_Convolution2D_OWH1D::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+     n0: 2560000 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n2: 584800 0x10DE1B: Matrix<float>::Matrix(std::vector<unsigned long, std::allocator<unsigned long> > const&, float, float const*) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 580800 0x10AC9F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 4000 in 1 place, below massif's threshold (1.00%)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 21568 in 78 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=8
+#-----------
+time=10787
+mem_heap_B=3239168
+mem_heap_extra_B=2560
+mem_stacks_B=2432
+heap_tree=detailed
+n3: 3239168 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 3144800 0x10D8C3: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 2560000 0x12F96F: void _align_memory_before_conv<float, unsigned long>(Matrix<float>&, std::vector<unsigned long, std::allocator<unsigned long> >, std::vector<unsigned long, std::allocator<unsigned long> >) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n1: 2560000 0x1310B3: void _convolution<float, bool, unsigned long>(Matrix<float>&, Matrix<bool>&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long, float) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+    n1: 2560000 0x12B45B: XNor_Convolution2D_OWH1D::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+     n0: 2560000 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n2: 584800 0x10DE1B: Matrix<float>::Matrix(std::vector<unsigned long, std::allocator<unsigned long> > const&, float, float const*) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 580800 0x10AC9F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 4000 in 1 place, below massif's threshold (1.00%)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 21664 in 78 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=9
+#-----------
+time=11923
+mem_heap_B=3239072
+mem_heap_extra_B=2528
+mem_stacks_B=2512
+heap_tree=detailed
+n3: 3239072 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 3144800 0x10D8C3: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 2560000 0x12F96F: void _align_memory_before_conv<float, unsigned long>(Matrix<float>&, std::vector<unsigned long, std::allocator<unsigned long> >, std::vector<unsigned long, std::allocator<unsigned long> >) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n1: 2560000 0x1310B3: void _convolution<float, bool, unsigned long>(Matrix<float>&, Matrix<bool>&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long, float) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+    n1: 2560000 0x12B45B: XNor_Convolution2D_OWH1D::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+     n0: 2560000 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n2: 584800 0x10DE1B: Matrix<float>::Matrix(std::vector<unsigned long, std::allocator<unsigned long> > const&, float, float const*) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 580800 0x10AC9F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 4000 in 1 place, below massif's threshold (1.00%)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 21568 in 78 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=10
+#-----------
+time=12978
+mem_heap_B=3319016
+mem_heap_extra_B=2688
+mem_stacks_B=1808
+heap_tree=detailed
+n4: 3319016 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 3144800 0x10D8C3: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 2560000 0x12F96F: void _align_memory_before_conv<float, unsigned long>(Matrix<float>&, std::vector<unsigned long, std::allocator<unsigned long> >, std::vector<unsigned long, std::allocator<unsigned long> >) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n1: 2560000 0x1310B3: void _convolution<float, bool, unsigned long>(Matrix<float>&, Matrix<bool>&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long, float) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+    n1: 2560000 0x12B45B: XNor_Convolution2D_OWH1D::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+     n0: 2560000 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n2: 584800 0x10DE1B: Matrix<float>::Matrix(std::vector<unsigned long, std::allocator<unsigned long> > const&, float, float const*) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 580800 0x10AC9F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 4000 in 1 place, below massif's threshold (1.00%)
+ n2: 80000 0x1116FB: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 80000 0x144BDB: XNor_BatchNormConv<Matrix>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 80000 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 21512 in 96 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=11
+#-----------
+time=13520
+mem_heap_B=5959112
+mem_heap_extra_B=2728
+mem_stacks_B=1936
+heap_tree=detailed
+n5: 5959112 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 3144800 0x10D8C3: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 2560000 0x12F96F: void _align_memory_before_conv<float, unsigned long>(Matrix<float>&, std::vector<unsigned long, std::allocator<unsigned long> >, std::vector<unsigned long, std::allocator<unsigned long> >) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n1: 2560000 0x1310B3: void _convolution<float, bool, unsigned long>(Matrix<float>&, Matrix<bool>&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long, float) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+    n1: 2560000 0x12B45B: XNor_Convolution2D_OWH1D::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+     n0: 2560000 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n2: 584800 0x10DE1B: Matrix<float>::Matrix(std::vector<unsigned long, std::allocator<unsigned long> > const&, float, float const*) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 580800 0x10AC9F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 4000 in 1 place, below massif's threshold (1.00%)
+ n2: 2560000 0x10E9AF: Matrix<float>::Matrix(Matrix<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 2560000 0x111C27: BinaryActivation<bool, Matrix, half>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 2560000 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n0: 0 in 2 places, all below massif's threshold (1.00%)
+ n3: 160000 0x1116FB: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 80000 0x111E93: BinaryActivation<bool, Matrix, half>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 80000 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 80000 0x144BDB: XNor_BatchNormConv<Matrix>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 80000 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 21608 in 97 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=12
+#-----------
+time=14782
+mem_heap_B=3479304
+mem_heap_extra_B=2776
+mem_stacks_B=1920
+heap_tree=detailed
+n4: 3479304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 3144800 0x10D8C3: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 2560000 0x12F96F: void _align_memory_before_conv<float, unsigned long>(Matrix<float>&, std::vector<unsigned long, std::allocator<unsigned long> >, std::vector<unsigned long, std::allocator<unsigned long> >) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n1: 2560000 0x1310B3: void _convolution<float, bool, unsigned long>(Matrix<float>&, Matrix<bool>&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long, float) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+    n1: 2560000 0x12B45B: XNor_Convolution2D_OWH1D::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+     n0: 2560000 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n2: 584800 0x10DE1B: Matrix<float>::Matrix(std::vector<unsigned long, std::allocator<unsigned long> > const&, float, float const*) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 580800 0x10AC9F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 4000 in 1 place, below massif's threshold (1.00%)
+ n4: 240000 0x1116FB: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 80000 0x111E93: BinaryActivation<bool, Matrix, half>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 80000 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 80000 0x1192E7: MaxPooling<bool, Matrix, half>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 80000 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 80000 0x144BDB: XNor_BatchNormConv<Matrix>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 80000 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 21800 in 103 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=13
+#-----------
+time=16182
+mem_heap_B=3479240
+mem_heap_extra_B=2760
+mem_stacks_B=1920
+heap_tree=detailed
+n4: 3479240 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 3144800 0x10D8C3: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 2560000 0x12F96F: void _align_memory_before_conv<float, unsigned long>(Matrix<float>&, std::vector<unsigned long, std::allocator<unsigned long> >, std::vector<unsigned long, std::allocator<unsigned long> >) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n1: 2560000 0x1310B3: void _convolution<float, bool, unsigned long>(Matrix<float>&, Matrix<bool>&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long, float) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+    n1: 2560000 0x12B45B: XNor_Convolution2D_OWH1D::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+     n0: 2560000 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n2: 584800 0x10DE1B: Matrix<float>::Matrix(std::vector<unsigned long, std::allocator<unsigned long> > const&, float, float const*) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 580800 0x10AC9F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 4000 in 1 place, below massif's threshold (1.00%)
+ n4: 240000 0x1116FB: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 80000 0x111E93: BinaryActivation<bool, Matrix, half>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 80000 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 80000 0x1192E7: MaxPooling<bool, Matrix, half>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 80000 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 80000 0x144BDB: XNor_BatchNormConv<Matrix>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 80000 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 21736 in 103 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=14
+#-----------
+time=17582
+mem_heap_B=3479272
+mem_heap_extra_B=2768
+mem_stacks_B=1920
+heap_tree=detailed
+n4: 3479272 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 3144800 0x10D8C3: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 2560000 0x12F96F: void _align_memory_before_conv<float, unsigned long>(Matrix<float>&, std::vector<unsigned long, std::allocator<unsigned long> >, std::vector<unsigned long, std::allocator<unsigned long> >) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n1: 2560000 0x1310B3: void _convolution<float, bool, unsigned long>(Matrix<float>&, Matrix<bool>&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long, float) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+    n1: 2560000 0x12B45B: XNor_Convolution2D_OWH1D::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+     n0: 2560000 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n2: 584800 0x10DE1B: Matrix<float>::Matrix(std::vector<unsigned long, std::allocator<unsigned long> > const&, float, float const*) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 580800 0x10AC9F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 4000 in 1 place, below massif's threshold (1.00%)
+ n4: 240000 0x1116FB: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 80000 0x111E93: BinaryActivation<bool, Matrix, half>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 80000 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 80000 0x1192E7: MaxPooling<bool, Matrix, half>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 80000 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 80000 0x144BDB: XNor_BatchNormConv<Matrix>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 80000 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 21768 in 103 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=15
+#-----------
+time=18982
+mem_heap_B=3479272
+mem_heap_extra_B=2768
+mem_stacks_B=1920
+heap_tree=detailed
+n4: 3479272 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 3144800 0x10D8C3: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 2560000 0x12F96F: void _align_memory_before_conv<float, unsigned long>(Matrix<float>&, std::vector<unsigned long, std::allocator<unsigned long> >, std::vector<unsigned long, std::allocator<unsigned long> >) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n1: 2560000 0x1310B3: void _convolution<float, bool, unsigned long>(Matrix<float>&, Matrix<bool>&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long, float) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+    n1: 2560000 0x12B45B: XNor_Convolution2D_OWH1D::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+     n0: 2560000 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n2: 584800 0x10DE1B: Matrix<float>::Matrix(std::vector<unsigned long, std::allocator<unsigned long> > const&, float, float const*) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 580800 0x10AC9F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 4000 in 1 place, below massif's threshold (1.00%)
+ n4: 240000 0x1116FB: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 80000 0x111E93: BinaryActivation<bool, Matrix, half>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 80000 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 80000 0x1192E7: MaxPooling<bool, Matrix, half>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 80000 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 80000 0x144BDB: XNor_BatchNormConv<Matrix>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 80000 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 21768 in 103 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=16
+#-----------
+time=20092
+mem_heap_B=3479272
+mem_heap_extra_B=2768
+mem_stacks_B=2000
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=20912
+mem_heap_B=3479272
+mem_heap_extra_B=2768
+mem_stacks_B=2000
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=21732
+mem_heap_B=3479240
+mem_heap_extra_B=2760
+mem_stacks_B=2000
+heap_tree=detailed
+n4: 3479240 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 3144800 0x10D8C3: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 2560000 0x12F96F: void _align_memory_before_conv<float, unsigned long>(Matrix<float>&, std::vector<unsigned long, std::allocator<unsigned long> >, std::vector<unsigned long, std::allocator<unsigned long> >) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n1: 2560000 0x1310B3: void _convolution<float, bool, unsigned long>(Matrix<float>&, Matrix<bool>&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long, float) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+    n1: 2560000 0x12B45B: XNor_Convolution2D_OWH1D::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+     n0: 2560000 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n2: 584800 0x10DE1B: Matrix<float>::Matrix(std::vector<unsigned long, std::allocator<unsigned long> > const&, float, float const*) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 580800 0x10AC9F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 4000 in 1 place, below massif's threshold (1.00%)
+ n4: 240000 0x1116FB: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 80000 0x111E93: BinaryActivation<bool, Matrix, half>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 80000 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 80000 0x1192E7: MaxPooling<bool, Matrix, half>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 80000 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 80000 0x144BDB: XNor_BatchNormConv<Matrix>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 80000 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 21736 in 103 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=19
+#-----------
+time=22552
+mem_heap_B=3479272
+mem_heap_extra_B=2768
+mem_stacks_B=1920
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=23372
+mem_heap_B=3479240
+mem_heap_extra_B=2760
+mem_stacks_B=2000
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=24192
+mem_heap_B=3479240
+mem_heap_extra_B=2760
+mem_stacks_B=2000
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=25012
+mem_heap_B=3479272
+mem_heap_extra_B=2768
+mem_stacks_B=1920
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=25832
+mem_heap_B=3479304
+mem_heap_extra_B=2776
+mem_stacks_B=1920
+heap_tree=detailed
+n4: 3479304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 3144800 0x10D8C3: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 2560000 0x12F96F: void _align_memory_before_conv<float, unsigned long>(Matrix<float>&, std::vector<unsigned long, std::allocator<unsigned long> >, std::vector<unsigned long, std::allocator<unsigned long> >) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n1: 2560000 0x1310B3: void _convolution<float, bool, unsigned long>(Matrix<float>&, Matrix<bool>&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long, float) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+    n1: 2560000 0x12B45B: XNor_Convolution2D_OWH1D::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+     n0: 2560000 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n2: 584800 0x10DE1B: Matrix<float>::Matrix(std::vector<unsigned long, std::allocator<unsigned long> > const&, float, float const*) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 580800 0x10AC9F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 4000 in 1 place, below massif's threshold (1.00%)
+ n4: 240000 0x1116FB: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 80000 0x111E93: BinaryActivation<bool, Matrix, half>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 80000 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 80000 0x1192E7: MaxPooling<bool, Matrix, half>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 80000 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 80000 0x144BDB: XNor_BatchNormConv<Matrix>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 80000 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 21800 in 103 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=24
+#-----------
+time=26652
+mem_heap_B=3479240
+mem_heap_extra_B=2760
+mem_stacks_B=1920
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=27472
+mem_heap_B=3479272
+mem_heap_extra_B=2768
+mem_stacks_B=1920
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=28292
+mem_heap_B=3479272
+mem_heap_extra_B=2768
+mem_stacks_B=1920
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=29112
+mem_heap_B=3479272
+mem_heap_extra_B=2768
+mem_stacks_B=2000
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=29932
+mem_heap_B=3479272
+mem_heap_extra_B=2768
+mem_stacks_B=2000
+heap_tree=detailed
+n4: 3479272 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 3144800 0x10D8C3: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 2560000 0x12F96F: void _align_memory_before_conv<float, unsigned long>(Matrix<float>&, std::vector<unsigned long, std::allocator<unsigned long> >, std::vector<unsigned long, std::allocator<unsigned long> >) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n1: 2560000 0x1310B3: void _convolution<float, bool, unsigned long>(Matrix<float>&, Matrix<bool>&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long, float) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+    n1: 2560000 0x12B45B: XNor_Convolution2D_OWH1D::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+     n0: 2560000 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n2: 584800 0x10DE1B: Matrix<float>::Matrix(std::vector<unsigned long, std::allocator<unsigned long> > const&, float, float const*) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 580800 0x10AC9F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 4000 in 1 place, below massif's threshold (1.00%)
+ n4: 240000 0x1116FB: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 80000 0x111E93: BinaryActivation<bool, Matrix, half>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 80000 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 80000 0x1192E7: MaxPooling<bool, Matrix, half>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 80000 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 80000 0x144BDB: XNor_BatchNormConv<Matrix>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 80000 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 21768 in 103 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=29
+#-----------
+time=31480
+mem_heap_B=3479240
+mem_heap_extra_B=2760
+mem_stacks_B=1920
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=33028
+mem_heap_B=3479240
+mem_heap_extra_B=2760
+mem_stacks_B=2000
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=34576
+mem_heap_B=3479272
+mem_heap_extra_B=2768
+mem_stacks_B=1920
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=35350
+mem_heap_B=3479272
+mem_heap_extra_B=2768
+mem_stacks_B=1920
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=36124
+mem_heap_B=3479304
+mem_heap_extra_B=2776
+mem_stacks_B=1920
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=36898
+mem_heap_B=3479272
+mem_heap_extra_B=2768
+mem_stacks_B=1920
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=37672
+mem_heap_B=3479240
+mem_heap_extra_B=2760
+mem_stacks_B=2000
+heap_tree=detailed
+n4: 3479240 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 3144800 0x10D8C3: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 2560000 0x12F96F: void _align_memory_before_conv<float, unsigned long>(Matrix<float>&, std::vector<unsigned long, std::allocator<unsigned long> >, std::vector<unsigned long, std::allocator<unsigned long> >) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n1: 2560000 0x1310B3: void _convolution<float, bool, unsigned long>(Matrix<float>&, Matrix<bool>&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long, float) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+    n1: 2560000 0x12B45B: XNor_Convolution2D_OWH1D::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+     n0: 2560000 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n2: 584800 0x10DE1B: Matrix<float>::Matrix(std::vector<unsigned long, std::allocator<unsigned long> > const&, float, float const*) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 580800 0x10AC9F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 4000 in 1 place, below massif's threshold (1.00%)
+ n4: 240000 0x1116FB: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 80000 0x111E93: BinaryActivation<bool, Matrix, half>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 80000 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 80000 0x1192E7: MaxPooling<bool, Matrix, half>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 80000 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 80000 0x144BDB: XNor_BatchNormConv<Matrix>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 80000 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 21736 in 103 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=36
+#-----------
+time=38446
+mem_heap_B=3479272
+mem_heap_extra_B=2768
+mem_stacks_B=2000
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=39220
+mem_heap_B=3479272
+mem_heap_extra_B=2768
+mem_stacks_B=2000
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=39996
+mem_heap_B=3511184
+mem_heap_extra_B=2944
+mem_stacks_B=2512
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=40772
+mem_heap_B=3511184
+mem_heap_extra_B=2944
+mem_stacks_B=2512
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=41936
+mem_heap_B=3511184
+mem_heap_extra_B=2944
+mem_stacks_B=2512
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=42711
+mem_heap_B=3511184
+mem_heap_extra_B=2944
+mem_stacks_B=2512
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=43490
+mem_heap_B=3511184
+mem_heap_extra_B=2944
+mem_stacks_B=2512
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=44264
+mem_heap_B=3548392
+mem_heap_extra_B=3192
+mem_stacks_B=1920
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=45038
+mem_heap_B=3548392
+mem_heap_extra_B=3192
+mem_stacks_B=2000
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=45812
+mem_heap_B=3548424
+mem_heap_extra_B=3200
+mem_stacks_B=1920
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=46586
+mem_heap_B=3548392
+mem_heap_extra_B=3192
+mem_stacks_B=2000
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=47360
+mem_heap_B=3548456
+mem_heap_extra_B=3208
+mem_stacks_B=1920
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=48137
+mem_heap_B=3571888
+mem_heap_extra_B=3376
+mem_stacks_B=2512
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=49300
+mem_heap_B=3571888
+mem_heap_extra_B=3376
+mem_stacks_B=2512
+heap_tree=detailed
+n4: 3571888 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 3144800 0x10D8C3: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 2560000 0x12F96F: void _align_memory_before_conv<float, unsigned long>(Matrix<float>&, std::vector<unsigned long, std::allocator<unsigned long> >, std::vector<unsigned long, std::allocator<unsigned long> >) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n1: 2560000 0x1310B3: void _convolution<float, bool, unsigned long>(Matrix<float>&, Matrix<bool>&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long, float) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+    n1: 2560000 0x12B45B: XNor_Convolution2D_OWH1D::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+     n0: 2560000 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n2: 584800 0x10DE1B: Matrix<float>::Matrix(std::vector<unsigned long, std::allocator<unsigned long> > const&, float, float const*) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 580800 0x10AC9F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 4000 in 1 place, below massif's threshold (1.00%)
+ n4: 302176 0x1116FB: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 92800 0x111E93: BinaryActivation<bool, Matrix, half>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 92800 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 92800 0x1192E7: MaxPooling<bool, Matrix, half>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 92800 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 92800 0x144BDB: XNor_BatchNormConv<Matrix>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 92800 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n0: 23776 in 2 places, all below massif's threshold (1.00%)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 52208 in 104 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=50
+#-----------
+time=49843
+mem_heap_B=3571888
+mem_heap_extra_B=3376
+mem_stacks_B=2512
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=50386
+mem_heap_B=3662880
+mem_heap_extra_B=3728
+mem_stacks_B=2240
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=50935
+mem_heap_B=3662880
+mem_heap_extra_B=3728
+mem_stacks_B=2240
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=51537
+mem_heap_B=1154368
+mem_heap_extra_B=4656
+mem_stacks_B=2304
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=52277
+mem_heap_B=1220224
+mem_heap_extra_B=4720
+mem_stacks_B=2304
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=52825
+mem_heap_B=1403912
+mem_heap_extra_B=4784
+mem_stacks_B=2272
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=55562
+mem_heap_B=1399624
+mem_heap_extra_B=4776
+mem_stacks_B=2656
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=56109
+mem_heap_B=1401872
+mem_heap_extra_B=4840
+mem_stacks_B=2896
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=56654
+mem_heap_B=1401872
+mem_heap_extra_B=4840
+mem_stacks_B=2896
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=57200
+mem_heap_B=1401872
+mem_heap_extra_B=4840
+mem_stacks_B=2896
+heap_tree=detailed
+n5: 1401872 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n3: 789600 0x10D8C3: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n2: 584800 0x10DE1B: Matrix<float>::Matrix(std::vector<unsigned long, std::allocator<unsigned long> > const&, float, float const*) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 580800 0x10AC9F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 4000 in 8 places, all below massif's threshold (1.00%)
+  n1: 204800 0x1296E7: void _align_memory_before_dot<bool>(Matrix<float>&, std::vector<unsigned long, std::allocator<unsigned long> >&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n1: 204800 0x12A433: void float_dot_bit<bool>(Matrix<float>&, Matrix<bool>&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+    n1: 204800 0x12749B: XNor_Dense_OVW1D::backprop(Matrix<float>&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+     n0: 204800 0x10BAEF: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n0: 0 in 1 place, below massif's threshold (1.00%)
+ n5: 326304 0x1116FB: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 100800 0x111E93: BinaryActivation<bool, Matrix, half>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 100800 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 99200 0x144BDB: XNor_BatchNormConv<Matrix>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 99200 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 92800 0x1192E7: MaxPooling<bool, Matrix, half>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 92800 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 23200 0x12BD2F: XNor_Convolution2D_OWH1D::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 23200 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n0: 10304 in 3 places, all below massif's threshold (1.00%)
+ n5: 181944 0x1236DF: std::vector<half, std::allocator<half> >::_M_fill_insert(__gnu_cxx::__normal_iterator<half*, std::vector<half, std::allocator<half> > >, unsigned long, half const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 75008 0x1269AF: XNor_Dense_OVW1D::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 75008 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 75008 0x1275FB: XNor_Dense_OVW1D::backprop(Matrix<float>&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 75008 0x10BAEF: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 14688 0x12BB53: XNor_Convolution2D_OWH1D::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 14688 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 14688 0x12BB6F: XNor_Convolution2D_OWH1D::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 14688 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n0: 2552 in 6 places, all below massif's threshold (1.00%)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 31320 in 170 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=60
+#-----------
+time=57745
+mem_heap_B=1401872
+mem_heap_extra_B=4840
+mem_stacks_B=2896
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=58290
+mem_heap_B=1401872
+mem_heap_extra_B=4840
+mem_stacks_B=2896
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=58883
+mem_heap_B=1604192
+mem_heap_extra_B=4704
+mem_stacks_B=2336
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=63893
+mem_heap_B=1604424
+mem_heap_extra_B=4776
+mem_stacks_B=2656
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=64438
+mem_heap_B=2015984
+mem_heap_extra_B=4840
+mem_stacks_B=2896
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=64983
+mem_heap_B=2015984
+mem_heap_extra_B=4840
+mem_stacks_B=2896
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=65530
+mem_heap_B=2015984
+mem_heap_extra_B=4840
+mem_stacks_B=2896
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=66075
+mem_heap_B=2015984
+mem_heap_extra_B=4840
+mem_stacks_B=2896
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=66624
+mem_heap_B=2015984
+mem_heap_extra_B=4840
+mem_stacks_B=2896
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=67169
+mem_heap_B=2015984
+mem_heap_extra_B=4840
+mem_stacks_B=2896
+heap_tree=detailed
+n5: 2015984 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n3: 1404000 0x10D8C3: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n2: 819200 0x12F96F: void _align_memory_before_conv<float, unsigned long>(Matrix<float>&, std::vector<unsigned long, std::allocator<unsigned long> >, std::vector<unsigned long, std::allocator<unsigned long> >) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n1: 819200 0x131EEF: void _convolution_dx<float, bool, unsigned long>(Matrix<float>&, Matrix<bool>&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long, float) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+    n1: 819200 0x12C89B: XNor_Convolution2D_OWH1D::backprop(Matrix<float>&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+     n0: 819200 0x10BAEF: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+  n2: 584800 0x10DE1B: Matrix<float>::Matrix(std::vector<unsigned long, std::allocator<unsigned long> > const&, float, float const*) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 580800 0x10AC9F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 4000 in 8 places, all below massif's threshold (1.00%)
+  n0: 0 in 2 places, all below massif's threshold (1.00%)
+ n5: 326016 0x1116FB: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 100800 0x111E93: BinaryActivation<bool, Matrix, half>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 100800 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 99200 0x144BDB: XNor_BatchNormConv<Matrix>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 99200 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 92800 0x1192E7: MaxPooling<bool, Matrix, half>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 92800 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 23200 0x12BD2F: XNor_Convolution2D_OWH1D::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 23200 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n0: 10016 in 3 places, all below massif's threshold (1.00%)
+ n3: 181944 0x1236DF: std::vector<half, std::allocator<half> >::_M_fill_insert(__gnu_cxx::__normal_iterator<half*, std::vector<half, std::allocator<half> > >, unsigned long, half const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 75008 0x1269AF: XNor_Dense_OVW1D::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 75008 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 75008 0x1275FB: XNor_Dense_OVW1D::backprop(Matrix<float>&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 75008 0x10BAEF: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n0: 31928 in 8 places, all below massif's threshold (1.00%)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 31320 in 176 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=70
+#-----------
+time=67714
+mem_heap_B=2015984
+mem_heap_extra_B=4840
+mem_stacks_B=2896
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=68260
+mem_heap_B=2015984
+mem_heap_extra_B=4840
+mem_stacks_B=2896
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=68805
+mem_heap_B=2015984
+mem_heap_extra_B=4840
+mem_stacks_B=2896
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=69351
+mem_heap_B=2015984
+mem_heap_extra_B=4840
+mem_stacks_B=2896
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=69896
+mem_heap_B=2015984
+mem_heap_extra_B=4840
+mem_stacks_B=2896
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=70443
+mem_heap_B=2015984
+mem_heap_extra_B=4840
+mem_stacks_B=2896
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=70988
+mem_heap_B=2015984
+mem_heap_extra_B=4840
+mem_stacks_B=2896
+heap_tree=empty
+#-----------
+snapshot=77
+#-----------
+time=71534
+mem_heap_B=2015984
+mem_heap_extra_B=4840
+mem_stacks_B=2896
+heap_tree=empty
+#-----------
+snapshot=78
+#-----------
+time=72080
+mem_heap_B=2015984
+mem_heap_extra_B=4840
+mem_stacks_B=2896
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=72625
+mem_heap_B=2015984
+mem_heap_extra_B=4840
+mem_stacks_B=2896
+heap_tree=detailed
+n5: 2015984 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n3: 1404000 0x10D8C3: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n2: 819200 0x12F96F: void _align_memory_before_conv<float, unsigned long>(Matrix<float>&, std::vector<unsigned long, std::allocator<unsigned long> >, std::vector<unsigned long, std::allocator<unsigned long> >) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n1: 819200 0x131EEF: void _convolution_dx<float, bool, unsigned long>(Matrix<float>&, Matrix<bool>&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long, float) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+    n1: 819200 0x12C89B: XNor_Convolution2D_OWH1D::backprop(Matrix<float>&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+     n0: 819200 0x10BAEF: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+  n2: 584800 0x10DE1B: Matrix<float>::Matrix(std::vector<unsigned long, std::allocator<unsigned long> > const&, float, float const*) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 580800 0x10AC9F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 4000 in 8 places, all below massif's threshold (1.00%)
+  n0: 0 in 2 places, all below massif's threshold (1.00%)
+ n5: 326016 0x1116FB: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 100800 0x111E93: BinaryActivation<bool, Matrix, half>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 100800 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 99200 0x144BDB: XNor_BatchNormConv<Matrix>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 99200 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 92800 0x1192E7: MaxPooling<bool, Matrix, half>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 92800 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 23200 0x12BD2F: XNor_Convolution2D_OWH1D::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 23200 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n0: 10016 in 3 places, all below massif's threshold (1.00%)
+ n3: 181944 0x1236DF: std::vector<half, std::allocator<half> >::_M_fill_insert(__gnu_cxx::__normal_iterator<half*, std::vector<half, std::allocator<half> > >, unsigned long, half const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 75008 0x1269AF: XNor_Dense_OVW1D::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 75008 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 75008 0x1275FB: XNor_Dense_OVW1D::backprop(Matrix<float>&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 75008 0x10BAEF: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n0: 31928 in 8 places, all below massif's threshold (1.00%)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 31320 in 176 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=80
+#-----------
+time=73040
+mem_heap_B=6314656
+mem_heap_extra_B=4728
+mem_stacks_B=1920
+heap_tree=peak
+n6: 6314656 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n3: 3144800 0x10D8C3: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 2560000 0x1159B7: void _align_memory_before_pool<Matrix>(Matrix<float>&, std::vector<unsigned long, std::allocator<unsigned long> >, unsigned long) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n1: 2560000 0x115D03: MaxPooling<bool, Matrix, half>::backprop(Matrix<float>&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+    n0: 2560000 0x10BAEF: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n2: 584800 0x10DE1B: Matrix<float>::Matrix(std::vector<unsigned long, std::allocator<unsigned long> > const&, float, float const*) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 580800 0x10AC9F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 4000 in 8 places, all below massif's threshold (1.00%)
+  n0: 0 in 2 places, all below massif's threshold (1.00%)
+ n2: 2560000 0x10E9AF: Matrix<float>::Matrix(Matrix<float> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 2560000 0x115D6B: MaxPooling<bool, Matrix, half>::backprop(Matrix<float>&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 2560000 0x10BAEF: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n0: 0 in 13 places, all below massif's threshold (1.00%)
+ n4: 325728 0x1116FB: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 100800 0x111E93: BinaryActivation<bool, Matrix, half>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 100800 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 99200 0x144BDB: XNor_BatchNormConv<Matrix>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 99200 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 92800 0x1192E7: MaxPooling<bool, Matrix, half>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 92800 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n0: 32928 in 4 places, all below massif's threshold (1.00%)
+ n3: 181944 0x1236DF: std::vector<half, std::allocator<half> >::_M_fill_insert(__gnu_cxx::__normal_iterator<half*, std::vector<half, std::allocator<half> > >, unsigned long, half const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 75008 0x1269AF: XNor_Dense_OVW1D::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 75008 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 75008 0x1275FB: XNor_Dense_OVW1D::backprop(Matrix<float>&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 75008 0x10BAEF: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n0: 31928 in 8 places, all below massif's threshold (1.00%)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 29480 in 175 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=81
+#-----------
+time=73872
+mem_heap_B=3755056
+mem_heap_extra_B=4832
+mem_stacks_B=2384
+heap_tree=empty
+#-----------
+snapshot=82
+#-----------
+time=82862
+mem_heap_B=3755688
+mem_heap_extra_B=4784
+mem_stacks_B=2544
+heap_tree=empty
+#-----------
+snapshot=83
+#-----------
+time=83419
+mem_heap_B=1993736
+mem_heap_extra_B=6216
+mem_stacks_B=2512
+heap_tree=empty
+#-----------
+snapshot=84
+#-----------
+time=83978
+mem_heap_B=1993736
+mem_heap_extra_B=6216
+mem_stacks_B=2512
+heap_tree=empty
+#-----------
+snapshot=85
+#-----------
+time=84536
+mem_heap_B=1993736
+mem_heap_extra_B=6216
+mem_stacks_B=2512
+heap_tree=empty
+#-----------
+snapshot=86
+#-----------
+time=85095
+mem_heap_B=1993736
+mem_heap_extra_B=6216
+mem_stacks_B=2512
+heap_tree=empty
+#-----------
+snapshot=87
+#-----------
+time=85653
+mem_heap_B=1993736
+mem_heap_extra_B=6216
+mem_stacks_B=2512
+heap_tree=empty
+#-----------
+snapshot=88
+#-----------
+time=86212
+mem_heap_B=1993736
+mem_heap_extra_B=6216
+mem_stacks_B=2512
+heap_tree=empty
+#-----------
+snapshot=89
+#-----------
+time=86771
+mem_heap_B=1993736
+mem_heap_extra_B=6216
+mem_stacks_B=2512
+heap_tree=empty
+#-----------
+snapshot=90
+#-----------
+time=87313
+mem_heap_B=1965368
+mem_heap_extra_B=6136
+mem_stacks_B=1920
+heap_tree=detailed
+n7: 1965368 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 584800 0x10D8C3: std::vector<float, std::allocator<float> >::_M_fill_insert(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float> > >, unsigned long, float const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n2: 584800 0x10DE1B: Matrix<float>::Matrix(std::vector<unsigned long, std::allocator<unsigned long> > const&, float, float const*) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 580800 0x10AC9F: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 4000 in 8 places, all below massif's threshold (1.00%)
+  n0: 0 in 3 places, all below massif's threshold (1.00%)
+ n0: 580800 0x10B4B7: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+ n5: 325728 0x1116FB: std::vector<bool, std::allocator<bool> >::_M_fill_insert(std::_Bit_iterator, unsigned long, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 100800 0x111E93: BinaryActivation<bool, Matrix, half>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 100800 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 99200 0x144BDB: XNor_BatchNormConv<Matrix>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 99200 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 92800 0x1192E7: MaxPooling<bool, Matrix, half>::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 92800 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 23200 0x12BD2F: XNor_Convolution2D_OWH1D::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 23200 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n0: 9728 in 3 places, all below massif's threshold (1.00%)
+ n3: 181944 0x1236DF: std::vector<half, std::allocator<half> >::_M_fill_insert(__gnu_cxx::__normal_iterator<half*, std::vector<half, std::allocator<half> > >, unsigned long, half const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 75008 0x1269AF: XNor_Dense_OVW1D::forward(Matrix<float>&, bool) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 75008 0x10B753: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 75008 0x1275FB: XNor_Dense_OVW1D::backprop(Matrix<float>&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 75008 0x10BAEF: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n0: 31928 in 10 places, all below massif's threshold (1.00%)
+ n2: 180200 0x124A1F: Matrix<half>::Matrix(Matrix<half> const&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 90100 0x12558F: Adam<half>::update(std::vector<std::unique_ptr<BaseLayer<Matrix, half>, std::default_delete<BaseLayer<Matrix, half> > >, std::allocator<std::unique_ptr<BaseLayer<Matrix, half>, std::default_delete<BaseLayer<Matrix, half> > > > >&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 90100 0x10BCF7: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+  n1: 90100 0x1255AF: Adam<half>::update(std::vector<std::unique_ptr<BaseLayer<Matrix, half>, std::default_delete<BaseLayer<Matrix, half> > >, std::allocator<std::unique_ptr<BaseLayer<Matrix, half>, std::default_delete<BaseLayer<Matrix, half> > > > >&) (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+   n0: 90100 0x10BCF7: main (in /home/ubuntu/imperial_project/BNN/core/cython/build/cpp_profile/xnor_naive_layer_test)
+ n1: 72704 0x4909293: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x400E83B: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400E93B: call_init (dl-init.c:30)
+    n1: 72704 0x400E93B: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001143: ??? (in /usr/lib/aarch64-linux-gnu/ld-2.31.so)
+ n0: 39192 in 189 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=91
+#-----------
+time=87855
+mem_heap_B=1965368
+mem_heap_extra_B=6136
+mem_stacks_B=2000
+heap_tree=empty
+#-----------
+snapshot=92
+#-----------
+time=88397
+mem_heap_B=1965408
+mem_heap_extra_B=6200
+mem_stacks_B=2096
+heap_tree=empty
+#-----------
+snapshot=93
+#-----------
+time=89294
+mem_heap_B=1410104
+mem_heap_extra_B=6144
+mem_stacks_B=2304
+heap_tree=empty
+#-----------
+snapshot=94
+#-----------
+time=89842
+mem_heap_B=1593792
+mem_heap_extra_B=6224
+mem_stacks_B=2272
+heap_tree=empty

@@ -1,0 +1,319 @@
+# /usr/bin/time -v
+
+CPP = aarch64-linux-gnu-g++
+CFLAGS = -std=c++17 -ftree-vectorize -unroll-loops
+ARMV8_A = -mcpu=native -mtune=cortex-a53 -march=armv8-a+crc+simd+fp -mlittle-endian 
+MASSIF = --tool=massif --time-unit=ms --max-snapshots=100 --stacks=yes --depth=5 #--detailed-freq=1 
+MASSIF_B = --tool=massif --time-unit=B --max-snapshots=100 --stacks=yes --depth=5
+CBLAS = -lblas -lpthread 
+
+COMMON_LAYERS_OUTPUT = ./naive_layers/common_layers/
+XNOR_LAYERS_OUTPUT = ./naive_layers/xnor_layers/
+VANILLA_LAYERS_OUTPUT = ./naive_layers/vanilla_layers/
+OPT_VANILLA_LAYERS_OUTPUT = ./optimized_layers/vanilla_layers/
+OVW_VANILLA_LAYERS_OUTPUT = ./naive_layers/vanilla_layers/
+OPT_XNOR_LAYERS_OUTPUT = ./optimized_layers/xnor_layers/
+
+RESULT_OUTPUT = ./integration_test/
+TEST_EXE_OUTPUT = ./naive_layer_test_exe/
+
+TEST_XNOR_EXE = test_xnor
+TEST_XNOR_OPT_EXE = test_xnor_opt
+TEST_XNOR_OVW1D_EXE = test_xnor_ovw1d
+TEST_XNOR_OVW1D_PO2_EXE = test_xnor_ovw1d_po2
+
+TEST_VANILLA_EXE = test_vanilla
+TEST_VANILLA_OPT_EXE = test_vanilla_opt
+TEST_VANILLA_OVW1D_EXE = test_vanilla_ovw1d
+
+MLP_XNOR_EXE = test_mlp_xnor
+MLP_XNOR_OPT_EXE = test_mlp_xnor_opt
+MLP_XNOR_OVW_EXE = test_mlp_xnor_ovw
+MLP_XNOR_OVW1D_EXE = test_mlp_xnor_ovw1d
+MLP_XNOR_PO2_EXE = test_mlp_xnor_po2
+
+MLP_VANILLA_EXE = test_mlp_vanilla
+MLP_VANILLA_OPT_EXE = test_mlp_vanilla_opt
+MLP_VANILLA_OVW_EXE = test_mlp_vanilla_ovw
+MLP_VANILLA_OVW1D_EXE = test_mlp_vanilla_ovw1d
+
+CONVNET_XNOR_EXE = test_convnet_xnor
+CONVNET_VANILLA_EXE = test_convnet_vanilla
+BINARYNET_XNOR_EXE = test_binary_xnor
+BINARYNET_VANILLA_EXE = test_binary_vanilla
+
+TEST_XNOR_BINARYNET_OPT_EXE = test_xnor_binarynet_opt
+TEST_VANILLA_BINARYNET_OPT_EXE = test_vanilla_binarynet_opt
+
+COMMON_ML_OBJ = $(COMMON_LAYERS_OUTPUT)/activation_layer.o $(COMMON_LAYERS_OUTPUT)/flatten.o $(COMMON_LAYERS_OUTPUT)/max_pooling.o $(COMMON_LAYERS_OUTPUT)/loss.o $(COMMON_LAYERS_OUTPUT)/softmax.o $(COMMON_LAYERS_OUTPUT)/optimizers.o
+
+VANILLA_ML_OBJ = $(VANILLA_LAYERS_OUTPUT)/vanilla_dense.o  $(VANILLA_LAYERS_OUTPUT)/vanilla_convolution.o $(VANILLA_LAYERS_OUTPUT)/vanilla_batchnorm_dense.o $(VANILLA_LAYERS_OUTPUT)/vanilla_batchnorm_conv.o
+
+OVW_VANILLA_ML_OBJ = $(VANILLA_LAYERS_OUTPUT)/vanilla_dense_ovw1d.o  $(VANILLA_LAYERS_OUTPUT)/vanilla_convolution_ovw1d.o $(VANILLA_LAYERS_OUTPUT)/vanilla_batchnorm_dense.o $(VANILLA_LAYERS_OUTPUT)/vanilla_batchnorm_conv.o
+
+XNOR_ML_OBJ = $(XNOR_LAYERS_OUTPUT)/xnor_dense.o  $(XNOR_LAYERS_OUTPUT)/xnor_convolution.o $(XNOR_LAYERS_OUTPUT)/xnor_batchnorm_dense.o $(XNOR_LAYERS_OUTPUT)/xnor_batchnorm_conv.o
+
+OVW_XNOR_ML_OBJ = $(XNOR_LAYERS_OUTPUT)/xnor_dense_ovw1d.o  $(XNOR_LAYERS_OUTPUT)/xnor_convolution_ovw1d.o $(XNOR_LAYERS_OUTPUT)/xnor_batchnorm_dense.o $(XNOR_LAYERS_OUTPUT)/xnor_batchnorm_conv.o
+
+
+# test dense and conv ------------------------------------------------------------------------------------
+
+build_vanilla_tests: ../../lib/integration_test/vanilla_naive_layer_test.cpp
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $? -o ./$(TEST_VANILLA_EXE) $(COMMON_ML_OBJ) $(VANILLA_ML_OBJ)
+	./$(TEST_VANILLA_EXE) 10 1
+
+build_xnor_tests: ../../lib/integration_test/xnor_naive_layer_test.cpp
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $? -o ./$(TEST_XNOR_EXE) $(COMMON_ML_OBJ) $(XNOR_ML_OBJ) 
+	./$(TEST_XNOR_EXE) 10 1
+
+run_naive_layer_tests:
+	for number in 1000 500 400 200 100 ; do \
+		valgrind $(MASSIF) --massif-out-file=./$(RESULT_OUTPUT)/massif.out.$(TEST_XNOR_EXE)_$${number}_epoch_3 ./$(TEST_XNOR_EXE) $$number 3; \
+		valgrind $(MASSIF) --massif-out-file=./$(RESULT_OUTPUT)/massif.out.$(TEST_VANILLA_EXE)_$${number}_epoch_3 ./$(TEST_VANILLA_EXE) $$number 3; \
+	done
+    
+run_speed_naive_layer_tests:
+	for number in 1000 500 400 200 100 ; do \
+		./$(TEST_XNOR_EXE) $$number 3; \
+		./$(TEST_VANILLA_EXE) $$number 3; \
+	done
+    
+    
+
+build_ovw1d_vanilla_tests: ../../lib/integration_test/ovw_vanilla_naive_layer_test.cpp
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $? -o ./$(TEST_VANILLA_OVW1D_EXE) $(COMMON_ML_OBJ) $(OVW_VANILLA_ML_OBJ)
+	./$(TEST_VANILLA_OVW1D_EXE) 10 1
+
+build_ovw1d_xnor_tests: ../../lib/integration_test/ovw_xnor_naive_layer_test.cpp
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $? -o ./$(TEST_XNOR_OVW1D_EXE) $(COMMON_ML_OBJ) $(OVW_XNOR_ML_OBJ) 
+	./$(TEST_XNOR_OVW1D_EXE) 10 1
+
+build_po2_ovw1d_xnor_tests: ../../lib/integration_test/po2_ovw_xnor_naive_layer_test.cpp
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $? -o ./$(TEST_XNOR_OVW1D_PO2_EXE) $(COMMON_ML_OBJ) $(OVW_XNOR_ML_OBJ) 
+	./$(TEST_XNOR_OVW1D_PO2_EXE) 10 1
+
+run_ovw1d_naive_layer_tests:
+	for number in 100 200 400 500 1000; do \
+		valgrind $(MASSIF) --massif-out-file=./$(RESULT_OUTPUT)/massif.out.$(TEST_XNOR_OVW1D_EXE)_$${number}_epoch_3 ./$(TEST_XNOR_OVW1D_EXE) $$number 3; \
+		valgrind $(MASSIF) --massif-out-file=./$(RESULT_OUTPUT)/massif.out.$(TEST_VANILLA_OVW1D_EXE)_$${number}_epoch_3 ./$(TEST_VANILLA_OVW1D_EXE)  $$number 3; \
+	done
+#	for number in 10 20 40 80; do \
+#		echo $$number ; \
+#		./xnor_naive_layer_test $$number 3; \
+#		./vanilla_naive_layer_test $$number 3; \
+#	done
+
+run_speed_ovw1d_naive_layer_tests:
+	for number in 100 200 400 500 1000; do \
+		./$(TEST_XNOR_OVW1D_EXE) $$number 3; \
+		./$(TEST_VANILLA_OVW1D_EXE)  $$number 3; \
+	done
+    
+
+run_po2_naive_layer_tests:
+	for number in 100 200 400 500 1000; do \
+		valgrind $(MASSIF) --massif-out-file=./$(RESULT_OUTPUT)/massif.out.$(TEST_XNOR_OVW1D_PO2_EXE)_$${number}_epoch_3 ./$(TEST_XNOR_OVW1D_PO2_EXE) $$number 3; \
+	done
+
+
+B_run_ovw1d_naive_layer_tests:
+	for number in 100 200 400 500 1000; do \
+		valgrind $(MASSIF_B) --massif-out-file=./$(RESULT_OUTPUT)/B_massif.out.$(TEST_XNOR_OVW1D_EXE)_$${number}_epoch_3 ./$(TEST_XNOR_OVW1D_EXE) $$number 3; \
+		valgrind $(MASSIF_B) --massif-out-file=./$(RESULT_OUTPUT)/B_massif.out.$(TEST_VANILLA_OVW1D_EXE)_$${number}_epoch_3 ./$(TEST_VANILLA_OVW1D_EXE)  $$number 3; \
+	done
+
+    
+build_opt_vanilla_tests: ../../lib/integration_test/opt_vanilla_naive_layer_test.cpp
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $? -o ./$(TEST_VANILLA_OPT_EXE) $(COMMON_ML_OBJ) $(OPT_VANILLA_LAYERS_OUTPUT)/opt_vanilla_dense.o  $(OPT_VANILLA_LAYERS_OUTPUT)/opt_vanilla_convolution.o $(VANILLA_LAYERS_OUTPUT)/vanilla_batchnorm_dense.o $(VANILLA_LAYERS_OUTPUT)/vanilla_batchnorm_conv.o $(CBLAS) 
+	./$(TEST_VANILLA_OPT_EXE) 10 1
+    
+build_opt_xnor_tests: ../../lib/integration_test/opt_xnor_naive_layer_test.cpp
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $? -o ./$(TEST_XNOR_OPT_EXE) $(COMMON_ML_OBJ) $(OPT_XNOR_LAYERS_OUTPUT)/opt_xnor_dense.o  $(OPT_XNOR_LAYERS_OUTPUT)/opt_xnor_convolution.o  $(XNOR_LAYERS_OUTPUT)/xnor_batchnorm_dense.o $(XNOR_LAYERS_OUTPUT)/xnor_batchnorm_conv.o $(CBLAS)
+	./$(TEST_XNOR_OPT_EXE) 10 1
+
+
+run_opt_layer_tests:
+	for number in 500 400 200 100; do \
+		valgrind $(MASSIF) --massif-out-file=./$(RESULT_OUTPUT)/massif.out.$(TEST_XNOR_OPT_EXE)_$${number}_epoch_3 ./$(TEST_XNOR_OPT_EXE) $$number 3; \
+		valgrind $(MASSIF) --massif-out-file=./$(RESULT_OUTPUT)/massif.out.$(TEST_VANILLA_OPT_EXE)_$${number}_epoch_3 ./$(TEST_VANILLA_OPT_EXE) $$number 3; \
+	done
+
+run_speed_opt_layer_tests:
+	for number in 100 200 400 500 1000; do \
+		echo $$number ; \
+		./$(TEST_XNOR_OPT_EXE) $$number 3; \
+		./$(TEST_VANILLA_OPT_EXE) $$number 3; \
+	done
+    
+# build mlp ----------------------------------------------------------------------------------------
+
+build_xnor_mlp: ../../lib/integration_test/xnor_multilayer_perceptron.cpp
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $? -o $(TEST_EXE_OUTPUT)/$(MLP_XNOR_EXE) $(COMMON_ML_OBJ) $(XNOR_LAYERS_OUTPUT)/xnor_dense.o $(XNOR_LAYERS_OUTPUT)/xnor_batchnorm_dense.o
+	$(TEST_EXE_OUTPUT)/$(MLP_XNOR_EXE) 10 1
+
+
+build_vanilla_mlp: ../../lib/integration_test/vanilla_multilayer_perceptron.cpp
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $? -o $(TEST_EXE_OUTPUT)/$(MLP_VANILLA_EXE) $(COMMON_ML_OBJ) $(VANILLA_LAYERS_OUTPUT)/vanilla_dense.o $(VANILLA_LAYERS_OUTPUT)/vanilla_batchnorm_dense.o
+	$(TEST_EXE_OUTPUT)/$(MLP_VANILLA_EXE) 100 1
+    
+    
+run_mlp_tests:
+	for number in 100 200 400 500 1000; do \
+		valgrind $(MASSIF) --massif-out-file=./$(RESULT_OUTPUT)/massif.out.$(MLP_XNOR_EXE)_$${number}_baseline $(TEST_EXE_OUTPUT)/$(MLP_XNOR_EXE) $$number 0; \
+		valgrind $(MASSIF) --massif-out-file=./$(RESULT_OUTPUT)/massif.out.$(MLP_XNOR_EXE)_$${number}_epoch_3 $(TEST_EXE_OUTPUT)/$(MLP_XNOR_EXE) $$number 3; \
+		valgrind $(MASSIF) --massif-out-file=./$(RESULT_OUTPUT)/massif.out.$(MLP_VANILLA_EXE)_$${number}_baseline $(TEST_EXE_OUTPUT)/$(MLP_VANILLA_EXE) $$number 0; \
+		valgrind $(MASSIF) --massif-out-file=./$(RESULT_OUTPUT)/massif.out.$(MLP_VANILLA_EXE)_$${number}_epoch_3 $(TEST_EXE_OUTPUT)/$(MLP_VANILLA_EXE) $$number 3; \
+	done
+	for number in 100 200 400 500 1000; do \
+		echo $$number ; \
+		$(TEST_EXE_OUTPUT)/$(MLP_XNOR_EXE) $$number 3; \
+		$(TEST_EXE_OUTPUT)/$(MLP_VANILLA_EXE) $$number 3; \
+	done
+    
+    
+build_ovw1d_vanilla_mlp: ../../lib/integration_test/ovw1d_vanilla_multilayer_perceptron.cpp
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $? -o $(TEST_EXE_OUTPUT)/$(MLP_VANILLA_OVW1D_EXE)  $(COMMON_ML_OBJ) $(OVW_VANILLA_LAYERS_OUTPUT)/vanilla_dense_ovw1d.o $(VANILLA_LAYERS_OUTPUT)/vanilla_batchnorm_dense.o
+	$(TEST_EXE_OUTPUT)/$(MLP_VANILLA_OVW1D_EXE) 100 1
+
+build_ovw1d_xnor_mlp: ../../lib/integration_test/ovw1d_xnor_multilayer_perceptron.cpp
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $? -o $(TEST_EXE_OUTPUT)/$(MLP_XNOR_OVW_EXE)   $(COMMON_ML_OBJ) $(XNOR_LAYERS_OUTPUT)/xnor_dense_ovw1d.o $(XNOR_LAYERS_OUTPUT)/xnor_batchnorm_dense.o
+	$(TEST_EXE_OUTPUT)/$(MLP_XNOR_OVW_EXE) 100 1
+    
+    
+run_mlp_ovw1d_tests:
+	for number in 100 200 400 500 1000; do \
+		valgrind $(MASSIF) --massif-out-file=./$(RESULT_OUTPUT)/massif.out.$(MLP_XNOR_OVW_EXE)_$${number}_baseline $(TEST_EXE_OUTPUT)/$(MLP_XNOR_OVW_EXE) $$number 0; \
+		valgrind $(MASSIF) --massif-out-file=./$(RESULT_OUTPUT)/massif.out.$(MLP_XNOR_OVW_EXE)_$${number}_epoch_3 $(TEST_EXE_OUTPUT)/$(MLP_XNOR_OVW_EXE) $$number 3; \
+		valgrind $(MASSIF) --massif-out-file=./$(RESULT_OUTPUT)/massif.out.$(MLP_VANILLA_OVW1D_EXE)_$${number}_baseline $(TEST_EXE_OUTPUT)/$(MLP_VANILLA_OVW1D_EXE) $$number 0; \
+		valgrind $(MASSIF) --massif-out-file=./$(RESULT_OUTPUT)/massif.out.$(MLP_VANILLA_OVW1D_EXE)_$${number}_epoch_3 $(TEST_EXE_OUTPUT)/$(MLP_VANILLA_OVW1D_EXE) $$number 3; \
+	done
+	for number in 100 200 400 500 1000; do \
+		echo $$number ; \
+		$(TEST_EXE_OUTPUT)/$(MLP_XNOR_OVW_EXE) $$number 3; \
+		$(TEST_EXE_OUTPUT)/$(MLP_VANILLA_OVW1D_EXE) $$number 3; \
+	done
+    
+run_xnor_mlp_tests:
+	for number in 100 200 400 500 1000; do \
+		valgrind $(MASSIF) --massif-out-file=./$(RESULT_OUTPUT)/massif.out.$(MLP_XNOR_EXE)_$${number}_epoch_3 $(TEST_EXE_OUTPUT)/$(MLP_XNOR_EXE) $$number 3; \
+		valgrind $(MASSIF) --massif-out-file=./$(RESULT_OUTPUT)/massif.out.$(MLP_XNOR_OVW_EXE)_$${number}_epoch_3 $(TEST_EXE_OUTPUT)/$(MLP_XNOR_OVW_EXE) $$number 3; \
+	done
+    
+    
+build_opt_xnor_mlp: ../../lib/integration_test/opt_xnor_multilayer_perceptron.cpp
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $? -o $(TEST_EXE_OUTPUT)/$(MLP_XNOR_OPT_EXE) $(COMMON_ML_OBJ) $(OPT_XNOR_LAYERS_OUTPUT)/opt_xnor_dense.o $(XNOR_LAYERS_OUTPUT)/xnor_batchnorm_dense.o $(CBLAS)
+	$(TEST_EXE_OUTPUT)/$(MLP_XNOR_OPT_EXE) 100 1
+
+build_opt_vanilla_mlp: ../../lib/integration_test/opt_vanilla_multilayer_perceptron.cpp
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $? -o $(TEST_EXE_OUTPUT)/$(MLP_VANILLA_OPT_EXE) $(COMMON_ML_OBJ) $(OPT_VANILLA_LAYERS_OUTPUT)/opt_vanilla_dense.o $(VANILLA_LAYERS_OUTPUT)/vanilla_batchnorm_dense.o $(CBLAS)
+	$(TEST_EXE_OUTPUT)/$(MLP_VANILLA_OPT_EXE) 100 3
+    
+    
+run_mlp_opt_tests:
+	for number in 100 200 400 500 1000; do \
+#		valgrind $(MASSIF) --massif-out-file=./$(RESULT_OUTPUT)/massif.out.$(MLP_XNOR_OPT_EXE)_$${number}_epoch_3 $(TEST_EXE_OUTPUT)/$(MLP_XNOR_OPT_EXE) $$number 3; \
+		valgrind $(MASSIF) --massif-out-file=./$(RESULT_OUTPUT)/massif.out.$(MLP_VANILLA_OPT_EXE)_$${number}_epoch_3 $(TEST_EXE_OUTPUT)/$(MLP_VANILLA_OPT_EXE) $$number 3; \
+	done
+	for number in 100 200 400 500 1000; do \
+		echo $$number ; \
+		$(TEST_EXE_OUTPUT)/$(MLP_XNOR_OPT_EXE) $$number 3; \
+		$(TEST_EXE_OUTPUT)/$(MLP_VANILLA_OPT_EXE) $$number 3; \
+	done
+
+
+
+
+build_po2_xnor_mlp: ../../lib/integration_test/po2_xnor_multilayer_perceptron.cpp
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $? -o $(TEST_EXE_OUTPUT)/$(MLP_XNOR_PO2_EXE)   $(COMMON_ML_OBJ) $(OPT_XNOR_LAYERS_OUTPUT)/po2_xnor_dense.o $(XNOR_LAYERS_OUTPUT)/xnor_batchnorm_dense.o
+	$(TEST_EXE_OUTPUT)/$(MLP_XNOR_PO2_EXE) 100 1
+    
+# ----------------------------------------------------------------------------------
+
+
+build_ovw_vanilla_mlp: ../../lib/integration_test/ovw_vanilla_multilayer_perceptron.cpp
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $? -o $(TEST_EXE_OUTPUT)/$(MLP_VANILLA_OVW_EXE) $(COMMON_LAYERS_OUTPUT)/activation_layer.o $(COMMON_LAYERS_OUTPUT)/softmax.o $(COMMON_LAYERS_OUTPUT)/loss.o $(OVW_VANILLA_LAYERS_OUTPUT)/vanilla_dense_ovw.o $(VANILLA_LAYERS_OUTPUT)/vanilla_batchnorm_dense.o
+	$(TEST_EXE_OUTPUT)/$(MLP_VANILLA_OVW_EXE) 100 3
+
+
+build_ovw_xnor_mlp: ../../lib/integration_test/ovw_xnor_multilayer_perceptron.cpp
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $? -o $(TEST_EXE_OUTPUT)/$(MLP_XNOR_OVW_EXE) $(COMMON_LAYERS_OUTPUT)/activation_layer.o $(COMMON_LAYERS_OUTPUT)/softmax.o $(COMMON_LAYERS_OUTPUT)/loss.o $(XNOR_LAYERS_OUTPUT)/xnor_dense_ovw.o $(XNOR_LAYERS_OUTPUT)/xnor_batchnorm_dense.o
+	$(TEST_EXE_OUTPUT)/$(MLP_XNOR_OVW_EXE) 100 1
+
+build_test_mlp_bool:  ../../lib/integration_test/multilayer_perceptron.cpp
+	rm -rf test_mlp_bool
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $? -o test_mlp_bool gradient_quantisation_utils.o dense.o batchnorm.o activation_layer_bool.o
+	./test_mlp_bool 100 1
+    
+
+    
+    
+# build convnet ----------------------------------------------------------------------------------------
+
+build_xnor_convnet: ../../lib/integration_test/xnor_convnet.cpp
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $? -o $(TEST_EXE_OUTPUT)/$(CONVNET_XNOR_EXE) $(COMMON_LAYERS_OUTPUT)/activation_layer.o $(COMMON_LAYERS_OUTPUT)/softmax.o $(COMMON_LAYERS_OUTPUT)/loss.o $(COMMON_LAYERS_OUTPUT)/flatten.o $(COMMON_LAYERS_OUTPUT)/max_pooling.o $(XNOR_LAYERS_OUTPUT)/xnor_dense.o $(XNOR_LAYERS_OUTPUT)/xnor_convolution.o $(XNOR_LAYERS_OUTPUT)/xnor_batchnorm_dense.o $(XNOR_LAYERS_OUTPUT)/xnor_batchnorm_conv.o 
+	$(TEST_EXE_OUTPUT)/$(CONVNET_XNOR_EXE) 5 1
+
+build_vanilla_convnet: ../../lib/integration_test/vanilla_convnet.cpp
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $? -o $(TEST_EXE_OUTPUT)/$(CONVNET_VANILLA_EXE) $(COMMON_LAYERS_OUTPUT)/activation_layer.o $(COMMON_LAYERS_OUTPUT)/softmax.o $(COMMON_LAYERS_OUTPUT)/loss.o $(COMMON_LAYERS_OUTPUT)/flatten.o $(COMMON_LAYERS_OUTPUT)/max_pooling.o $(VANILLA_LAYERS_OUTPUT)/vanilla_dense.o  $(VANILLA_LAYERS_OUTPUT)/vanilla_convolution.o $(VANILLA_LAYERS_OUTPUT)/vanilla_batchnorm_dense.o $(VANILLA_LAYERS_OUTPUT)/vanilla_batchnorm_conv.o 
+	$(TEST_EXE_OUTPUT)/$(CONVNET_VANILLA_EXE) 5 1
+    
+
+run_convnet_tests:
+	for number in 100 200 400 500 1000; do \
+		valgrind $(MASSIF) --massif-out-file=./$(RESULT_OUTPUT)/massif.out.$(CONVNET_XNOR_EXE)_$${number}_baseline $(TEST_EXE_OUTPUT)/$(CONVNET_XNOR_EXE) $$number 0; \
+		valgrind $(MASSIF) --massif-out-file=./$(RESULT_OUTPUT)/massif.out.$(CONVNET_XNOR_EXE)_$${number}_epoch_3 $(TEST_EXE_OUTPUT)/$(CONVNET_XNOR_EXE) $$number 3; \
+		valgrind $(MASSIF) --massif-out-file=./$(RESULT_OUTPUT)/massif.out.$(CONVNET_VANILLA_EXE)_$${number}_baseline $(TEST_EXE_OUTPUT)/$(CONVNET_VANILLA_EXE) $$number 0; \
+		valgrind $(MASSIF) --massif-out-file=./$(RESULT_OUTPUT)/massif.out.$(CONVNET_VANILLA_EXE)_$${number}_epoch_3 $(TEST_EXE_OUTPUT)/$(CONVNET_VANILLA_EXE) $$number 3; \
+	done
+	for number in 100 200 400 500 1000; do \
+		echo $$number ; \
+		$(TEST_EXE_OUTPUT)/$(CONVNET_XNOR_EXE) $$number 3; \
+		$(TEST_EXE_OUTPUT)/$(CONVNET_VANILLA_EXE) $$number 3; \
+	done
+    
+    
+# build binarynet ----------------------------------------------------------------------------------------
+
+build_xnor_binarynet_opt: ../../lib/integration_test/opt_xnor_BinaryNet.cpp
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $? -o ./$(TEST_EXE_OUTPUT)/$(TEST_XNOR_BINARYNET_OPT_EXE) $(COMMON_ML_OBJ) $(OPT_XNOR_LAYERS_OUTPUT)/opt_xnor_dense.o  $(OPT_XNOR_LAYERS_OUTPUT)/opt_xnor_convolution.o  $(XNOR_LAYERS_OUTPUT)/xnor_batchnorm_dense.o $(XNOR_LAYERS_OUTPUT)/xnor_batchnorm_conv.o $(CBLAS)
+	$(TEST_EXE_OUTPUT)/$(TEST_XNOR_BINARYNET_OPT_EXE) 5 1
+
+build_vanilla_binarynet_opt: ../../lib/integration_test/opt_vanilla_BinaryNet.cpp
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $? -o $(TEST_EXE_OUTPUT)/$(TEST_VANILLA_BINARYNET_OPT_EXE) $(COMMON_ML_OBJ) $(OPT_VANILLA_LAYERS_OUTPUT)/opt_vanilla_dense.o  $(OPT_VANILLA_LAYERS_OUTPUT)/opt_vanilla_convolution.o $(VANILLA_LAYERS_OUTPUT)/vanilla_batchnorm_dense.o $(VANILLA_LAYERS_OUTPUT)/vanilla_batchnorm_conv.o $(CBLAS)
+	$(TEST_EXE_OUTPUT)/$(TEST_VANILLA_BINARYNET_OPT_EXE) 5 1
+    
+
+run_binarynet_tests:
+	for number in 100 200 400 500 1000; do \
+		valgrind $(MASSIF) --massif-out-file=./$(RESULT_OUTPUT)/massif.out.$(BINARYNET_XNOR_EXE)_$${number}_baseline $(TEST_EXE_OUTPUT)/$(BINARYNET_XNOR_EXE) $$number 0; \
+		valgrind $(MASSIF) --massif-out-file=./$(RESULT_OUTPUT)/massif.out.$(BINARYNET_XNOR_EXE)_$${number}_epoch_3 $(TEST_EXE_OUTPUT)/$(BINARYNET_XNOR_EXE) $$number 3; \
+		valgrind $(MASSIF) --massif-out-file=./$(RESULT_OUTPUT)/massif.out.$(BINARYNET_VANILLA_EXE)_$${number}_baseline $(TEST_EXE_OUTPUT)/$(BINARYNET_VANILLA_EXE) $$number 0; \
+		valgrind $(MASSIF) --massif-out-file=./$(RESULT_OUTPUT)/massif.out.$(BINARYNET_VANILLA_EXE)_$${number}_epoch_3 $(TEST_EXE_OUTPUT)/$(BINARYNET_VANILLA_EXE) $$number 3; \
+	done
+	for number in 100 200 400 500 1000; do \
+		echo $$number ; \
+		./$(BINARYNET_XNOR_EXE) $$number 3; \
+		./$(BINARYNET_VANILLA_EXE) $$number 3; \
+	done
+
+
+    
+# run all tests ----------------------------------------------------------------------------------------
+
+run_all_tests:
+	for number in 100 200 400 500 1000; do \
+		valgrind $(MASSIF) --massif-out-file=./$(RESULT_OUTPUT)/massif.out.$(MLP_XNOR_EXE)_$${number}_baseline ./$(MLP_XNOR_EXE) $$number 0; \
+		valgrind $(MASSIF) --massif-out-file=./$(RESULT_OUTPUT)/massif.out.$(MLP_XNOR_EXE)_$${number}_epoch_3 ./$(MLP_XNOR_EXE) $$number 3; \
+		valgrind $(MASSIF) --massif-out-file=./$(RESULT_OUTPUT)/massif.out.$(MLP_VANILLA_EXE)_$${number}_baseline ./$(MLP_VANILLA_EXE) $$number 0; \
+		valgrind $(MASSIF) --massif-out-file=./$(RESULT_OUTPUT)/massif.out.$(MLP_VANILLA_EXE)_$${number}_epoch_3 ./$(MLP_VANILLA_EXE) $$number 3; \
+	done
+	for number in 100 200 400 500 1000; do \
+		echo $$number ; \
+		echo MLP ; \
+		./$(MLP_XNOR_EXE) $$number 3; \
+		./$(MLP_VANILLA_EXE) $$number 3; \
+	done
+	for number in 100 200 400 500 1000; do \
+		valgrind $(MASSIF) --massif-out-file=./$(RESULT_OUTPUT)/massif.out.$(BINARYNET_VANILLA_EXE)_$${number}_baseline ./$(BINARYNET_VANILLA_EXE) $$number 0; \
+		valgrind $(MASSIF) --massif-out-file=./$(RESULT_OUTPUT)/massif.out.$(BINARYNET_VANILLA_EXE)_$${number}_epoch_3 ./$(BINARYNET_VANILLA_EXE) $$number 3; \
+

@@ -1,0 +1,44 @@
+CPP = aarch64-linux-gnu-g++
+CFLAGS = -std=c++17 -ftree-vectorize -unroll-loops
+ARMV8_A = -mcpu=native -mtune=cortex-a53 -march=armv8-a+crc+simd+fp -mlittle-endian
+CBLAS = -lblas -lpthread #-lcblas -latlas -lopenblas
+
+PROJECT_DIR = ../../lib/optimized_layers/
+OUTPUT_DIR = ./optimized_layers/
+TEST_DIR = ./test_exe/
+
+OPT_VANILLA_LAYERS = $(PROJECT_DIR)/vanilla_layers/
+OPT_VANILLA_LAYERS_OUTPUT = $(OUTPUT_DIR)/vanilla_layers/
+
+OPT_XNOR_LAYERS = $(PROJECT_DIR)/xnor_layers/
+OPT_XNOR_LAYERS_OUTPUT = $(OUTPUT_DIR)/xnor_layers/
+
+MASSIF = --tool=massif --time-unit=ms --max-snapshots=100 --stacks=yes --depth=5 #--detailed-freq=1 
+
+# dense layer ----------------------------------------------------------------------------------------
+
+build_vanilla_dense:
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) -c $(OPT_VANILLA_LAYERS)/dense/opt_vanilla_dense.cpp -o $(OPT_VANILLA_LAYERS_OUTPUT)/opt_vanilla_dense.o $(CBLAS)
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $(OPT_VANILLA_LAYERS)/dense/test_dense_main.cpp -o $(TEST_DIR)/test_opt_vanilla_dense $(OPT_VANILLA_LAYERS_OUTPUT)/opt_vanilla_dense.o $(CBLAS)
+	$(TEST_DIR)/test_opt_vanilla_dense 0 0
+	$(TEST_DIR)/test_opt_vanilla_dense 1 100
+
+
+build_xnor_dense:
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) -c $(OPT_XNOR_LAYERS)/dense/opt_xnor_dense.cpp -o $(OPT_XNOR_LAYERS_OUTPUT)/opt_xnor_dense.o $(CBLAS)
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $(OPT_XNOR_LAYERS)/dense/test_dense_main.cpp -o $(TEST_DIR)/test_opt_xnor_dense $(OPT_XNOR_LAYERS_OUTPUT)/opt_xnor_dense.o $(CBLAS)
+	$(TEST_DIR)/test_opt_xnor_dense 0 0
+
+# convolution layer ----------------------------------------------------------------------------------------
+
+build_vanilla_convolution_layer:
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) -c $(OPT_VANILLA_LAYERS)/convolution/opt_vanilla_convolution.cpp -o $(OPT_VANILLA_LAYERS_OUTPUT)/opt_vanilla_convolution.o
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $(OPT_VANILLA_LAYERS)/convolution/test_convolution_main.cpp -o test_opt_vanilla_conv $(OPT_VANILLA_LAYERS_OUTPUT)/opt_vanilla_convolution.o $(CBLAS)
+	./test_opt_vanilla_conv
+
+
+build_xnor_convolution_layer:
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) -c $(OPT_XNOR_LAYERS)/convolution/opt_xnor_convolution.cpp -o $(OPT_XNOR_LAYERS_OUTPUT)/opt_xnor_convolution.o $(CBLAS)
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $(OPT_XNOR_LAYERS)/convolution/test_convolution_main.cpp -o $(TEST_DIR)/test_opt_xnor_convolution $(OPT_XNOR_LAYERS_OUTPUT)/opt_xnor_convolution.o $(CBLAS)
+	$(TEST_DIR)/test_opt_xnor_convolution 0 0
+

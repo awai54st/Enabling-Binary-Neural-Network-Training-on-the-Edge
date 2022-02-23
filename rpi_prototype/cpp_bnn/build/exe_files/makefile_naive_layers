@@ -1,0 +1,118 @@
+CPP = aarch64-linux-gnu-g++
+CFLAGS = -std=c++17 -ftree-vectorize -unroll-loops
+ARMV8_A = -mcpu=native -mtune=cortex-a53 -march=armv8-a+crc+simd+fp -mlittle-endian
+
+PROJECT_DIR = ../../lib/naive_layers
+
+XNOR_LAYERS = ../../lib/naive_layers/xnor_layers/
+XNOR_LAYERS_OUTPUT = ./naive_layers/xnor_layers/
+COMMON_LAYERS = ../../lib/naive_layers/common_layers/
+COMMON_LAYERS_OUTPUT = ./naive_layers/common_layers/
+LOSS_LAYERS = ../../lib/naive_layers/loss/
+OPTIMIZERS = ../../lib/optimizers/
+VANILLA_LAYERS = ../../lib/naive_layers/vanilla_layers/
+VANILLA_LAYERS_OUTPUT = ./naive_layers/vanilla_layers/
+COMMON_LAYERS_OUTPUT = ./naive_layers/common_layers/
+
+MASSIF = --tool=massif --time-unit=ms --max-snapshots=100 --stacks=yes --depth=5 #--detailed-freq=1 
+
+    
+# common layers ------------------------------------------------------------------------------------
+
+build_activation_layer:
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) -c $(COMMON_LAYERS)/activation_layer/activation_layer.cpp -o $(COMMON_LAYERS_OUTPUT)/activation_layer.o 
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $(COMMON_LAYERS)/activation_layer/test_activation_layer_main.cpp -o test_activation $(COMMON_LAYERS_OUTPUT)/activation_layer.o
+	./test_activation 0 0
+    
+build_max_pooling_layer:
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) -c $(COMMON_LAYERS)/pooling_layers/pooling_layers.cpp -o $(COMMON_LAYERS_OUTPUT)/max_pooling.o
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $(COMMON_LAYERS)/pooling_layers/test_pooling_layers_main.cpp -o test_pool $(COMMON_LAYERS_OUTPUT)/max_pooling.o
+	./test_pool
+
+build_flatten_layer:
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) -c $(COMMON_LAYERS)/flatten_layer/flatten_layer.cpp -o $(COMMON_LAYERS_OUTPUT)/flatten.o
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $(COMMON_LAYERS)/flatten_layer/test_flatten_main.cpp -o test_flatten $(COMMON_LAYERS_OUTPUT)/flatten.o
+	./test_flatten 0 0
+
+build_softmax_layer:
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) -c $(COMMON_LAYERS)/softmax_layer/softmax.cpp -o $(COMMON_LAYERS_OUTPUT)/softmax.o
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $(COMMON_LAYERS)/softmax_layer/test_softmax_main.cpp -o test_softmax $(COMMON_LAYERS_OUTPUT)/softmax.o
+	./test_softmax 0 0
+    
+
+# loss layers ------------------------------------------------------------------------------------
+
+build_cross_entropy_layer:
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) -c $(LOSS_LAYERS)/loss.cpp -o $(COMMON_LAYERS_OUTPUT)/loss.o
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $(LOSS_LAYERS)/test_cross_entropy_main.cpp -o test_loss $(COMMON_LAYERS_OUTPUT)/loss.o $(COMMON_LAYERS_OUTPUT)/softmax.o
+	./test_loss 0 0
+    
+
+# optimizers ------------------------------------------------------------------------------------
+
+build_optimizers:
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) -c $(OPTIMIZERS)/optimizers.cpp -o $(COMMON_LAYERS_OUTPUT)/optimizers.o
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $(OPTIMIZERS)/test_optimizers.cpp -o test_optimizers $(COMMON_LAYERS_OUTPUT)/optimizers.o $(VANILLA_LAYERS_OUTPUT)/vanilla_dense.o $(COMMON_LAYERS_OUTPUT)/activation_layer.o
+	./test_optimizers 0 0
+    
+    
+    
+# xnor layers ------------------------------------------------------------------------------------
+
+build_dense:
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) -c $(XNOR_LAYERS)/dense/xnor_dense.cpp -o $(XNOR_LAYERS_OUTPUT)/xnor_dense.o
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $(XNOR_LAYERS)/dense/test_dense_main.cpp -o test_dense $(XNOR_LAYERS_OUTPUT)/xnor_dense.o
+	./test_dense 0 0
+    
+build_convolution_layer:
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) -c $(XNOR_LAYERS)/convolution/xnor_convolution.cpp -o $(XNOR_LAYERS_OUTPUT)/xnor_convolution.o
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $(XNOR_LAYERS)/convolution/test_convolution_main.cpp -o test_conv $(XNOR_LAYERS_OUTPUT)/xnor_convolution.o
+	./test_conv
+
+build_batchnorm_layer:
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) -c $(XNOR_LAYERS)/batchnorm/xnor_batchnorm_dense.cpp -o $(XNOR_LAYERS_OUTPUT)/xnor_batchnorm_dense.o
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) -c $(XNOR_LAYERS)/batchnorm/xnor_batchnorm_conv.cpp -o $(XNOR_LAYERS_OUTPUT)/xnor_batchnorm_conv.o
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $(XNOR_LAYERS)/batchnorm/test_batchnorm_main.cpp -o test_batchnorm $(XNOR_LAYERS_OUTPUT)/xnor_batchnorm_dense.o $(XNOR_LAYERS_OUTPUT)/xnor_batchnorm_conv.o
+	./test_batchnorm 0 0
+
+# vanilla layers ---------------------------------------------------------------------------------
+
+build_vanilla_dense:
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) -c $(VANILLA_LAYERS)/dense/vanilla_dense.cpp -o $(VANILLA_LAYERS_OUTPUT)/vanilla_dense.o
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $(VANILLA_LAYERS)/dense/test_dense_main.cpp -o test_vanilla_dense $(VANILLA_LAYERS_OUTPUT)/vanilla_dense.o
+	./test_vanilla_dense 0 0
+
+
+build_vanilla_convolution_layer:
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) -c $(VANILLA_LAYERS)/convolution/vanilla_convolution.cpp -o $(VANILLA_LAYERS_OUTPUT)/vanilla_convolution.o
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $(VANILLA_LAYERS)/convolution/test_convolution_main.cpp -o test_vanilla_conv $(VANILLA_LAYERS_OUTPUT)/vanilla_convolution.o
+	./test_vanilla_conv
+
+
+build_vanilla_batchnorm_layer:
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) -c $(VANILLA_LAYERS)/batchnorm/vanilla_batchnorm_dense.cpp -o $(VANILLA_LAYERS_OUTPUT)/vanilla_batchnorm_dense.o
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) -c $(VANILLA_LAYERS)/batchnorm/vanilla_batchnorm_conv.cpp -o $(VANILLA_LAYERS_OUTPUT)/vanilla_batchnorm_conv.o
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) $(VANILLA_LAYERS)/batchnorm/test_batchnorm_main.cpp -o test_vanilla_batchnorm $(VANILLA_LAYERS_OUTPUT)/vanilla_batchnorm_dense.o $(VANILLA_LAYERS_OUTPUT)/vanilla_batchnorm_conv.o
+	./test_vanilla_batchnorm 0 0
+    
+    
+# build all ---------------------------------------------------------------------------------
+
+build_all:
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) -c $(COMMON_LAYERS)/activation_layer/activation_layer.cpp -o $(COMMON_LAYERS_OUTPUT)/activation_layer.o 
+#	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) -c $(COMMON_LAYERS)/pooling_layers/pooling_layers.cpp -o $(COMMON_LAYERS_OUTPUT)/max_pooling.o
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) -c $(COMMON_LAYERS)/flatten_layer/flatten_layer.cpp -o $(COMMON_LAYERS_OUTPUT)/flatten.o
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) -c $(COMMON_LAYERS)/softmax_layer/softmax.cpp -o $(COMMON_LAYERS_OUTPUT)/softmax.o
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) -c $(LOSS_LAYERS)/loss.cpp -o $(COMMON_LAYERS_OUTPUT)/loss.o
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) -c $(OPTIMIZERS)/optimizers.cpp -o $(COMMON_LAYERS_OUTPUT)/optimizers.o
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) -c $(VANILLA_LAYERS)/dense/vanilla_dense.cpp -o $(VANILLA_LAYERS_OUTPUT)/vanilla_dense.o
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) -c $(VANILLA_LAYERS)/convolution/vanilla_convolution.cpp -o $(VANILLA_LAYERS_OUTPUT)/vanilla_convolution.o
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) -c $(VANILLA_LAYERS)/batchnorm/vanilla_batchnorm_dense.cpp -o $(VANILLA_LAYERS_OUTPUT)/vanilla_batchnorm_dense.o
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) -c $(VANILLA_LAYERS)/batchnorm/vanilla_batchnorm_conv.cpp -o $(VANILLA_LAYERS_OUTPUT)/vanilla_batchnorm_conv.o
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) -c $(XNOR_LAYERS)/batchnorm/xnor_batchnorm_dense.cpp -o $(XNOR_LAYERS_OUTPUT)/xnor_batchnorm_dense.o
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) -c $(XNOR_LAYERS)/batchnorm/xnor_batchnorm_conv.cpp -o $(XNOR_LAYERS_OUTPUT)/xnor_batchnorm_conv.o
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) -c $(XNOR_LAYERS)/dense/xnor_dense.cpp -o $(XNOR_LAYERS_OUTPUT)/xnor_dense.o
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) -c $(XNOR_LAYERS)/convolution/xnor_convolution.cpp -o $(XNOR_LAYERS_OUTPUT)/xnor_convolution.o
+    
+activation_layer_bool:
+	$(CPP) -O3 $(CFLAGS) $(ARMV8_A) -c ../../lib/activation_layer/activation_layer.cpp -o $@.o
